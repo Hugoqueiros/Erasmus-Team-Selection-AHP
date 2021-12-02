@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "bYxk8jOEo8n2lr7xTAFSJnevg+pFSM/6IPoo5RfuZyGfQqINEX7Nse5B0IDSjFem74SrWC1VWKELTQJz940O5A==",
+  "dgSpecHash": "9FxhXdW2Q164YOJfBuihJm4q0csa9+QmkkHnj5ymzbK6VTL2d8IrDpBZI3tDzUvqSj8mzRxyGgprwDg1ROvuSw==",
   "success": true,
-  "projectFilePath": "D:\\Universidade\\SAD\\Build2Evenize\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\João\\Source\\Repos\\SADProject1\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\João\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512",
+    "C:\\Users\\João\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\João\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\João\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
