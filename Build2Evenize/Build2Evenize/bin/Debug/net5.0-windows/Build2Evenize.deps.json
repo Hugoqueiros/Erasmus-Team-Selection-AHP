@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Build2Evenize/1.0.0": {
+        "runtime": {
+          "Build2Evenize.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Build2Evenize/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

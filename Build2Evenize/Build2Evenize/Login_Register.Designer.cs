@@ -1,7 +1,7 @@
 ﻿
 namespace Build2Evenize
 {
-    partial class Form1
+    partial class Login_Register
     {
         /// <summary>
         ///  Required designer variable.

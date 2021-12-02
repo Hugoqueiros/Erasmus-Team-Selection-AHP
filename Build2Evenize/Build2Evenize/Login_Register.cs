@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Build2Evenize
 {
-    public partial class Form1 : Form
+    public partial class Login_Register : Form
     {
-        public Form1()
+        public Login_Register()
         {
             InitializeComponent();
         }
