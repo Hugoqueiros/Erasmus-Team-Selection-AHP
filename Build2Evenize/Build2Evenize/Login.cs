@@ -21,5 +21,20 @@ namespace Build2Evenize
         {
 
         }
+
+        private void Login_Register_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
