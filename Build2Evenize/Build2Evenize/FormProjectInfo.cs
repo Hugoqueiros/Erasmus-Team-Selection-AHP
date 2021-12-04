@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Build2Evenize
 {
-    public partial class CRUD_Projeto : Form
+    public partial class FormProjectInfo : Form
     {
-        public CRUD_Projeto()
+        public FormProjectInfo()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
