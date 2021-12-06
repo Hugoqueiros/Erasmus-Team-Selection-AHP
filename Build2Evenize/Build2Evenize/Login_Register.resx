@@ -58,6 +58,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAWtJREFUaEPt
+        mEtKBTEQRRscuwARV+FCXIpLcQ0OHLsRFyGCTnTk0P+9g0Ao6vWtdHfsiHXgTDqpSiovxYNMSZIkSeJw
+        Cm/gE/zeWe6Be+GeQpzAZ+gl29MXGCriGnoJRpC/hOQeesEj+Aglb7AOuoAP5ttvyDW5tv0usQWQY3gF
+        P2A91kOuwbW4JrHjEq+Awjm8g/X4ljI316ixcyTvcC7gCF7CV1jPWyNzMSdzW+xciS3gFp5BC79xrJ67
+        xNb8ElsAnTuhpU1emtSifmGJV0DRu6Okpcltk9ZEekwyVwBds4EtDkASSUJbrsCWV1ASLaComrC1SZWS
+        1gLo3AlbVJMqJUsKKB6644VIkyoln9ALjMoDsE3e0qRKydoCiqXJl/5PHFKyVQG9lGQBnZV8QS9wFCVZ
+        QGclWUBnJV7QSEq8oJGU8PHICxzB0MMWn++84BEMPS3yAZUPqV6CPQ0/7pI//byeJEmS/Bem6Qd4XGxf
+        EMN6RwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAQFJREFUaEPt
+        laFuAzEQRF1QGt6wwpDA/lZwUWlgf6S8KDC/ECmwKJ8QRa2Smcs5svZ8XriWOk96kr07Y3LgkhBCCCGE
+        EF2xgFv4Odzu8MwZdx6h/SU8wSv8hetRnjnjjpk5ovsD35BhuhvNd+48ovtpBS8wl7KccecR1v8oPEL7
+        AGdlxlLuIvqTgqellmlpqWVaTqiFWlpqmZaWWqblhPLz/EBb4KzMWMpdRP/BG/yD9gHOuPMI7T/BPcyl
+        r9F8546ZOaL76QUeIMNn+DrKM2fcMTNHdH/gGW7g+3C7wzNn3HlE94UQQvxz+MfrWZdaqSddaqWedKmV
+        elIIIYQQnZDSDQaWnEi9hy69AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIAAEFQAAZgAAAICAAAABACAAKAgBAGoVAABAQAAAAQAgAChCAACSHQEAMDAAAAEA
