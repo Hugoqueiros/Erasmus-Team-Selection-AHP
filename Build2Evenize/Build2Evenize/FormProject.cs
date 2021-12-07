@@ -16,5 +16,30 @@ namespace Build2Evenize
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProjectManagementPanel.Visible = false;
+            SimulationPanel.Visible = true;
+            button1.BackColor = Color.FromArgb(37, 55, 127);
+            button1.ForeColor = Color.White;
+            button2.BackColor = Color.FromArgb(250, 218, 24);
+            button2.ForeColor = Color.FromArgb(37, 55, 127);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProjectManagementPanel.Visible = true;
+            SimulationPanel.Visible = false;
+            button2.BackColor = Color.FromArgb(37, 55, 127);
+            button2.ForeColor = Color.White;
+            button1.BackColor = Color.FromArgb(250, 218, 24);
+            button1.ForeColor = Color.FromArgb(37, 55, 127);
+        }
+
+        private void FormProject_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
