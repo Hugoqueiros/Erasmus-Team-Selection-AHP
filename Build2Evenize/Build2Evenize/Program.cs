@@ -17,7 +17,7 @@ namespace Build2Evenize
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormProject());
+            Application.Run(new Login_Register());
         }
     }
 }
