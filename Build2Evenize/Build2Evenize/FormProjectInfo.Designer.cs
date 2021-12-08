@@ -47,6 +47,12 @@ namespace Build2Evenize
             this.label13 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.button13 = new System.Windows.Forms.Button();
+            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.button12 = new System.Windows.Forms.Button();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -103,6 +109,7 @@ namespace Build2Evenize
             this.button11.BackgroundImage = global::Build2Evenize.Properties.Resources.edit;
             this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.Enabled = false;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button11.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -119,6 +126,7 @@ namespace Build2Evenize
             this.button10.BackgroundImage = global::Build2Evenize.Properties.Resources.delete;
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.Enabled = false;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button10.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -161,11 +169,11 @@ namespace Build2Evenize
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
-            this.button9.Location = new System.Drawing.Point(300, 543);
+            this.button9.Location = new System.Drawing.Point(300, 538);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(294, 29);
+            this.button9.Size = new System.Drawing.Size(294, 34);
             this.button9.TabIndex = 35;
             this.button9.Text = "Save";
             this.button9.UseVisualStyleBackColor = false;
@@ -174,11 +182,11 @@ namespace Build2Evenize
             // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(0, 543);
+            this.button8.Location = new System.Drawing.Point(0, 538);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(294, 29);
+            this.button8.Size = new System.Drawing.Size(294, 35);
             this.button8.TabIndex = 34;
             this.button8.Text = "Cancel";
             this.button8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -188,11 +196,11 @@ namespace Build2Evenize
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(0, 492);
+            this.button7.Location = new System.Drawing.Point(0, 497);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(595, 45);
+            this.button7.Size = new System.Drawing.Size(595, 35);
             this.button7.TabIndex = 33;
             this.button7.Text = "Import Students";
             this.button7.UseVisualStyleBackColor = false;
@@ -283,6 +291,12 @@ namespace Build2Evenize
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button14);
+            this.panel3.Controls.Add(this.comboBox11);
+            this.panel3.Controls.Add(this.button13);
+            this.panel3.Controls.Add(this.comboBox10);
+            this.panel3.Controls.Add(this.button12);
+            this.panel3.Controls.Add(this.comboBox9);
             this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button5);
@@ -318,6 +332,84 @@ namespace Build2Evenize
             this.panel3.Size = new System.Drawing.Size(723, 577);
             this.panel3.TabIndex = 2;
             // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.button14.BackgroundImage = global::Build2Evenize.Properties.Resources.x_white;
+            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button14.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button14.ForeColor = System.Drawing.Color.White;
+            this.button14.Location = new System.Drawing.Point(695, 501);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(29, 29);
+            this.button14.TabIndex = 42;
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Visible = false;
+            // 
+            // comboBox11
+            // 
+            this.comboBox11.FormattingEnabled = true;
+            this.comboBox11.Location = new System.Drawing.Point(147, 501);
+            this.comboBox11.Name = "comboBox11";
+            this.comboBox11.Size = new System.Drawing.Size(541, 29);
+            this.comboBox11.TabIndex = 41;
+            this.comboBox11.Visible = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.button13.BackgroundImage = global::Build2Evenize.Properties.Resources.x_white;
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button13.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.Location = new System.Drawing.Point(694, 396);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(29, 29);
+            this.button13.TabIndex = 40;
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Visible = false;
+            // 
+            // comboBox10
+            // 
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Location = new System.Drawing.Point(147, 396);
+            this.comboBox10.Name = "comboBox10";
+            this.comboBox10.Size = new System.Drawing.Size(541, 29);
+            this.comboBox10.TabIndex = 39;
+            this.comboBox10.Visible = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.button12.BackgroundImage = global::Build2Evenize.Properties.Resources.x_white;
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button12.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.Location = new System.Drawing.Point(694, 291);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(29, 29);
+            this.button12.TabIndex = 38;
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Visible = false;
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(147, 291);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(541, 29);
+            this.comboBox9.TabIndex = 37;
+            this.comboBox9.Visible = false;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -336,11 +428,12 @@ namespace Build2Evenize
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(695, 457);
+            this.button6.Location = new System.Drawing.Point(695, 466);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(29, 29);
             this.button6.TabIndex = 35;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Visible = false;
             // 
             // button5
             // 
@@ -352,11 +445,12 @@ namespace Build2Evenize
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(694, 422);
+            this.button5.Location = new System.Drawing.Point(694, 431);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(29, 29);
             this.button5.TabIndex = 34;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Visible = false;
             // 
             // button4
             // 
@@ -368,11 +462,12 @@ namespace Build2Evenize
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(694, 355);
+            this.button4.Location = new System.Drawing.Point(694, 361);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(29, 29);
             this.button4.TabIndex = 33;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
             // 
             // button3
             // 
@@ -389,6 +484,7 @@ namespace Build2Evenize
             this.button3.Size = new System.Drawing.Size(29, 29);
             this.button3.TabIndex = 32;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             // 
             // button2
             // 
@@ -400,11 +496,12 @@ namespace Build2Evenize
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(694, 320);
+            this.button2.Location = new System.Drawing.Point(694, 326);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(29, 29);
             this.button2.TabIndex = 31;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
             // 
             // label12
             // 
@@ -457,15 +554,16 @@ namespace Build2Evenize
             // comboBox7
             // 
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(147, 457);
+            this.comboBox7.Location = new System.Drawing.Point(147, 466);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(541, 29);
             this.comboBox7.TabIndex = 23;
+            this.comboBox7.Visible = false;
             // 
             // comboBox8
             // 
             this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(147, 422);
+            this.comboBox8.Location = new System.Drawing.Point(147, 431);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(541, 29);
             this.comboBox8.TabIndex = 21;
@@ -475,7 +573,7 @@ namespace Build2Evenize
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.label9.Location = new System.Drawing.Point(0, 420);
+            this.label9.Location = new System.Drawing.Point(0, 429);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(121, 27);
             this.label9.TabIndex = 20;
@@ -484,15 +582,16 @@ namespace Build2Evenize
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(147, 355);
+            this.comboBox5.Location = new System.Drawing.Point(147, 361);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(541, 29);
             this.comboBox5.TabIndex = 18;
+            this.comboBox5.Visible = false;
             // 
             // comboBox6
             // 
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(147, 320);
+            this.comboBox6.Location = new System.Drawing.Point(147, 326);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(541, 29);
             this.comboBox6.TabIndex = 16;
@@ -502,7 +601,7 @@ namespace Build2Evenize
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.label8.Location = new System.Drawing.Point(0, 318);
+            this.label8.Location = new System.Drawing.Point(0, 324);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(129, 27);
             this.label8.TabIndex = 15;
@@ -515,6 +614,7 @@ namespace Build2Evenize
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(541, 29);
             this.comboBox4.TabIndex = 13;
+            this.comboBox4.Visible = false;
             // 
             // button1
             // 
@@ -531,6 +631,7 @@ namespace Build2Evenize
             this.button1.Size = new System.Drawing.Size(29, 29);
             this.button1.TabIndex = 12;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox3
@@ -719,5 +820,11 @@ namespace Build2Evenize
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.ComboBox comboBox9;
     }
 }
