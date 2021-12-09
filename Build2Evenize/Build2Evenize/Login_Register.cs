@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
@@ -14,9 +8,9 @@ namespace Build2Evenize
 {
     public partial class Login_Register : Form
     {
-        public string server = @"LAPTOP-KJD4E8L6\SQLEXPRESS";
+        public string server = @"DESKTOP-I51RAV\SQLEXPRESS";
         public string database = "SAD";
-        public string user = @"LAPTOP-KJD4E8L6\João";
+        public string user = @"AzureAD\FranciscoPereira";
         public string pass = "";
 
         public Login_Register()
@@ -83,7 +77,7 @@ namespace Build2Evenize
                 {
                     dr.Close();
                     this.Hide();
-                    FormProject fP = new();
+                    FormProject fP = new FormProject();
                     fP.ShowDialog();
                     this.Close();
                 }
@@ -100,6 +94,11 @@ namespace Build2Evenize
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }

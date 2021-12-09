@@ -15,6 +15,7 @@ namespace Build2Evenize
         public FormProject()
         {
             InitializeComponent();
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -39,12 +40,20 @@ namespace Build2Evenize
 
         private void FormProject_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'sADDataSet1.View_1' table. You can move, or remove it, as needed.
+            this.view_1TableAdapter.Fill(this.sADDataSet1.View_1);
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }

@@ -14,10 +14,9 @@ namespace Build2Evenize
         [STAThread]
         static void Main()
         {
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login_Register());
+            Application.Run(new FormProject());
         }
     }
 }

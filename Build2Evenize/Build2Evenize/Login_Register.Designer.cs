@@ -52,7 +52,7 @@ namespace Build2Evenize
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Montserrat Black", 24F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label1.Location = new System.Drawing.Point(352, 319);
             this.label1.Name = "label1";
@@ -99,13 +99,13 @@ namespace Build2Evenize
             // 
             // loginUser
             // 
-            this.loginUser.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginUser.Font = new System.Drawing.Font("Montserrat", 16.2F);
             this.loginUser.Location = new System.Drawing.Point(54, -1);
             this.loginUser.Multiline = true;
             this.loginUser.Name = "loginUser";
-            this.loginUser.PlaceholderText = "Email";
             this.loginUser.Size = new System.Drawing.Size(330, 52);
             this.loginUser.TabIndex = 1;
+            this.loginUser.Text = "Email";
             this.loginUser.TextChanged += new System.EventHandler(this.loginUser_TextChanged);
             // 
             // panel1
@@ -121,14 +121,14 @@ namespace Build2Evenize
             // 
             // loginPass
             // 
-            this.loginPass.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginPass.Font = new System.Drawing.Font("Montserrat", 16.2F);
             this.loginPass.Location = new System.Drawing.Point(54, -1);
             this.loginPass.Multiline = true;
             this.loginPass.Name = "loginPass";
             this.loginPass.PasswordChar = '*';
-            this.loginPass.PlaceholderText = "Password";
             this.loginPass.Size = new System.Drawing.Size(330, 52);
             this.loginPass.TabIndex = 1;
+            this.loginPass.Text = "Password";
             // 
             // panel4
             // 
@@ -161,7 +161,7 @@ namespace Build2Evenize
             this.loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Font = new System.Drawing.Font("Montserrat Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginBtn.Font = new System.Drawing.Font("Montserrat Black", 15F);
             this.loginBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
             this.loginBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.loginBtn.Location = new System.Drawing.Point(246, 532);
@@ -181,6 +181,7 @@ namespace Build2Evenize
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // Login_Register
             // 
@@ -194,7 +195,7 @@ namespace Build2Evenize
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

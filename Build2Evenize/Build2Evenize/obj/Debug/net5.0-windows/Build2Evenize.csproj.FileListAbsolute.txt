@@ -86,3 +86,10 @@ C:\Users\João\source\repos\SADProject\Build2Evenize\Build2Evenize\obj\Debug\net
 C:\Users\João\source\repos\SADProject\Build2Evenize\Build2Evenize\obj\Debug\net5.0-windows\ref\Build2Evenize.dll
 C:\Users\João\source\repos\SADProject\Build2Evenize\Build2Evenize\obj\Debug\net5.0-windows\Build2Evenize.pdb
 C:\Users\João\source\repos\SADProject\Build2Evenize\Build2Evenize\obj\Debug\net5.0-windows\Build2Evenize.genruntimeconfig.cache
+D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\obj\Debug\net5.0-windows\Build2Evenize.csproj.CopyComplete
