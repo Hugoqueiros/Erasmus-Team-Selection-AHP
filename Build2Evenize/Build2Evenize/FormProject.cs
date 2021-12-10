@@ -12,10 +12,10 @@ namespace Build2Evenize
 {
     public partial class FormProject : Form
     {
-        public FormProject()
+        public FormProject(string name, int id)
         {
             InitializeComponent();
-           
+            label6.Text = name;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -56,5 +56,9 @@ namespace Build2Evenize
 
         }
 
+        public void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

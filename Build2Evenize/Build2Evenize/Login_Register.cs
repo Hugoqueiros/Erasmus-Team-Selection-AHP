@@ -75,21 +75,24 @@ namespace Build2Evenize
                 SqlDataReader  dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
+                    int id = (int)dr["coordinator_id"];
+                    string name = (string)dr["name"];
+                    
                     dr.Close();
                     this.Hide();
-                    FormProject fP = new FormProject();
+                    FormProject fP = new FormProject(name,id);
                     fP.ShowDialog();
                     this.Close();
                 }
                 else
                 {
                     dr.Close();
-                    MessageBox.Show("Não existe conta com os dados inseridos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This account doesn't exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Por favor preencha todos os campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please, fill all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -62,6 +62,8 @@ namespace Build2Evenize
             this.datestartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateendDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nrstudentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.ProjectManagementPanel.SuspendLayout();
@@ -74,6 +76,8 @@ namespace Build2Evenize
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.linkLabel1);
@@ -118,9 +122,9 @@ namespace Build2Evenize
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold);
+            this.linkLabel1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(93, 909);
+            this.linkLabel1.Location = new System.Drawing.Point(100, 915);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(81, 26);
@@ -131,7 +135,7 @@ namespace Build2Evenize
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Build2Evenize.Properties.Resources.B2E;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 739);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 713);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(300, 192);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -403,6 +407,28 @@ namespace Build2Evenize
             this.nrstudentsDataGridViewTextBoxColumn.Name = "nrstudentsDataGridViewTextBoxColumn";
             this.nrstudentsDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(12, 879);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 26);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Logged as: ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(131, 879);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 26);
+            this.label6.TabIndex = 11;
+            // 
             // FormProject
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -463,5 +489,7 @@ namespace Build2Evenize
         private System.Windows.Forms.DataGridViewTextBoxColumn datestartDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateendDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nrstudentsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
     }
 }
