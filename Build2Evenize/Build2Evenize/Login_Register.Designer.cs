@@ -56,7 +56,7 @@ namespace Build2Evenize
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label1.Location = new System.Drawing.Point(352, 319);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 55);
+            this.label1.Size = new System.Drawing.Size(128, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "LOGIN";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -105,7 +105,7 @@ namespace Build2Evenize
             this.loginUser.Name = "loginUser";
             this.loginUser.Size = new System.Drawing.Size(330, 52);
             this.loginUser.TabIndex = 1;
-            this.loginUser.Text = "Email";
+            this.loginUser.Text = "ispg4259@ispgaya.pt";
             this.loginUser.TextChanged += new System.EventHandler(this.loginUser_TextChanged);
             // 
             // panel1
@@ -128,7 +128,7 @@ namespace Build2Evenize
             this.loginPass.PasswordChar = '*';
             this.loginPass.Size = new System.Drawing.Size(330, 52);
             this.loginPass.TabIndex = 1;
-            this.loginPass.Text = "Password";
+            this.loginPass.Text = "admin";
             // 
             // panel4
             // 
@@ -185,7 +185,8 @@ namespace Build2Evenize
             // 
             // Login_Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AcceptButton = this.loginBtn;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(880, 626);
@@ -199,6 +200,7 @@ namespace Build2Evenize
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

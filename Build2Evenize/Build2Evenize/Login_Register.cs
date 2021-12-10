@@ -25,6 +25,8 @@ namespace Build2Evenize
 
         private void Login_Register_Load(object sender, EventArgs e)
         {
+            loginUser.Text = "ispg4259@ispgaya.pt";
+            loginPass.Text = "admin";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -69,6 +71,7 @@ namespace Build2Evenize
             SqlConnection con = new SqlConnection(str);
             con.Open();
 
+
             if (loginUser.Text != String.Empty && loginPass.Text != String.Empty) {
                 String passEnc = MD5Hash(loginPass.Text);
                 SqlCommand cmd = new SqlCommand("select * from Coordinator where email='" + loginUser.Text + "' and password='" + passEnc+"'", con);
@@ -77,12 +80,13 @@ namespace Build2Evenize
                 {
                     int id = (int)dr["coordinator_id"];
                     string name = (string)dr["name"];
-                    
-                    dr.Close();
                     this.Hide();
-                    FormProject fP = new FormProject(name,id);
+                    dr.Close();
+                    FormProject fP = new FormProject(name,id,con);
                     fP.ShowDialog();
+                    
                     this.Close();
+                  
                 }
                 else
                 {
@@ -93,7 +97,9 @@ namespace Build2Evenize
             else
             {
                 MessageBox.Show("Please, fill all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
             }
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

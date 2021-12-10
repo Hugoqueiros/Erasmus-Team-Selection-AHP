@@ -54,6 +54,8 @@ namespace Build2Evenize {
         
         private Student_LanguageDataTable tableStudent_Language;
         
+        private Student_ProjectDataTable tableStudent_Project;
+        
         private Student_SKDataTable tableStudent_SK;
         
         private Student_TechDataTable tableStudent_Tech;
@@ -61,6 +63,8 @@ namespace Build2Evenize {
         private TeamDataTable tableTeam;
         
         private TechDataTable tableTech;
+        
+        private countryDataTable tablecountry;
         
         private View_1DataTable tableView_1;
         
@@ -97,6 +101,10 @@ namespace Build2Evenize {
         private global::System.Data.DataRelation relationFK_Student_Language_Language;
         
         private global::System.Data.DataRelation relationFK_Student_Language_Student;
+        
+        private global::System.Data.DataRelation relationFK_Student_Project_Project;
+        
+        private global::System.Data.DataRelation relationFK_Student_Project_Student;
         
         private global::System.Data.DataRelation relationFK_Student_SK_Social_Skill;
         
@@ -183,6 +191,9 @@ namespace Build2Evenize {
                 if ((ds.Tables["Student_Language"] != null)) {
                     base.Tables.Add(new Student_LanguageDataTable(ds.Tables["Student_Language"]));
                 }
+                if ((ds.Tables["Student_Project"] != null)) {
+                    base.Tables.Add(new Student_ProjectDataTable(ds.Tables["Student_Project"]));
+                }
                 if ((ds.Tables["Student_SK"] != null)) {
                     base.Tables.Add(new Student_SKDataTable(ds.Tables["Student_SK"]));
                 }
@@ -194,6 +205,9 @@ namespace Build2Evenize {
                 }
                 if ((ds.Tables["Tech"] != null)) {
                     base.Tables.Add(new TechDataTable(ds.Tables["Tech"]));
+                }
+                if ((ds.Tables["country"] != null)) {
+                    base.Tables.Add(new countryDataTable(ds.Tables["country"]));
                 }
                 if ((ds.Tables["View_1"] != null)) {
                     base.Tables.Add(new View_1DataTable(ds.Tables["View_1"]));
@@ -370,6 +384,16 @@ namespace Build2Evenize {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Student_ProjectDataTable Student_Project {
+            get {
+                return this.tableStudent_Project;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public Student_SKDataTable Student_SK {
             get {
                 return this.tableStudent_SK;
@@ -403,6 +427,16 @@ namespace Build2Evenize {
         public TechDataTable Tech {
             get {
                 return this.tableTech;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public countryDataTable country {
+            get {
+                return this.tablecountry;
             }
         }
         
@@ -528,6 +562,9 @@ namespace Build2Evenize {
                 if ((ds.Tables["Student_Language"] != null)) {
                     base.Tables.Add(new Student_LanguageDataTable(ds.Tables["Student_Language"]));
                 }
+                if ((ds.Tables["Student_Project"] != null)) {
+                    base.Tables.Add(new Student_ProjectDataTable(ds.Tables["Student_Project"]));
+                }
                 if ((ds.Tables["Student_SK"] != null)) {
                     base.Tables.Add(new Student_SKDataTable(ds.Tables["Student_SK"]));
                 }
@@ -539,6 +576,9 @@ namespace Build2Evenize {
                 }
                 if ((ds.Tables["Tech"] != null)) {
                     base.Tables.Add(new TechDataTable(ds.Tables["Tech"]));
+                }
+                if ((ds.Tables["country"] != null)) {
+                    base.Tables.Add(new countryDataTable(ds.Tables["country"]));
                 }
                 if ((ds.Tables["View_1"] != null)) {
                     base.Tables.Add(new View_1DataTable(ds.Tables["View_1"]));
@@ -666,6 +706,12 @@ namespace Build2Evenize {
                     this.tableStudent_Language.InitVars();
                 }
             }
+            this.tableStudent_Project = ((Student_ProjectDataTable)(base.Tables["Student_Project"]));
+            if ((initTable == true)) {
+                if ((this.tableStudent_Project != null)) {
+                    this.tableStudent_Project.InitVars();
+                }
+            }
             this.tableStudent_SK = ((Student_SKDataTable)(base.Tables["Student_SK"]));
             if ((initTable == true)) {
                 if ((this.tableStudent_SK != null)) {
@@ -688,6 +734,12 @@ namespace Build2Evenize {
             if ((initTable == true)) {
                 if ((this.tableTech != null)) {
                     this.tableTech.InitVars();
+                }
+            }
+            this.tablecountry = ((countryDataTable)(base.Tables["country"]));
+            if ((initTable == true)) {
+                if ((this.tablecountry != null)) {
+                    this.tablecountry.InitVars();
                 }
             }
             this.tableView_1 = ((View_1DataTable)(base.Tables["View_1"]));
@@ -713,6 +765,8 @@ namespace Build2Evenize {
             this.relationFK_Student_Area_Student = this.Relations["FK_Student_Area_Student"];
             this.relationFK_Student_Language_Language = this.Relations["FK_Student_Language_Language"];
             this.relationFK_Student_Language_Student = this.Relations["FK_Student_Language_Student"];
+            this.relationFK_Student_Project_Project = this.Relations["FK_Student_Project_Project"];
+            this.relationFK_Student_Project_Student = this.Relations["FK_Student_Project_Student"];
             this.relationFK_Student_SK_Social_Skill = this.Relations["FK_Student_SK_Social_Skill"];
             this.relationFK_Student_SK_Student = this.Relations["FK_Student_SK_Student"];
             this.relationFK_Student_Tech_Student = this.Relations["FK_Student_Tech_Student"];
@@ -759,6 +813,8 @@ namespace Build2Evenize {
             base.Tables.Add(this.tableStudent_Area);
             this.tableStudent_Language = new Student_LanguageDataTable();
             base.Tables.Add(this.tableStudent_Language);
+            this.tableStudent_Project = new Student_ProjectDataTable();
+            base.Tables.Add(this.tableStudent_Project);
             this.tableStudent_SK = new Student_SKDataTable();
             base.Tables.Add(this.tableStudent_SK);
             this.tableStudent_Tech = new Student_TechDataTable();
@@ -767,6 +823,8 @@ namespace Build2Evenize {
             base.Tables.Add(this.tableTeam);
             this.tableTech = new TechDataTable();
             base.Tables.Add(this.tableTech);
+            this.tablecountry = new countryDataTable();
+            base.Tables.Add(this.tablecountry);
             this.tableView_1 = new View_1DataTable();
             base.Tables.Add(this.tableView_1);
             this.relationFK_Coordinator_Institution = new global::System.Data.DataRelation("FK_Coordinator_Institution", new global::System.Data.DataColumn[] {
@@ -837,6 +895,14 @@ namespace Build2Evenize {
                         this.tableStudent.student_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableStudent_Language.student_idColumn}, false);
             this.Relations.Add(this.relationFK_Student_Language_Student);
+            this.relationFK_Student_Project_Project = new global::System.Data.DataRelation("FK_Student_Project_Project", new global::System.Data.DataColumn[] {
+                        this.tableProject.project_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableStudent_Project.project_idColumn}, false);
+            this.Relations.Add(this.relationFK_Student_Project_Project);
+            this.relationFK_Student_Project_Student = new global::System.Data.DataRelation("FK_Student_Project_Student", new global::System.Data.DataColumn[] {
+                        this.tableStudent.student_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableStudent_Project.student_idColumn}, false);
+            this.Relations.Add(this.relationFK_Student_Project_Student);
             this.relationFK_Student_SK_Social_Skill = new global::System.Data.DataRelation("FK_Student_SK_Social_Skill", new global::System.Data.DataColumn[] {
                         this.tableSocial_Skill.social_skill_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableStudent_SK.social_skill_idColumn}, false);
@@ -955,6 +1021,12 @@ namespace Build2Evenize {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeStudent_Project() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeStudent_SK() {
             return false;
         }
@@ -974,6 +1046,12 @@ namespace Build2Evenize {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeTech() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializecountry() {
             return false;
         }
         
@@ -1084,6 +1162,9 @@ namespace Build2Evenize {
         public delegate void Student_LanguageRowChangeEventHandler(object sender, Student_LanguageRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void Student_ProjectRowChangeEventHandler(object sender, Student_ProjectRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void Student_SKRowChangeEventHandler(object sender, Student_SKRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1094,6 +1175,9 @@ namespace Build2Evenize {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void TechRowChangeEventHandler(object sender, TechRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void countryRowChangeEventHandler(object sender, countryRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void View_1RowChangeEventHandler(object sender, View_1RowChangeEvent e);
@@ -5701,6 +5785,304 @@ namespace Build2Evenize {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Student_ProjectDataTable : global::System.Data.TypedTableBase<Student_ProjectRow> {
+            
+            private global::System.Data.DataColumn columnstudent_project_id;
+            
+            private global::System.Data.DataColumn columnstudent_id;
+            
+            private global::System.Data.DataColumn columnproject_id;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Student_ProjectDataTable() {
+                this.TableName = "Student_Project";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Student_ProjectDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected Student_ProjectDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn student_project_idColumn {
+                get {
+                    return this.columnstudent_project_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn student_idColumn {
+                get {
+                    return this.columnstudent_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn project_idColumn {
+                get {
+                    return this.columnproject_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Student_ProjectRow this[int index] {
+                get {
+                    return ((Student_ProjectRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Student_ProjectRowChangeEventHandler Student_ProjectRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Student_ProjectRowChangeEventHandler Student_ProjectRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Student_ProjectRowChangeEventHandler Student_ProjectRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Student_ProjectRowChangeEventHandler Student_ProjectRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddStudent_ProjectRow(Student_ProjectRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Student_ProjectRow AddStudent_ProjectRow(StudentRow parentStudentRowByFK_Student_Project_Student, ProjectRow parentProjectRowByFK_Student_Project_Project) {
+                Student_ProjectRow rowStudent_ProjectRow = ((Student_ProjectRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        null};
+                if ((parentStudentRowByFK_Student_Project_Student != null)) {
+                    columnValuesArray[1] = parentStudentRowByFK_Student_Project_Student[0];
+                }
+                if ((parentProjectRowByFK_Student_Project_Project != null)) {
+                    columnValuesArray[2] = parentProjectRowByFK_Student_Project_Project[0];
+                }
+                rowStudent_ProjectRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowStudent_ProjectRow);
+                return rowStudent_ProjectRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Student_ProjectRow FindBystudent_project_id(int student_project_id) {
+                return ((Student_ProjectRow)(this.Rows.Find(new object[] {
+                            student_project_id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Student_ProjectDataTable cln = ((Student_ProjectDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Student_ProjectDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnstudent_project_id = base.Columns["student_project_id"];
+                this.columnstudent_id = base.Columns["student_id"];
+                this.columnproject_id = base.Columns["project_id"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnstudent_project_id = new global::System.Data.DataColumn("student_project_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_project_id);
+                this.columnstudent_id = new global::System.Data.DataColumn("student_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudent_id);
+                this.columnproject_id = new global::System.Data.DataColumn("project_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproject_id);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnstudent_project_id}, true));
+                this.columnstudent_project_id.AutoIncrement = true;
+                this.columnstudent_project_id.AutoIncrementSeed = -1;
+                this.columnstudent_project_id.AutoIncrementStep = -1;
+                this.columnstudent_project_id.AllowDBNull = false;
+                this.columnstudent_project_id.ReadOnly = true;
+                this.columnstudent_project_id.Unique = true;
+                this.columnstudent_id.AllowDBNull = false;
+                this.columnproject_id.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Student_ProjectRow NewStudent_ProjectRow() {
+                return ((Student_ProjectRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Student_ProjectRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Student_ProjectRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Student_ProjectRowChanged != null)) {
+                    this.Student_ProjectRowChanged(this, new Student_ProjectRowChangeEvent(((Student_ProjectRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Student_ProjectRowChanging != null)) {
+                    this.Student_ProjectRowChanging(this, new Student_ProjectRowChangeEvent(((Student_ProjectRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Student_ProjectRowDeleted != null)) {
+                    this.Student_ProjectRowDeleted(this, new Student_ProjectRowChangeEvent(((Student_ProjectRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Student_ProjectRowDeleting != null)) {
+                    this.Student_ProjectRowDeleting(this, new Student_ProjectRowChangeEvent(((Student_ProjectRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveStudent_ProjectRow(Student_ProjectRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Student_ProjectDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Student_SKDataTable : global::System.Data.TypedTableBase<Student_SKRow> {
             
             private global::System.Data.DataColumn columnstudent_sk_id;
@@ -6872,6 +7254,255 @@ namespace Build2Evenize {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class countryDataTable : global::System.Data.TypedTableBase<countryRow> {
+            
+            private global::System.Data.DataColumn columncountry;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public countryDataTable() {
+                this.TableName = "country";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal countryDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected countryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn countryColumn {
+                get {
+                    return this.columncountry;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public countryRow this[int index] {
+                get {
+                    return ((countryRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event countryRowChangeEventHandler countryRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event countryRowChangeEventHandler countryRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event countryRowChangeEventHandler countryRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event countryRowChangeEventHandler countryRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddcountryRow(countryRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public countryRow AddcountryRow(string country) {
+                countryRow rowcountryRow = ((countryRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        country};
+                rowcountryRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowcountryRow);
+                return rowcountryRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                countryDataTable cln = ((countryDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new countryDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columncountry = base.Columns["country"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columncountry = new global::System.Data.DataColumn("country", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncountry);
+                this.columncountry.AllowDBNull = false;
+                this.columncountry.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public countryRow NewcountryRow() {
+                return ((countryRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new countryRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(countryRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.countryRowChanged != null)) {
+                    this.countryRowChanged(this, new countryRowChangeEvent(((countryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.countryRowChanging != null)) {
+                    this.countryRowChanging(this, new countryRowChangeEvent(((countryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.countryRowDeleted != null)) {
+                    this.countryRowDeleted(this, new countryRowChangeEvent(((countryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.countryRowDeleting != null)) {
+                    this.countryRowDeleting(this, new countryRowChangeEvent(((countryRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemovecountryRow(countryRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "countryDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class View_1DataTable : global::System.Data.TypedTableBase<View_1Row> {
             
             private global::System.Data.DataColumn columnname;
@@ -7073,7 +7704,7 @@ namespace Build2Evenize {
                 this.columnnr_students = new global::System.Data.DataColumn("nr_students", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnr_students);
                 this.columnname.AllowDBNull = false;
-                this.columnname.MaxLength = 50;
+                this.columnname.MaxLength = 100;
                 this.columnExpr1.AllowDBNull = false;
                 this.columnExpr1.MaxLength = 100;
                 this.columnExpr2.AllowDBNull = false;
@@ -7687,6 +8318,17 @@ namespace Build2Evenize {
                 }
                 else {
                     return ((Project_TechRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Project_Tech_Project"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Student_ProjectRow[] GetStudent_ProjectRows() {
+                if ((this.Table.ChildRelations["FK_Student_Project_Project"] == null)) {
+                    return new Student_ProjectRow[0];
+                }
+                else {
+                    return ((Student_ProjectRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Student_Project_Project"])));
                 }
             }
         }
@@ -8308,6 +8950,17 @@ namespace Build2Evenize {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Student_ProjectRow[] GetStudent_ProjectRows() {
+                if ((this.Table.ChildRelations["FK_Student_Project_Student"] == null)) {
+                    return new Student_ProjectRow[0];
+                }
+                else {
+                    return ((Student_ProjectRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Student_Project_Student"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Student_SKRow[] GetStudent_SKRows() {
                 if ((this.Table.ChildRelations["FK_Student_SK_Student"] == null)) {
                     return new Student_SKRow[0];
@@ -8476,6 +9129,76 @@ namespace Build2Evenize {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Student_Language_Student"]);
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Student_ProjectRow : global::System.Data.DataRow {
+            
+            private Student_ProjectDataTable tableStudent_Project;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Student_ProjectRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableStudent_Project = ((Student_ProjectDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int student_project_id {
+                get {
+                    return ((int)(this[this.tableStudent_Project.student_project_idColumn]));
+                }
+                set {
+                    this[this.tableStudent_Project.student_project_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int student_id {
+                get {
+                    return ((int)(this[this.tableStudent_Project.student_idColumn]));
+                }
+                set {
+                    this[this.tableStudent_Project.student_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int project_id {
+                get {
+                    return ((int)(this[this.tableStudent_Project.project_idColumn]));
+                }
+                set {
+                    this[this.tableStudent_Project.project_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ProjectRow ProjectRow {
+                get {
+                    return ((ProjectRow)(this.GetParentRow(this.Table.ParentRelations["FK_Student_Project_Project"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Student_Project_Project"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public StudentRow StudentRow {
+                get {
+                    return ((StudentRow)(this.GetParentRow(this.Table.ParentRelations["FK_Student_Project_Student"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Student_Project_Student"]);
                 }
             }
         }
@@ -8756,6 +9479,32 @@ namespace Build2Evenize {
                 }
                 else {
                     return ((Student_TechRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Student_Tech_Tech"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class countryRow : global::System.Data.DataRow {
+            
+            private countryDataTable tablecountry;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal countryRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablecountry = ((countryDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string country {
+                get {
+                    return ((string)(this[this.tablecountry.countryColumn]));
+                }
+                set {
+                    this[this.tablecountry.countryColumn] = value;
                 }
             }
         }
@@ -9366,6 +10115,40 @@ namespace Build2Evenize {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class Student_ProjectRowChangeEvent : global::System.EventArgs {
+            
+            private Student_ProjectRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Student_ProjectRowChangeEvent(Student_ProjectRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Student_ProjectRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public class Student_SKRowChangeEvent : global::System.EventArgs {
             
             private Student_SKRow eventRow;
@@ -9484,6 +10267,40 @@ namespace Build2Evenize {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TechRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class countryRowChangeEvent : global::System.EventArgs {
+            
+            private countryRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public countryRowChangeEvent(countryRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public countryRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -14662,6 +15479,314 @@ SELECT student_language_id, student_id, language_id FROM Student_Language WHERE 
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Student_ProjectTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public Student_ProjectTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Student_Project";
+            tableMapping.ColumnMappings.Add("student_project_id", "student_project_id");
+            tableMapping.ColumnMappings.Add("student_id", "student_id");
+            tableMapping.ColumnMappings.Add("project_id", "project_id");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Student_Project] WHERE (([student_project_id] = @Original_stud" +
+                "ent_project_id) AND ([student_id] = @Original_student_id) AND ([project_id] = @O" +
+                "riginal_project_id))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_student_project_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_project_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_project_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "project_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Student_Project] ([student_id], [project_id]) VALUES (@student" +
+                "_id, @project_id);\r\nSELECT student_project_id, student_id, project_id FROM Stude" +
+                "nt_Project WHERE (student_project_id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@project_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "project_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Student_Project] SET [student_id] = @student_id, [project_id] = @project_id WHERE (([student_project_id] = @Original_student_project_id) AND ([student_id] = @Original_student_id) AND ([project_id] = @Original_project_id));
+SELECT student_project_id, student_id, project_id FROM Student_Project WHERE (student_project_id = @student_project_id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@project_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "project_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_student_project_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_project_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_student_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "student_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_project_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "project_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_project_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "student_project_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT student_project_id, student_id, project_id FROM dbo.Student_Project";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(build2evenizeDataSet.Student_ProjectDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual build2evenizeDataSet.Student_ProjectDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            build2evenizeDataSet.Student_ProjectDataTable dataTable = new build2evenizeDataSet.Student_ProjectDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(build2evenizeDataSet.Student_ProjectDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(build2evenizeDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Student_Project");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_student_project_id, int Original_student_id, int Original_project_id) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_student_project_id));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_student_id));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_project_id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int student_id, int project_id) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(student_id));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(project_id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int student_id, int project_id, int Original_student_project_id, int Original_student_id, int Original_project_id, int student_project_id) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(student_id));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(project_id));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_student_project_id));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_student_id));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_project_id));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(student_project_id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int student_id, int project_id, int Original_student_project_id, int Original_student_id, int Original_project_id) {
+            return this.Update(student_id, project_id, Original_student_project_id, Original_student_id, Original_project_id, Original_student_project_id);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class Student_SKTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -15883,6 +17008,173 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class countryTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public countryTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "country";
+            tableMapping.ColumnMappings.Add("country", "country");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT country FROM dbo.country";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(build2evenizeDataSet.countryDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual build2evenizeDataSet.countryDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            build2evenizeDataSet.countryDataTable dataTable = new build2evenizeDataSet.countryDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class View_1TableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -16089,6 +17381,8 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         private Student_AreaTableAdapter _student_AreaTableAdapter;
         
         private Student_LanguageTableAdapter _student_LanguageTableAdapter;
+        
+        private Student_ProjectTableAdapter _student_ProjectTableAdapter;
         
         private Student_SKTableAdapter _student_SKTableAdapter;
         
@@ -16328,6 +17622,20 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
+        public Student_ProjectTableAdapter Student_ProjectTableAdapter {
+            get {
+                return this._student_ProjectTableAdapter;
+            }
+            set {
+                this._student_ProjectTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
         public Student_SKTableAdapter Student_SKTableAdapter {
             get {
                 return this._student_SKTableAdapter;
@@ -16458,6 +17766,10 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                             && (this._student_LanguageTableAdapter.Connection != null))) {
                     return this._student_LanguageTableAdapter.Connection;
                 }
+                if (((this._student_ProjectTableAdapter != null) 
+                            && (this._student_ProjectTableAdapter.Connection != null))) {
+                    return this._student_ProjectTableAdapter.Connection;
+                }
                 if (((this._student_SKTableAdapter != null) 
                             && (this._student_SKTableAdapter.Connection != null))) {
                     return this._student_SKTableAdapter.Connection;
@@ -16532,6 +17844,9 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                 if ((this._student_LanguageTableAdapter != null)) {
                     count = (count + 1);
                 }
+                if ((this._student_ProjectTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 if ((this._student_SKTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -16582,12 +17897,12 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._areaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Area.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._techTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tech.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._areaTableAdapter.Update(updatedRows));
+                    result = (result + this._techTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -16600,12 +17915,21 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._languageTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Language.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._social_SkillTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Social_Skill.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._languageTableAdapter.Update(updatedRows));
+                    result = (result + this._social_SkillTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._areaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Area.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._areaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -16618,66 +17942,12 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._techTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tech.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._languageTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Language.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._techTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._social_SkillTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Social_Skill.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._social_SkillTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._student_TechTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Student_Tech.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._student_TechTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._student_SKTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Student_SK.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._student_SKTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._student_LanguageTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Student_Language.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._student_LanguageTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._student_AreaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Student_Area.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._student_AreaTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._project_TechTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Project_Tech.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._project_TechTableAdapter.Update(updatedRows));
+                    result = (result + this._languageTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -16690,12 +17960,21 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._project_PartnerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Project_Partner.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._project_TeamTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Project_Team.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._project_PartnerTableAdapter.Update(updatedRows));
+                    result = (result + this._project_TeamTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._project_TechTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Project_Tech.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._project_TechTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -16708,6 +17987,51 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._student_AreaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Student_Area.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._student_AreaTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._student_LanguageTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Student_Language.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._student_LanguageTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._student_ProjectTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Student_Project.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._student_ProjectTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._student_SKTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Student_SK.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._student_SKTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._student_TechTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Student_Tech.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._student_TechTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._coordinatorTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Coordinator.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -16717,12 +18041,12 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._project_TeamTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Project_Team.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._project_PartnerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Project_Partner.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._project_TeamTableAdapter.Update(updatedRows));
+                    result = (result + this._project_PartnerTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -16760,11 +18084,11 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._areaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Area.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._techTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tech.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._areaTableAdapter.Update(addedRows));
+                    result = (result + this._techTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -16776,11 +18100,19 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._languageTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Language.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._social_SkillTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Social_Skill.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._languageTableAdapter.Update(addedRows));
+                    result = (result + this._social_SkillTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._areaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Area.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._areaTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -16792,59 +18124,11 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._techTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tech.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._languageTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Language.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._techTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._social_SkillTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Social_Skill.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._social_SkillTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._student_TechTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Student_Tech.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._student_TechTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._student_SKTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Student_SK.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._student_SKTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._student_LanguageTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Student_Language.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._student_LanguageTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._student_AreaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Student_Area.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._student_AreaTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._project_TechTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Project_Tech.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._project_TechTableAdapter.Update(addedRows));
+                    result = (result + this._languageTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -16856,11 +18140,19 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._project_PartnerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Project_Partner.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._project_TeamTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Project_Team.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._project_PartnerTableAdapter.Update(addedRows));
+                    result = (result + this._project_TeamTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._project_TechTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Project_Tech.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._project_TechTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -16872,6 +18164,46 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._student_AreaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Student_Area.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._student_AreaTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._student_LanguageTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Student_Language.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._student_LanguageTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._student_ProjectTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Student_Project.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._student_ProjectTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._student_SKTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Student_SK.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._student_SKTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._student_TechTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Student_Tech.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._student_TechTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._coordinatorTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Coordinator.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -16880,11 +18212,11 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._project_TeamTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Project_Team.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._project_PartnerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Project_Partner.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._project_TeamTableAdapter.Update(addedRows));
+                    result = (result + this._project_PartnerTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -16898,11 +18230,11 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(build2evenizeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._project_TeamTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Project_Team.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._project_PartnerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Project_Partner.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._project_TeamTableAdapter.Update(deletedRows));
+                    result = (result + this._project_PartnerTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -16914,51 +18246,11 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._project_AreaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Project_Area.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._student_TechTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Student_Tech.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._project_AreaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._project_PartnerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Project_Partner.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._project_PartnerTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._project_SKTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Project_SK.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._project_SKTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._project_TechTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Project_Tech.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._project_TechTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._student_AreaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Student_Area.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._student_AreaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._student_LanguageTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Student_Language.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._student_LanguageTableAdapter.Update(deletedRows));
+                    result = (result + this._student_TechTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -16970,35 +18262,59 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._student_TechTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Student_Tech.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._student_ProjectTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Student_Project.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._student_TechTableAdapter.Update(deletedRows));
+                    result = (result + this._student_ProjectTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._social_SkillTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Social_Skill.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._student_LanguageTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Student_Language.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._social_SkillTableAdapter.Update(deletedRows));
+                    result = (result + this._student_LanguageTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._techTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tech.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._student_AreaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Student_Area.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._techTableAdapter.Update(deletedRows));
+                    result = (result + this._student_AreaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._projectTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Project.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._project_AreaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Project_Area.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._projectTableAdapter.Update(deletedRows));
+                    result = (result + this._project_AreaTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._project_TechTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Project_Tech.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._project_TechTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._project_TeamTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Project_Team.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._project_TeamTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._project_SKTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Project_SK.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._project_SKTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -17010,11 +18326,11 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._teamTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Team.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._projectTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Project.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._teamTableAdapter.Update(deletedRows));
+                    result = (result + this._projectTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -17023,6 +18339,30 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._areaTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._social_SkillTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Social_Skill.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._social_SkillTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._teamTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Team.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._teamTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._techTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tech.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._techTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -17161,6 +18501,11 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
             }
             if (((this._student_LanguageTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._student_LanguageTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._student_ProjectTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._student_ProjectTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -17351,6 +18696,15 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                         adaptersWithAcceptChangesDuringUpdate.Add(this._student_LanguageTableAdapter.Adapter);
                     }
                 }
+                if ((this._student_ProjectTableAdapter != null)) {
+                    revertConnections.Add(this._student_ProjectTableAdapter, this._student_ProjectTableAdapter.Connection);
+                    this._student_ProjectTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._student_ProjectTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._student_ProjectTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._student_ProjectTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._student_ProjectTableAdapter.Adapter);
+                    }
+                }
                 if ((this._student_SKTableAdapter != null)) {
                     revertConnections.Add(this._student_SKTableAdapter, this._student_SKTableAdapter.Connection);
                     this._student_SKTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -17504,6 +18858,10 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
                 if ((this._student_LanguageTableAdapter != null)) {
                     this._student_LanguageTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._student_LanguageTableAdapter]));
                     this._student_LanguageTableAdapter.Transaction = null;
+                }
+                if ((this._student_ProjectTableAdapter != null)) {
+                    this._student_ProjectTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._student_ProjectTableAdapter]));
+                    this._student_ProjectTableAdapter.Transaction = null;
                 }
                 if ((this._student_SKTableAdapter != null)) {
                     this._student_SKTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._student_SKTableAdapter]));
