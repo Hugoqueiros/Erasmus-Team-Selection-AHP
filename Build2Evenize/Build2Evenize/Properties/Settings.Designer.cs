@@ -33,5 +33,16 @@ namespace Build2Evenize.Properties {
                 return ((string)(this["SADConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=build2evenize.database.windows.net;Initial Catalog=build2evenize;User" +
+            " ID=ispg4259;Password=BUILD2evenize")]
+        public string build2evenizeConnectionString {
+            get {
+                return ((string)(this["build2evenizeConnectionString"]));
+            }
+        }
     }
 }

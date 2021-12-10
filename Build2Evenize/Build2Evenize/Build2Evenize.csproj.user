@@ -20,7 +20,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Update="SADDataSet.xsd">
+    <None Update="build2evenizeDataSet.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

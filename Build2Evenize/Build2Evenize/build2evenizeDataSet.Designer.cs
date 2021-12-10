@@ -20,9 +20,9 @@ namespace Build2Evenize {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SADDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("build2evenizeDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SADDataSet : global::System.Data.DataSet {
+    public partial class build2evenizeDataSet : global::System.Data.DataSet {
         
         private AreaDataTable tableArea;
         
@@ -114,7 +114,7 @@ namespace Build2Evenize {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public SADDataSet() {
+        public build2evenizeDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -125,7 +125,7 @@ namespace Build2Evenize {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected SADDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected build2evenizeDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -458,7 +458,7 @@ namespace Build2Evenize {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            SADDataSet cln = ((SADDataSet)(base.Clone()));
+            build2evenizeDataSet cln = ((build2evenizeDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -724,9 +724,9 @@ namespace Build2Evenize {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "SADDataSet";
+            this.DataSetName = "build2evenizeDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SADDataSet.xsd";
+            this.Namespace = "http://tempuri.org/build2evenizeDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableArea = new AreaDataTable();
@@ -994,7 +994,7 @@ namespace Build2Evenize {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SADDataSet ds = new SADDataSet();
+            build2evenizeDataSet ds = new build2evenizeDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -1317,7 +1317,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1645,7 +1645,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2003,7 +2003,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2281,7 +2281,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2638,7 +2638,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2936,7 +2936,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3234,7 +3234,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3532,7 +3532,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3828,7 +3828,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4126,7 +4126,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4404,7 +4404,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4682,7 +4682,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5041,7 +5041,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5339,7 +5339,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5637,7 +5637,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5935,7 +5935,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -6233,7 +6233,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -6531,7 +6531,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -6808,7 +6808,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -7150,7 +7150,7 @@ namespace Build2Evenize {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SADDataSet ds = new SADDataSet();
+                build2evenizeDataSet ds = new build2evenizeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -9533,7 +9533,7 @@ namespace Build2Evenize {
         }
     }
 }
-namespace Build2Evenize.SADDataSetTableAdapters {
+namespace Build2Evenize.build2evenizeDataSetTableAdapters {
     
     
     /// <summary>
@@ -9689,7 +9689,7 @@ namespace Build2Evenize.SADDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9706,7 +9706,7 @@ namespace Build2Evenize.SADDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.AreaDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.AreaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9719,9 +9719,9 @@ namespace Build2Evenize.SADDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.AreaDataTable GetData() {
+        public virtual build2evenizeDataSet.AreaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.AreaDataTable dataTable = new SADDataSet.AreaDataTable();
+            build2evenizeDataSet.AreaDataTable dataTable = new build2evenizeDataSet.AreaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9729,14 +9729,14 @@ namespace Build2Evenize.SADDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.AreaDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.AreaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Area");
         }
         
@@ -10024,7 +10024,7 @@ SELECT coordinator_id, name, email, password, institution_id FROM Coordinator WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10042,7 +10042,7 @@ SELECT coordinator_id, name, email, password, institution_id FROM Coordinator WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.CoordinatorDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.CoordinatorDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10055,9 +10055,9 @@ SELECT coordinator_id, name, email, password, institution_id FROM Coordinator WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.CoordinatorDataTable GetData() {
+        public virtual build2evenizeDataSet.CoordinatorDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.CoordinatorDataTable dataTable = new SADDataSet.CoordinatorDataTable();
+            build2evenizeDataSet.CoordinatorDataTable dataTable = new build2evenizeDataSet.CoordinatorDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10065,14 +10065,14 @@ SELECT coordinator_id, name, email, password, institution_id FROM Coordinator WH
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.CoordinatorDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.CoordinatorDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Coordinator");
         }
         
@@ -10418,7 +10418,7 @@ SELECT institution_id, name, email, phone, country, city, adress FROM Institutio
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10436,7 +10436,7 @@ SELECT institution_id, name, email, phone, country, city, adress FROM Institutio
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.InstitutionDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.InstitutionDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10449,9 +10449,9 @@ SELECT institution_id, name, email, phone, country, city, adress FROM Institutio
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.InstitutionDataTable GetData() {
+        public virtual build2evenizeDataSet.InstitutionDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.InstitutionDataTable dataTable = new SADDataSet.InstitutionDataTable();
+            build2evenizeDataSet.InstitutionDataTable dataTable = new build2evenizeDataSet.InstitutionDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10459,14 +10459,14 @@ SELECT institution_id, name, email, phone, country, city, adress FROM Institutio
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.InstitutionDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.InstitutionDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Institution");
         }
         
@@ -10857,7 +10857,7 @@ SELECT institution_id, name, email, phone, country, city, adress FROM Institutio
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10874,7 +10874,7 @@ SELECT institution_id, name, email, phone, country, city, adress FROM Institutio
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.LanguageDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.LanguageDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10887,9 +10887,9 @@ SELECT institution_id, name, email, phone, country, city, adress FROM Institutio
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.LanguageDataTable GetData() {
+        public virtual build2evenizeDataSet.LanguageDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.LanguageDataTable dataTable = new SADDataSet.LanguageDataTable();
+            build2evenizeDataSet.LanguageDataTable dataTable = new build2evenizeDataSet.LanguageDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10897,14 +10897,14 @@ SELECT institution_id, name, email, phone, country, city, adress FROM Institutio
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.LanguageDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.LanguageDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Language");
         }
         
@@ -11196,7 +11196,7 @@ SELECT project_id, name, [desc], nr_students, date_start, date_end, institution_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11214,7 +11214,7 @@ SELECT project_id, name, [desc], nr_students, date_start, date_end, institution_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.ProjectDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.ProjectDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11227,9 +11227,9 @@ SELECT project_id, name, [desc], nr_students, date_start, date_end, institution_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.ProjectDataTable GetData() {
+        public virtual build2evenizeDataSet.ProjectDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.ProjectDataTable dataTable = new SADDataSet.ProjectDataTable();
+            build2evenizeDataSet.ProjectDataTable dataTable = new build2evenizeDataSet.ProjectDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11237,14 +11237,14 @@ SELECT project_id, name, [desc], nr_students, date_start, date_end, institution_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.ProjectDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.ProjectDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Project");
         }
         
@@ -11548,7 +11548,7 @@ SELECT project_area, project_id, area_id FROM Project_Area WHERE (project_area =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11565,7 +11565,7 @@ SELECT project_area, project_id, area_id FROM Project_Area WHERE (project_area =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.Project_AreaDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.Project_AreaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11578,9 +11578,9 @@ SELECT project_area, project_id, area_id FROM Project_Area WHERE (project_area =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.Project_AreaDataTable GetData() {
+        public virtual build2evenizeDataSet.Project_AreaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.Project_AreaDataTable dataTable = new SADDataSet.Project_AreaDataTable();
+            build2evenizeDataSet.Project_AreaDataTable dataTable = new build2evenizeDataSet.Project_AreaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11588,14 +11588,14 @@ SELECT project_area, project_id, area_id FROM Project_Area WHERE (project_area =
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.Project_AreaDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.Project_AreaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Project_Area");
         }
         
@@ -11856,7 +11856,7 @@ SELECT partner_id, project_id, institution_id FROM Project_Partner WHERE (partne
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11873,7 +11873,7 @@ SELECT partner_id, project_id, institution_id FROM Project_Partner WHERE (partne
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.Project_PartnerDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.Project_PartnerDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11886,9 +11886,9 @@ SELECT partner_id, project_id, institution_id FROM Project_Partner WHERE (partne
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.Project_PartnerDataTable GetData() {
+        public virtual build2evenizeDataSet.Project_PartnerDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.Project_PartnerDataTable dataTable = new SADDataSet.Project_PartnerDataTable();
+            build2evenizeDataSet.Project_PartnerDataTable dataTable = new build2evenizeDataSet.Project_PartnerDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11896,14 +11896,14 @@ SELECT partner_id, project_id, institution_id FROM Project_Partner WHERE (partne
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.Project_PartnerDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.Project_PartnerDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Project_Partner");
         }
         
@@ -12164,7 +12164,7 @@ SELECT project_sk_id, project_id, social_skill_id FROM Project_SK WHERE (project
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12181,7 +12181,7 @@ SELECT project_sk_id, project_id, social_skill_id FROM Project_SK WHERE (project
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.Project_SKDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.Project_SKDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12194,9 +12194,9 @@ SELECT project_sk_id, project_id, social_skill_id FROM Project_SK WHERE (project
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.Project_SKDataTable GetData() {
+        public virtual build2evenizeDataSet.Project_SKDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.Project_SKDataTable dataTable = new SADDataSet.Project_SKDataTable();
+            build2evenizeDataSet.Project_SKDataTable dataTable = new build2evenizeDataSet.Project_SKDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12204,14 +12204,14 @@ SELECT project_sk_id, project_id, social_skill_id FROM Project_SK WHERE (project
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.Project_SKDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.Project_SKDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Project_SK");
         }
         
@@ -12474,7 +12474,7 @@ SELECT project_team_id, project_id, team_id FROM Project_Team WHERE (project_tea
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12491,7 +12491,7 @@ SELECT project_team_id, project_id, team_id FROM Project_Team WHERE (project_tea
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.Project_TeamDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.Project_TeamDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12504,9 +12504,9 @@ SELECT project_team_id, project_id, team_id FROM Project_Team WHERE (project_tea
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.Project_TeamDataTable GetData() {
+        public virtual build2evenizeDataSet.Project_TeamDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.Project_TeamDataTable dataTable = new SADDataSet.Project_TeamDataTable();
+            build2evenizeDataSet.Project_TeamDataTable dataTable = new build2evenizeDataSet.Project_TeamDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12514,14 +12514,14 @@ SELECT project_team_id, project_id, team_id FROM Project_Team WHERE (project_tea
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.Project_TeamDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.Project_TeamDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Project_Team");
         }
         
@@ -12830,7 +12830,7 @@ SELECT project_tech_id, project_id, tech_id FROM Project_Tech WHERE (project_tec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12847,7 +12847,7 @@ SELECT project_tech_id, project_id, tech_id FROM Project_Tech WHERE (project_tec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.Project_TechDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.Project_TechDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12860,9 +12860,9 @@ SELECT project_tech_id, project_id, tech_id FROM Project_Tech WHERE (project_tec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.Project_TechDataTable GetData() {
+        public virtual build2evenizeDataSet.Project_TechDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.Project_TechDataTable dataTable = new SADDataSet.Project_TechDataTable();
+            build2evenizeDataSet.Project_TechDataTable dataTable = new build2evenizeDataSet.Project_TechDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12870,14 +12870,14 @@ SELECT project_tech_id, project_id, tech_id FROM Project_Tech WHERE (project_tec
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.Project_TechDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.Project_TechDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Project_Tech");
         }
         
@@ -13132,7 +13132,7 @@ SELECT project_tech_id, project_id, tech_id FROM Project_Tech WHERE (project_tec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13149,7 +13149,7 @@ SELECT project_tech_id, project_id, tech_id FROM Project_Tech WHERE (project_tec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.RoleDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.RoleDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -13162,9 +13162,9 @@ SELECT project_tech_id, project_id, tech_id FROM Project_Tech WHERE (project_tec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.RoleDataTable GetData() {
+        public virtual build2evenizeDataSet.RoleDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.RoleDataTable dataTable = new SADDataSet.RoleDataTable();
+            build2evenizeDataSet.RoleDataTable dataTable = new build2evenizeDataSet.RoleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -13172,14 +13172,14 @@ SELECT project_tech_id, project_id, tech_id FROM Project_Tech WHERE (project_tec
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.RoleDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.RoleDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Role");
         }
         
@@ -13450,7 +13450,7 @@ SELECT project_tech_id, project_id, tech_id FROM Project_Tech WHERE (project_tec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13467,7 +13467,7 @@ SELECT project_tech_id, project_id, tech_id FROM Project_Tech WHERE (project_tec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.Social_SkillDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.Social_SkillDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -13480,9 +13480,9 @@ SELECT project_tech_id, project_id, tech_id FROM Project_Tech WHERE (project_tec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.Social_SkillDataTable GetData() {
+        public virtual build2evenizeDataSet.Social_SkillDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.Social_SkillDataTable dataTable = new SADDataSet.Social_SkillDataTable();
+            build2evenizeDataSet.Social_SkillDataTable dataTable = new build2evenizeDataSet.Social_SkillDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -13490,14 +13490,14 @@ SELECT project_tech_id, project_id, tech_id FROM Project_Tech WHERE (project_tec
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.Social_SkillDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.Social_SkillDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Social_Skill");
         }
         
@@ -13791,7 +13791,7 @@ SELECT student_id, name, email, phone, date_birth, degree, institution_id FROM S
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13809,7 +13809,7 @@ SELECT student_id, name, email, phone, date_birth, degree, institution_id FROM S
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.StudentDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.StudentDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -13822,9 +13822,9 @@ SELECT student_id, name, email, phone, date_birth, degree, institution_id FROM S
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.StudentDataTable GetData() {
+        public virtual build2evenizeDataSet.StudentDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.StudentDataTable dataTable = new SADDataSet.StudentDataTable();
+            build2evenizeDataSet.StudentDataTable dataTable = new build2evenizeDataSet.StudentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -13832,14 +13832,14 @@ SELECT student_id, name, email, phone, date_birth, degree, institution_id FROM S
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.StudentDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.StudentDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Student");
         }
         
@@ -14196,7 +14196,7 @@ SELECT student_area_id, student_id, area_id FROM Student_Area WHERE (student_are
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14213,7 +14213,7 @@ SELECT student_area_id, student_id, area_id FROM Student_Area WHERE (student_are
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.Student_AreaDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.Student_AreaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -14226,9 +14226,9 @@ SELECT student_area_id, student_id, area_id FROM Student_Area WHERE (student_are
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.Student_AreaDataTable GetData() {
+        public virtual build2evenizeDataSet.Student_AreaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.Student_AreaDataTable dataTable = new SADDataSet.Student_AreaDataTable();
+            build2evenizeDataSet.Student_AreaDataTable dataTable = new build2evenizeDataSet.Student_AreaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -14236,14 +14236,14 @@ SELECT student_area_id, student_id, area_id FROM Student_Area WHERE (student_are
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.Student_AreaDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.Student_AreaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Student_Area");
         }
         
@@ -14504,7 +14504,7 @@ SELECT student_language_id, student_id, language_id FROM Student_Language WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14521,7 +14521,7 @@ SELECT student_language_id, student_id, language_id FROM Student_Language WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.Student_LanguageDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.Student_LanguageDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -14534,9 +14534,9 @@ SELECT student_language_id, student_id, language_id FROM Student_Language WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.Student_LanguageDataTable GetData() {
+        public virtual build2evenizeDataSet.Student_LanguageDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.Student_LanguageDataTable dataTable = new SADDataSet.Student_LanguageDataTable();
+            build2evenizeDataSet.Student_LanguageDataTable dataTable = new build2evenizeDataSet.Student_LanguageDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -14544,14 +14544,14 @@ SELECT student_language_id, student_id, language_id FROM Student_Language WHERE 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.Student_LanguageDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.Student_LanguageDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Student_Language");
         }
         
@@ -14812,7 +14812,7 @@ SELECT student_sk_id, student_id, social_skill_id FROM Student_SK WHERE (student
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14829,7 +14829,7 @@ SELECT student_sk_id, student_id, social_skill_id FROM Student_SK WHERE (student
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.Student_SKDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.Student_SKDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -14842,9 +14842,9 @@ SELECT student_sk_id, student_id, social_skill_id FROM Student_SK WHERE (student
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.Student_SKDataTable GetData() {
+        public virtual build2evenizeDataSet.Student_SKDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.Student_SKDataTable dataTable = new SADDataSet.Student_SKDataTable();
+            build2evenizeDataSet.Student_SKDataTable dataTable = new build2evenizeDataSet.Student_SKDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -14852,14 +14852,14 @@ SELECT student_sk_id, student_id, social_skill_id FROM Student_SK WHERE (student
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.Student_SKDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.Student_SKDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Student_SK");
         }
         
@@ -15120,7 +15120,7 @@ SELECT student_tech_id, student_id, tech_id FROM Student_Tech WHERE (student_tec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15137,7 +15137,7 @@ SELECT student_tech_id, student_id, tech_id FROM Student_Tech WHERE (student_tec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.Student_TechDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.Student_TechDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -15150,9 +15150,9 @@ SELECT student_tech_id, student_id, tech_id FROM Student_Tech WHERE (student_tec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.Student_TechDataTable GetData() {
+        public virtual build2evenizeDataSet.Student_TechDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.Student_TechDataTable dataTable = new SADDataSet.Student_TechDataTable();
+            build2evenizeDataSet.Student_TechDataTable dataTable = new build2evenizeDataSet.Student_TechDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -15160,14 +15160,14 @@ SELECT student_tech_id, student_id, tech_id FROM Student_Tech WHERE (student_tec
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.Student_TechDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.Student_TechDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Student_Tech");
         }
         
@@ -15427,7 +15427,7 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15444,7 +15444,7 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.TeamDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.TeamDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -15457,9 +15457,9 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.TeamDataTable GetData() {
+        public virtual build2evenizeDataSet.TeamDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.TeamDataTable dataTable = new SADDataSet.TeamDataTable();
+            build2evenizeDataSet.TeamDataTable dataTable = new build2evenizeDataSet.TeamDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -15467,14 +15467,14 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.TeamDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.TeamDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Team");
         }
         
@@ -15729,7 +15729,7 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15746,7 +15746,7 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.TechDataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.TechDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -15759,9 +15759,9 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.TechDataTable GetData() {
+        public virtual build2evenizeDataSet.TechDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.TechDataTable dataTable = new SADDataSet.TechDataTable();
+            build2evenizeDataSet.TechDataTable dataTable = new build2evenizeDataSet.TechDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -15769,14 +15769,14 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet.TechDataTable dataTable) {
+        public virtual int Update(build2evenizeDataSet.TechDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SADDataSet dataSet) {
+        public virtual int Update(build2evenizeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Tech");
         }
         
@@ -16009,7 +16009,7 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.SADConnectionString;
+            this._connection.ConnectionString = global::Build2Evenize.Properties.Settings.Default.build2evenizeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16027,7 +16027,7 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SADDataSet.View_1DataTable dataTable) {
+        public virtual int Fill(build2evenizeDataSet.View_1DataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -16040,9 +16040,9 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SADDataSet.View_1DataTable GetData() {
+        public virtual build2evenizeDataSet.View_1DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SADDataSet.View_1DataTable dataTable = new SADDataSet.View_1DataTable();
+            build2evenizeDataSet.View_1DataTable dataTable = new build2evenizeDataSet.View_1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -16553,7 +16553,7 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(SADDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(build2evenizeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._institutionTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Institution.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -16734,7 +16734,7 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(SADDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(build2evenizeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._institutionTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Institution.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -16896,7 +16896,7 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(SADDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(build2evenizeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._project_TeamTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Project_Team.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -17082,7 +17082,7 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(SADDataSet dataSet) {
+        public virtual int UpdateAll(build2evenizeDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
