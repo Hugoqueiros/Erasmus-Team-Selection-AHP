@@ -40,6 +40,8 @@ namespace Build2Evenize
 
         private void FormProject_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'build2evenizeDataSet.View_1' table. You can move, or remove it, as needed.
+            this.view_1TableAdapter.Fill(this.build2evenizeDataSet.View_1);
 
 
         }

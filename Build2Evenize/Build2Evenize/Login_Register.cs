@@ -8,11 +8,11 @@ namespace Build2Evenize
 {
     public partial class Login_Register : Form
     {
-        public string server = @"DESKTOP-I51RAV\SQLEXPRESS";
-        public string database = "SAD";
-        public string user = @"AzureAD\FranciscoPereira";
-        public string pass = "";
-
+        public string server = @"build2evenize.database.windows.net";
+        public string database = "build2evenize";
+        public string user = @"ispg4259";
+        public string pass = "BUILD2evenize";
+        //server=build2evenize.database.windows.net;database=build2evenize;UID=ispg4259;password=BUILD2evenize;Trusted_Connection=True
         public Login_Register()
         {
             InitializeComponent();
@@ -65,7 +65,7 @@ namespace Build2Evenize
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            String str = $"server={server};database={database};UID={user};password={pass};Trusted_Connection=True";
+            String str = $"server={server};database={database};UID={user};password={pass};Trusted_Connection=False;Encrypt=True;";
             SqlConnection con = new SqlConnection(str);
             con.Open();
 
