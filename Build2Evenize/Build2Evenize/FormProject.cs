@@ -120,6 +120,11 @@ namespace Build2Evenize
             Login_Register lr = new Login_Register();
             lr.ShowDialog();
         }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 
