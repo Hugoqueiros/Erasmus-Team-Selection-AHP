@@ -40,10 +40,6 @@ namespace Build2Evenize
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.area = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.institution = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.country = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -112,7 +108,7 @@ namespace Build2Evenize
             this.button11.Enabled = false;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F);
             this.button11.ForeColor = System.Drawing.Color.White;
             this.button11.Location = new System.Drawing.Point(1226, 25);
             this.button11.Name = "button11";
@@ -129,7 +125,7 @@ namespace Build2Evenize
             this.button10.Enabled = false;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button10.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F);
             this.button10.ForeColor = System.Drawing.Color.White;
             this.button10.Location = new System.Drawing.Point(1282, 25);
             this.button10.Name = "button10";
@@ -140,12 +136,12 @@ namespace Build2Evenize
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 37.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 37.8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(644, 87);
+            this.label1.Size = new System.Drawing.Size(624, 72);
             this.label1.TabIndex = 0;
             this.label1.Text = "PROJECT PROFILE";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -169,7 +165,7 @@ namespace Build2Evenize
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
             this.button9.Location = new System.Drawing.Point(300, 538);
             this.button9.Name = "button9";
@@ -182,7 +178,7 @@ namespace Build2Evenize
             // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Location = new System.Drawing.Point(0, 538);
             this.button8.Name = "button8";
@@ -196,7 +192,7 @@ namespace Build2Evenize
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(0, 497);
             this.button7.Name = "button7";
@@ -204,6 +200,7 @@ namespace Build2Evenize
             this.button7.TabIndex = 33;
             this.button7.Text = "Import Students";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // dataGridView1
             // 
@@ -214,18 +211,13 @@ namespace Build2Evenize
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.name,
-            this.area,
-            this.institution,
-            this.country});
             this.dataGridView1.Enabled = false;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
@@ -239,43 +231,16 @@ namespace Build2Evenize
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(594, 452);
             this.dataGridView1.TabIndex = 32;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Name";
-            this.name.MinimumWidth = 6;
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // area
-            // 
-            this.area.HeaderText = "Area";
-            this.area.MinimumWidth = 6;
-            this.area.Name = "area";
-            this.area.ReadOnly = true;
-            // 
-            // institution
-            // 
-            this.institution.HeaderText = "Institution";
-            this.institution.MinimumWidth = 6;
-            this.institution.Name = "institution";
-            this.institution.ReadOnly = true;
-            // 
-            // country
-            // 
-            this.country.HeaderText = "Country";
-            this.country.MinimumWidth = 6;
-            this.country.Name = "country";
-            this.country.ReadOnly = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label13.Location = new System.Drawing.Point(3, -3);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(272, 33);
+            this.label13.Size = new System.Drawing.Size(251, 29);
             this.label13.TabIndex = 31;
             this.label13.Text = "Registered Students";
             // 
@@ -286,7 +251,7 @@ namespace Build2Evenize
             this.txtSearch.Location = new System.Drawing.Point(-628, 66);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(373, 26);
+            this.txtSearch.Size = new System.Drawing.Size(373, 24);
             this.txtSearch.TabIndex = 1;
             // 
             // panel3
@@ -340,7 +305,7 @@ namespace Build2Evenize
             this.button14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button14.FlatAppearance.BorderSize = 0;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button14.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F);
             this.button14.ForeColor = System.Drawing.Color.White;
             this.button14.Location = new System.Drawing.Point(695, 501);
             this.button14.Name = "button14";
@@ -354,7 +319,7 @@ namespace Build2Evenize
             this.comboBox11.FormattingEnabled = true;
             this.comboBox11.Location = new System.Drawing.Point(147, 501);
             this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(541, 29);
+            this.comboBox11.Size = new System.Drawing.Size(541, 26);
             this.comboBox11.TabIndex = 41;
             this.comboBox11.Visible = false;
             // 
@@ -366,7 +331,7 @@ namespace Build2Evenize
             this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button13.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F);
             this.button13.ForeColor = System.Drawing.Color.White;
             this.button13.Location = new System.Drawing.Point(694, 396);
             this.button13.Name = "button13";
@@ -380,7 +345,7 @@ namespace Build2Evenize
             this.comboBox10.FormattingEnabled = true;
             this.comboBox10.Location = new System.Drawing.Point(147, 396);
             this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(541, 29);
+            this.comboBox10.Size = new System.Drawing.Size(541, 26);
             this.comboBox10.TabIndex = 39;
             this.comboBox10.Visible = false;
             // 
@@ -392,7 +357,7 @@ namespace Build2Evenize
             this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button12.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F);
             this.button12.ForeColor = System.Drawing.Color.White;
             this.button12.Location = new System.Drawing.Point(694, 291);
             this.button12.Name = "button12";
@@ -406,7 +371,7 @@ namespace Build2Evenize
             this.comboBox9.FormattingEnabled = true;
             this.comboBox9.Location = new System.Drawing.Point(147, 291);
             this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(541, 29);
+            this.comboBox9.Size = new System.Drawing.Size(541, 26);
             this.comboBox9.TabIndex = 37;
             this.comboBox9.Visible = false;
             // 
@@ -415,7 +380,7 @@ namespace Build2Evenize
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(147, 547);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(151, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(151, 24);
             this.dateTimePicker1.TabIndex = 36;
             // 
             // button6
@@ -426,7 +391,7 @@ namespace Build2Evenize
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F);
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(695, 466);
             this.button6.Name = "button6";
@@ -443,7 +408,7 @@ namespace Build2Evenize
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F);
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(694, 431);
             this.button5.Name = "button5";
@@ -460,7 +425,7 @@ namespace Build2Evenize
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F);
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(694, 361);
             this.button4.Name = "button4";
@@ -477,7 +442,7 @@ namespace Build2Evenize
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(694, 256);
             this.button3.Name = "button3";
@@ -494,7 +459,7 @@ namespace Build2Evenize
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(694, 326);
             this.button2.Name = "button2";
@@ -506,11 +471,11 @@ namespace Build2Evenize
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label12.Location = new System.Drawing.Point(524, 547);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 27);
+            this.label12.Size = new System.Drawing.Size(61, 25);
             this.label12.TabIndex = 30;
             this.label12.Text = "Slots";
             // 
@@ -518,28 +483,28 @@ namespace Build2Evenize
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(594, 546);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(129, 26);
+            this.numericUpDown1.Size = new System.Drawing.Size(129, 24);
             this.numericUpDown1.TabIndex = 29;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label11.Location = new System.Drawing.Point(303, 546);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 27);
+            this.label11.Size = new System.Drawing.Size(57, 25);
             this.label11.TabIndex = 28;
             this.label11.Text = "End:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label10.Location = new System.Drawing.Point(0, 546);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 27);
+            this.label10.Size = new System.Drawing.Size(65, 25);
             this.label10.TabIndex = 27;
             this.label10.Text = "Start:";
             // 
@@ -548,7 +513,7 @@ namespace Build2Evenize
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(367, 547);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(151, 26);
+            this.dateTimePicker2.Size = new System.Drawing.Size(151, 24);
             this.dateTimePicker2.TabIndex = 26;
             // 
             // comboBox7
@@ -556,7 +521,7 @@ namespace Build2Evenize
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(147, 466);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(541, 29);
+            this.comboBox7.Size = new System.Drawing.Size(541, 26);
             this.comboBox7.TabIndex = 23;
             this.comboBox7.Visible = false;
             // 
@@ -565,17 +530,17 @@ namespace Build2Evenize
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Location = new System.Drawing.Point(147, 431);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(541, 29);
+            this.comboBox8.Size = new System.Drawing.Size(541, 26);
             this.comboBox8.TabIndex = 21;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label9.Location = new System.Drawing.Point(0, 429);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(121, 27);
+            this.label9.Size = new System.Drawing.Size(116, 25);
             this.label9.TabIndex = 20;
             this.label9.Text = "Soft Skills:";
             // 
@@ -584,7 +549,7 @@ namespace Build2Evenize
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(147, 361);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(541, 29);
+            this.comboBox5.Size = new System.Drawing.Size(541, 26);
             this.comboBox5.TabIndex = 18;
             this.comboBox5.Visible = false;
             // 
@@ -593,17 +558,17 @@ namespace Build2Evenize
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(147, 326);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(541, 29);
+            this.comboBox6.Size = new System.Drawing.Size(541, 26);
             this.comboBox6.TabIndex = 16;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label8.Location = new System.Drawing.Point(0, 324);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(129, 27);
+            this.label8.Size = new System.Drawing.Size(123, 25);
             this.label8.TabIndex = 15;
             this.label8.Text = "Hard Skills:";
             // 
@@ -612,7 +577,7 @@ namespace Build2Evenize
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(147, 256);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(541, 29);
+            this.comboBox4.Size = new System.Drawing.Size(541, 26);
             this.comboBox4.TabIndex = 13;
             this.comboBox4.Visible = false;
             // 
@@ -624,7 +589,7 @@ namespace Build2Evenize
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(694, 221);
             this.button1.Name = "button1";
@@ -639,17 +604,17 @@ namespace Build2Evenize
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(147, 221);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(541, 29);
+            this.comboBox3.Size = new System.Drawing.Size(541, 26);
             this.comboBox3.TabIndex = 10;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label7.Location = new System.Drawing.Point(0, 219);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 27);
+            this.label7.Size = new System.Drawing.Size(100, 25);
             this.label7.TabIndex = 9;
             this.label7.Text = "Partners:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -657,11 +622,11 @@ namespace Build2Evenize
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label6.Location = new System.Drawing.Point(582, 184);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 27);
+            this.label6.Size = new System.Drawing.Size(88, 25);
             this.label6.TabIndex = 8;
             this.label6.Text = "Country";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -671,18 +636,18 @@ namespace Build2Evenize
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(147, 186);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(397, 29);
+            this.comboBox2.Size = new System.Drawing.Size(397, 26);
             this.comboBox2.TabIndex = 7;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label5.Location = new System.Drawing.Point(0, 184);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 27);
+            this.label5.Size = new System.Drawing.Size(112, 25);
             this.label5.TabIndex = 6;
             this.label5.Text = "Institution:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -692,17 +657,17 @@ namespace Build2Evenize
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(147, 151);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(573, 29);
+            this.comboBox1.Size = new System.Drawing.Size(573, 26);
             this.comboBox1.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label4.Location = new System.Drawing.Point(0, 149);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 27);
+            this.label4.Size = new System.Drawing.Size(65, 25);
             this.label4.TabIndex = 4;
             this.label4.Text = "Area:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -718,11 +683,11 @@ namespace Build2Evenize
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label3.Location = new System.Drawing.Point(0, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 27);
+            this.label3.Size = new System.Drawing.Size(127, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Description:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -731,31 +696,31 @@ namespace Build2Evenize
             // 
             this.textBox1.Location = new System.Drawing.Point(147, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(573, 26);
+            this.textBox1.Size = new System.Drawing.Size(573, 24);
             this.textBox1.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 27);
+            this.label2.Size = new System.Drawing.Size(75, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Name:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // FormProjectInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1349, 687);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormProjectInfo";
@@ -805,10 +770,6 @@ namespace Build2Evenize
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn area;
-        private System.Windows.Forms.DataGridViewTextBoxColumn institution;
-        private System.Windows.Forms.DataGridViewTextBoxColumn country;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;

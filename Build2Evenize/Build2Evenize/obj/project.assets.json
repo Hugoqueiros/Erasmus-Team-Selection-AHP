@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "Microsoft.Office.Interop.Excel/15.0.4795.1000": {
+        "type": "package",
+        "compile": {
+          "lib/net20/Microsoft.Office.Interop.Excel.dll": {}
+        },
+        "runtime": {
+          "lib/net20/Microsoft.Office.Interop.Excel.dll": {}
+        }
+      },
       "System.Data.SqlClient/4.8.3": {
         "type": "package",
         "frameworkAssemblies": [
@@ -28,6 +37,15 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win7-x86": {
+      "Microsoft.Office.Interop.Excel/15.0.4795.1000": {
+        "type": "package",
+        "compile": {
+          "lib/net20/Microsoft.Office.Interop.Excel.dll": {}
+        },
+        "runtime": {
+          "lib/net20/Microsoft.Office.Interop.Excel.dll": {}
+        }
+      },
       "System.Data.SqlClient/4.8.3": {
         "type": "package",
         "frameworkAssemblies": [
@@ -45,6 +63,18 @@
     }
   },
   "libraries": {
+    "Microsoft.Office.Interop.Excel/15.0.4795.1000": {
+      "sha512": "DfceS96ustwfL8EOJNNRtpk6b0RylhjNpgeeemuvi9X4GYks2UTeAimjSrdFEfuqRo5ibZ4Sd0gJIeDr9gMa6Q==",
+      "type": "package",
+      "path": "microsoft.office.interop.excel/15.0.4795.1000",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/Microsoft.Office.Interop.Excel.dll",
+        "microsoft.office.interop.excel.15.0.4795.1000.nupkg.sha512",
+        "microsoft.office.interop.excel.nuspec"
+      ]
+    },
     "System.Data.SqlClient/4.8.3": {
       "sha512": "yERfVLXAY0QbylAgaGLByYN0hFxX28aeEQ0hUgJO+Ntn1AfmWl5HHUoYJA0Yl9HhIUUJHVaS/Sw/RLZr5aaC+A==",
       "type": "package",
@@ -134,27 +164,28 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "Microsoft.Office.Interop.Excel >= 15.0.4795.1000",
       "System.Data.SqlClient >= 4.8.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FranciscoPereira\\.nuget\\packages\\": {},
+    "C:\\Users\\João\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Universidade\\SAD\\Build2Evenize\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
+      "projectUniqueName": "C:\\Users\\João\\source\\repos\\SADProject\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
       "projectName": "Build2Evenize",
-      "projectPath": "D:\\Universidade\\SAD\\Build2Evenize\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
-      "packagesPath": "C:\\Users\\FranciscoPereira\\.nuget\\packages\\",
-      "outputPath": "D:\\Universidade\\SAD\\Build2Evenize\\Build2Evenize\\Build2Evenize\\obj\\",
+      "projectPath": "C:\\Users\\João\\source\\repos\\SADProject\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
+      "packagesPath": "C:\\Users\\João\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\João\\source\\repos\\SADProject\\Build2Evenize\\Build2Evenize\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\FranciscoPereira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\João\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -181,6 +212,10 @@
       "net472": {
         "targetAlias": "net461",
         "dependencies": {
+          "Microsoft.Office.Interop.Excel": {
+            "target": "Package",
+            "version": "[15.0.4795.1000, )"
+          },
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.8.3, )"
