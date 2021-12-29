@@ -35,3 +35,4 @@ C:\Users\João\source\repos\SADProject\Build2Evenize\Build2Evenize\obj\Debug\net
 C:\Users\João\source\repos\SADProject\Build2Evenize\Build2Evenize\obj\Debug\net472\Build2Evenize.exe
 C:\Users\João\source\repos\SADProject\Build2Evenize\Build2Evenize\obj\Debug\net472\Build2Evenize.pdb
 C:\Users\João\source\repos\SADProject\Build2Evenize\Build2Evenize\bin\Debug\net472\Microsoft.Office.Interop.Excel.dll
+D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\bin\Debug\net472\Microsoft.Office.Interop.Excel.dll

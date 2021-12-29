@@ -7505,11 +7505,13 @@ namespace Build2Evenize {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class View_1DataTable : global::System.Data.TypedTableBase<View_1Row> {
             
+            private global::System.Data.DataColumn columnproject_id;
+            
             private global::System.Data.DataColumn columnname;
             
-            private global::System.Data.DataColumn columnExpr1;
+            private global::System.Data.DataColumn columnarea;
             
-            private global::System.Data.DataColumn columnExpr2;
+            private global::System.Data.DataColumn columninstitution;
             
             private global::System.Data.DataColumn columncountry;
             
@@ -7554,6 +7556,14 @@ namespace Build2Evenize {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn project_idColumn {
+                get {
+                    return this.columnproject_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn nameColumn {
                 get {
                     return this.columnname;
@@ -7562,17 +7572,17 @@ namespace Build2Evenize {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Expr1Column {
+            public global::System.Data.DataColumn areaColumn {
                 get {
-                    return this.columnExpr1;
+                    return this.columnarea;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Expr2Column {
+            public global::System.Data.DataColumn institutionColumn {
                 get {
-                    return this.columnExpr2;
+                    return this.columninstitution;
                 }
             }
             
@@ -7645,12 +7655,13 @@ namespace Build2Evenize {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_1Row AddView_1Row(string name, string Expr1, string Expr2, string country, System.DateTime date_start, System.DateTime date_end, int nr_students) {
+            public View_1Row AddView_1Row(int project_id, string name, string area, string institution, string country, System.DateTime date_start, System.DateTime date_end, int nr_students) {
                 View_1Row rowView_1Row = ((View_1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        project_id,
                         name,
-                        Expr1,
-                        Expr2,
+                        area,
+                        institution,
                         country,
                         date_start,
                         date_end,
@@ -7658,6 +7669,13 @@ namespace Build2Evenize {
                 rowView_1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowView_1Row);
                 return rowView_1Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public View_1Row FindByproject_id(int project_id) {
+                return ((View_1Row)(this.Rows.Find(new object[] {
+                            project_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7677,9 +7695,10 @@ namespace Build2Evenize {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnproject_id = base.Columns["project_id"];
                 this.columnname = base.Columns["name"];
-                this.columnExpr1 = base.Columns["Expr1"];
-                this.columnExpr2 = base.Columns["Expr2"];
+                this.columnarea = base.Columns["area"];
+                this.columninstitution = base.Columns["institution"];
                 this.columncountry = base.Columns["country"];
                 this.columndate_start = base.Columns["date_start"];
                 this.columndate_end = base.Columns["date_end"];
@@ -7689,12 +7708,14 @@ namespace Build2Evenize {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnproject_id = new global::System.Data.DataColumn("project_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproject_id);
                 this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
-                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr1);
-                this.columnExpr2 = new global::System.Data.DataColumn("Expr2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr2);
+                this.columnarea = new global::System.Data.DataColumn("area", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnarea);
+                this.columninstitution = new global::System.Data.DataColumn("institution", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninstitution);
                 this.columncountry = new global::System.Data.DataColumn("country", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncountry);
                 this.columndate_start = new global::System.Data.DataColumn("date_start", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -7703,12 +7724,16 @@ namespace Build2Evenize {
                 base.Columns.Add(this.columndate_end);
                 this.columnnr_students = new global::System.Data.DataColumn("nr_students", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnr_students);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnproject_id}, true));
+                this.columnproject_id.AllowDBNull = false;
+                this.columnproject_id.Unique = true;
                 this.columnname.AllowDBNull = false;
                 this.columnname.MaxLength = 100;
-                this.columnExpr1.AllowDBNull = false;
-                this.columnExpr1.MaxLength = 100;
-                this.columnExpr2.AllowDBNull = false;
-                this.columnExpr2.MaxLength = 50;
+                this.columnarea.AllowDBNull = false;
+                this.columnarea.MaxLength = 100;
+                this.columninstitution.AllowDBNull = false;
+                this.columninstitution.MaxLength = 50;
                 this.columncountry.AllowDBNull = false;
                 this.columncountry.MaxLength = 50;
                 this.columndate_start.AllowDBNull = false;
@@ -9525,6 +9550,17 @@ namespace Build2Evenize {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int project_id {
+                get {
+                    return ((int)(this[this.tableView_1.project_idColumn]));
+                }
+                set {
+                    this[this.tableView_1.project_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string name {
                 get {
                     return ((string)(this[this.tableView_1.nameColumn]));
@@ -9536,23 +9572,23 @@ namespace Build2Evenize {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Expr1 {
+            public string area {
                 get {
-                    return ((string)(this[this.tableView_1.Expr1Column]));
+                    return ((string)(this[this.tableView_1.areaColumn]));
                 }
                 set {
-                    this[this.tableView_1.Expr1Column] = value;
+                    this[this.tableView_1.areaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Expr2 {
+            public string institution {
                 get {
-                    return ((string)(this[this.tableView_1.Expr2Column]));
+                    return ((string)(this[this.tableView_1.institutionColumn]));
                 }
                 set {
-                    this[this.tableView_1.Expr2Column] = value;
+                    this[this.tableView_1.institutionColumn] = value;
                 }
             }
             
@@ -17287,9 +17323,10 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "View_1";
+            tableMapping.ColumnMappings.Add("project_id", "project_id");
             tableMapping.ColumnMappings.Add("name", "name");
-            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
-            tableMapping.ColumnMappings.Add("Expr2", "Expr2");
+            tableMapping.ColumnMappings.Add("area", "area");
+            tableMapping.ColumnMappings.Add("institution", "institution");
             tableMapping.ColumnMappings.Add("country", "country");
             tableMapping.ColumnMappings.Add("date_start", "date_start");
             tableMapping.ColumnMappings.Add("date_end", "date_end");
@@ -17310,8 +17347,8 @@ SELECT team_id, student_id, role_id FROM Team WHERE (team_id = @team_id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT name, Expr1, Expr2, country, date_start, date_end, nr_students FROM dbo.Vi" +
-                "ew_1";
+            this._commandCollection[0].CommandText = "SELECT project_id, name, area, institution, country, date_start, date_end, nr_stu" +
+                "dents FROM dbo.View_1";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

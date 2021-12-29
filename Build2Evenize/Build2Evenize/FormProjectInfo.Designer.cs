@@ -29,9 +29,12 @@ namespace Build2Evenize
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProjectInfo));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.build2evenizeDataSet = new Build2Evenize.build2evenizeDataSet();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -79,16 +82,29 @@ namespace Build2Evenize
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.projectTableAdapter = new Build2Evenize.build2evenizeDataSetTableAdapters.ProjectTableAdapter();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.projectidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nrstudentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datestartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateendDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.institutionidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.build2evenizeDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.panel1.Controls.Add(this.dataGridView2);
             this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.label1);
@@ -98,6 +114,16 @@ namespace Build2Evenize
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1349, 92);
             this.panel1.TabIndex = 0;
+            // 
+            // projectBindingSource
+            // 
+            this.projectBindingSource.DataMember = "Project";
+            this.projectBindingSource.DataSource = this.build2evenizeDataSet;
+            // 
+            // build2evenizeDataSet
+            // 
+            this.build2evenizeDataSet.DataSetName = "build2evenizeDataSet";
+            this.build2evenizeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button11
             // 
@@ -141,7 +167,7 @@ namespace Build2Evenize
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(624, 72);
+            this.label1.Size = new System.Drawing.Size(511, 59);
             this.label1.TabIndex = 0;
             this.label1.Text = "PROJECT PROFILE";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -240,7 +266,7 @@ namespace Build2Evenize
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label13.Location = new System.Drawing.Point(3, -3);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(251, 29);
+            this.label13.Size = new System.Drawing.Size(198, 24);
             this.label13.TabIndex = 31;
             this.label13.Text = "Registered Students";
             // 
@@ -251,7 +277,7 @@ namespace Build2Evenize
             this.txtSearch.Location = new System.Drawing.Point(-628, 66);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(373, 24);
+            this.txtSearch.Size = new System.Drawing.Size(373, 21);
             this.txtSearch.TabIndex = 1;
             // 
             // panel3
@@ -319,7 +345,7 @@ namespace Build2Evenize
             this.comboBox11.FormattingEnabled = true;
             this.comboBox11.Location = new System.Drawing.Point(147, 501);
             this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(541, 26);
+            this.comboBox11.Size = new System.Drawing.Size(541, 23);
             this.comboBox11.TabIndex = 41;
             this.comboBox11.Visible = false;
             // 
@@ -345,7 +371,7 @@ namespace Build2Evenize
             this.comboBox10.FormattingEnabled = true;
             this.comboBox10.Location = new System.Drawing.Point(147, 396);
             this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(541, 26);
+            this.comboBox10.Size = new System.Drawing.Size(541, 23);
             this.comboBox10.TabIndex = 39;
             this.comboBox10.Visible = false;
             // 
@@ -371,7 +397,7 @@ namespace Build2Evenize
             this.comboBox9.FormattingEnabled = true;
             this.comboBox9.Location = new System.Drawing.Point(147, 291);
             this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(541, 26);
+            this.comboBox9.Size = new System.Drawing.Size(541, 23);
             this.comboBox9.TabIndex = 37;
             this.comboBox9.Visible = false;
             // 
@@ -380,7 +406,7 @@ namespace Build2Evenize
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(147, 547);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(151, 24);
+            this.dateTimePicker1.Size = new System.Drawing.Size(151, 21);
             this.dateTimePicker1.TabIndex = 36;
             // 
             // button6
@@ -475,7 +501,7 @@ namespace Build2Evenize
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label12.Location = new System.Drawing.Point(524, 547);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 25);
+            this.label12.Size = new System.Drawing.Size(50, 20);
             this.label12.TabIndex = 30;
             this.label12.Text = "Slots";
             // 
@@ -483,7 +509,7 @@ namespace Build2Evenize
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(594, 546);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(129, 24);
+            this.numericUpDown1.Size = new System.Drawing.Size(129, 21);
             this.numericUpDown1.TabIndex = 29;
             // 
             // label11
@@ -493,7 +519,7 @@ namespace Build2Evenize
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label11.Location = new System.Drawing.Point(303, 546);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 25);
+            this.label11.Size = new System.Drawing.Size(46, 20);
             this.label11.TabIndex = 28;
             this.label11.Text = "End:";
             // 
@@ -504,7 +530,7 @@ namespace Build2Evenize
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label10.Location = new System.Drawing.Point(0, 546);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 25);
+            this.label10.Size = new System.Drawing.Size(54, 20);
             this.label10.TabIndex = 27;
             this.label10.Text = "Start:";
             // 
@@ -513,7 +539,7 @@ namespace Build2Evenize
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(367, 547);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(151, 24);
+            this.dateTimePicker2.Size = new System.Drawing.Size(151, 21);
             this.dateTimePicker2.TabIndex = 26;
             // 
             // comboBox7
@@ -521,7 +547,7 @@ namespace Build2Evenize
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(147, 466);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(541, 26);
+            this.comboBox7.Size = new System.Drawing.Size(541, 23);
             this.comboBox7.TabIndex = 23;
             this.comboBox7.Visible = false;
             // 
@@ -530,7 +556,7 @@ namespace Build2Evenize
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Location = new System.Drawing.Point(147, 431);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(541, 26);
+            this.comboBox8.Size = new System.Drawing.Size(541, 23);
             this.comboBox8.TabIndex = 21;
             // 
             // label9
@@ -540,7 +566,7 @@ namespace Build2Evenize
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label9.Location = new System.Drawing.Point(0, 429);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 25);
+            this.label9.Size = new System.Drawing.Size(95, 20);
             this.label9.TabIndex = 20;
             this.label9.Text = "Soft Skills:";
             // 
@@ -549,7 +575,7 @@ namespace Build2Evenize
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(147, 361);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(541, 26);
+            this.comboBox5.Size = new System.Drawing.Size(541, 23);
             this.comboBox5.TabIndex = 18;
             this.comboBox5.Visible = false;
             // 
@@ -558,7 +584,7 @@ namespace Build2Evenize
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(147, 326);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(541, 26);
+            this.comboBox6.Size = new System.Drawing.Size(541, 23);
             this.comboBox6.TabIndex = 16;
             // 
             // label8
@@ -568,7 +594,7 @@ namespace Build2Evenize
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label8.Location = new System.Drawing.Point(0, 324);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 25);
+            this.label8.Size = new System.Drawing.Size(100, 20);
             this.label8.TabIndex = 15;
             this.label8.Text = "Hard Skills:";
             // 
@@ -577,7 +603,7 @@ namespace Build2Evenize
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(147, 256);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(541, 26);
+            this.comboBox4.Size = new System.Drawing.Size(541, 23);
             this.comboBox4.TabIndex = 13;
             this.comboBox4.Visible = false;
             // 
@@ -604,7 +630,7 @@ namespace Build2Evenize
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(147, 221);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(541, 26);
+            this.comboBox3.Size = new System.Drawing.Size(541, 23);
             this.comboBox3.TabIndex = 10;
             // 
             // label7
@@ -614,7 +640,7 @@ namespace Build2Evenize
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label7.Location = new System.Drawing.Point(0, 219);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 25);
+            this.label7.Size = new System.Drawing.Size(82, 20);
             this.label7.TabIndex = 9;
             this.label7.Text = "Partners:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -626,7 +652,7 @@ namespace Build2Evenize
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label6.Location = new System.Drawing.Point(582, 184);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 25);
+            this.label6.Size = new System.Drawing.Size(71, 20);
             this.label6.TabIndex = 8;
             this.label6.Text = "Country";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -636,7 +662,7 @@ namespace Build2Evenize
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(147, 186);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(397, 26);
+            this.comboBox2.Size = new System.Drawing.Size(397, 23);
             this.comboBox2.TabIndex = 7;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -647,7 +673,7 @@ namespace Build2Evenize
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label5.Location = new System.Drawing.Point(0, 184);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 25);
+            this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "Institution:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -657,7 +683,7 @@ namespace Build2Evenize
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(147, 151);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(573, 26);
+            this.comboBox1.Size = new System.Drawing.Size(573, 23);
             this.comboBox1.TabIndex = 5;
             // 
             // label4
@@ -667,7 +693,7 @@ namespace Build2Evenize
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label4.Location = new System.Drawing.Point(0, 149);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 25);
+            this.label4.Size = new System.Drawing.Size(52, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Area:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -687,7 +713,7 @@ namespace Build2Evenize
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label3.Location = new System.Drawing.Point(0, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 25);
+            this.label3.Size = new System.Drawing.Size(105, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Description:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -696,7 +722,7 @@ namespace Build2Evenize
             // 
             this.textBox1.Location = new System.Drawing.Point(147, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(573, 24);
+            this.textBox1.Size = new System.Drawing.Size(573, 21);
             this.textBox1.TabIndex = 1;
             // 
             // label2
@@ -706,14 +732,90 @@ namespace Build2Evenize
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 25);
+            this.label2.Size = new System.Drawing.Size(60, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Name:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // projectTableAdapter
+            // 
+            this.projectTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.projectidDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.descDataGridViewTextBoxColumn,
+            this.nrstudentsDataGridViewTextBoxColumn,
+            this.datestartDataGridViewTextBoxColumn,
+            this.dateendDataGridViewTextBoxColumn,
+            this.institutionidDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.projectBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(507, 12);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.Size = new System.Drawing.Size(713, 63);
+            this.dataGridView2.TabIndex = 43;
+            this.dataGridView2.Visible = false;
+            // 
+            // projectidDataGridViewTextBoxColumn
+            // 
+            this.projectidDataGridViewTextBoxColumn.DataPropertyName = "project_id";
+            this.projectidDataGridViewTextBoxColumn.HeaderText = "project_id";
+            this.projectidDataGridViewTextBoxColumn.Name = "projectidDataGridViewTextBoxColumn";
+            this.projectidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descDataGridViewTextBoxColumn
+            // 
+            this.descDataGridViewTextBoxColumn.DataPropertyName = "desc";
+            this.descDataGridViewTextBoxColumn.HeaderText = "desc";
+            this.descDataGridViewTextBoxColumn.Name = "descDataGridViewTextBoxColumn";
+            this.descDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nrstudentsDataGridViewTextBoxColumn
+            // 
+            this.nrstudentsDataGridViewTextBoxColumn.DataPropertyName = "nr_students";
+            this.nrstudentsDataGridViewTextBoxColumn.HeaderText = "nr_students";
+            this.nrstudentsDataGridViewTextBoxColumn.Name = "nrstudentsDataGridViewTextBoxColumn";
+            this.nrstudentsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // datestartDataGridViewTextBoxColumn
+            // 
+            this.datestartDataGridViewTextBoxColumn.DataPropertyName = "date_start";
+            this.datestartDataGridViewTextBoxColumn.HeaderText = "date_start";
+            this.datestartDataGridViewTextBoxColumn.Name = "datestartDataGridViewTextBoxColumn";
+            this.datestartDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateendDataGridViewTextBoxColumn
+            // 
+            this.dateendDataGridViewTextBoxColumn.DataPropertyName = "date_end";
+            this.dateendDataGridViewTextBoxColumn.HeaderText = "date_end";
+            this.dateendDataGridViewTextBoxColumn.Name = "dateendDataGridViewTextBoxColumn";
+            this.dateendDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // institutionidDataGridViewTextBoxColumn
+            // 
+            this.institutionidDataGridViewTextBoxColumn.DataPropertyName = "institution_id";
+            this.institutionidDataGridViewTextBoxColumn.HeaderText = "institution_id";
+            this.institutionidDataGridViewTextBoxColumn.Name = "institutionidDataGridViewTextBoxColumn";
+            this.institutionidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // FormProjectInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1349, 687);
@@ -725,14 +827,18 @@ namespace Build2Evenize
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormProjectInfo";
             this.Text = "Project Profile";
+            this.Load += new System.EventHandler(this.FormProjectInfo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.build2evenizeDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -787,5 +893,16 @@ namespace Build2Evenize
         private System.Windows.Forms.ComboBox comboBox10;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.ComboBox comboBox9;
+        private build2evenizeDataSet build2evenizeDataSet;
+        private System.Windows.Forms.BindingSource projectBindingSource;
+        private build2evenizeDataSetTableAdapters.ProjectTableAdapter projectTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn projectidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nrstudentsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datestartDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateendDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn institutionidDataGridViewTextBoxColumn;
     }
 }

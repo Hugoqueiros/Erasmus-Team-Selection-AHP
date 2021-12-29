@@ -14,6 +14,8 @@ namespace Build2Evenize
     public partial class FormProject : Form
     {
         SqlConnection con;
+        String name, area, institution, country;
+
         public FormProject(string name, int id, SqlConnection con)
         {
             InitializeComponent();
@@ -46,9 +48,8 @@ namespace Build2Evenize
             // query to get columnname from table and fill in the combobox items
             string query = "select distinct " + columnName+" from " + table;
             SqlCommand cmd = new SqlCommand(query, this.con);
-
+            comboBox.Items.Add("All");
             SqlDataReader dr = cmd.ExecuteReader();
-
             while (dr.Read())
             {
                 //add every row found on database to combobox
@@ -57,16 +58,65 @@ namespace Build2Evenize
             }
             dr.Close();
         }
-        private void Checker(string value)
+        private void CheckFilters()
         {
-
+            String query=null;
+            DataView DV = new DataView(this.build2evenizeDataSet.View_1);
+            if (name != "All")
+            {
+                if (query == null)
+                {
+                    query = "Name LIKE '%" + name + "%'";
+                }
+                else
+                {
+                    query += " AND Name LIKE '%" + name + "%'";
+                }
+            };
+            if (area != "All")
+            {
+                if (query == null)
+                {
+                    query = "Expr1 LIKE '%" + area + "%'";
+                }
+                else
+                {
+                    query += " AND Expr1 LIKE '%" + area + "%'";
+                }
+            };
+            if (institution != "All")
+            {
+                if (query == null)
+                {
+                    query = "institution LIKE '%" + institution + "%'";
+                }
+                else
+                {
+                    query += " AND institution LIKE '%" + institution + "%'";
+                }
+            };
+            if (country != "All")
+            {
+                if (query == null)
+                {
+                    query = "country LIKE '%" + country + "%'";
+                }
+                else
+                {
+                    query += " AND country LIKE '%" + country + "%'";
+                }
+            };
+            DV.RowFilter = query;
+            dataGridView1.DataSource = DV;
         }
         private void FormProject_Load(object sender, EventArgs e)
         {
             Filters("area", "name", comboBox1); // filter of area 
             Filters("institution", "name", comboBox2); //filter of institution name
             Filters("institution", "country", comboBox3); //filter of institution country
-
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
+            comboBox3.SelectedIndex = 0;
             // TODO: This line of code loads data into the 'build2evenizeDataSet.View_1' table. You can move, or remove it, as needed.
             this.view_1TableAdapter.Fill(this.build2evenizeDataSet.View_1);
 
@@ -85,36 +135,45 @@ namespace Build2Evenize
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataView DV = new DataView(this.build2evenizeDataSet.View_1);
-            DV.RowFilter = "Expr2 LIKE '%" + comboBox2.Text + "%' AND Name LIKE '" + textBox1.Text + "' AND Country LIKE '" + comboBox3.Text + "' AND Expr1 LIKE '" + comboBox1.Text + "'";
-            dataGridView1.DataSource = DV;
+            area = comboBox1.Text;
+            CheckFilters();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            DataView DV = new DataView(this.build2evenizeDataSet.View_1);
-            DV.RowFilter = "Expr2 LIKE '" + comboBox2.Text + "' AND Name LIKE '%" + textBox1.Text + "%' AND Country LIKE '" + comboBox3.Text + "' AND Expr1 LIKE '" + comboBox1.Text + "'";
-            dataGridView1.DataSource = DV;
+            name = textBox1.Text;
+            CheckFilters();
         }
 
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataView DV = new DataView(this.build2evenizeDataSet.View_1);
-            DV.RowFilter = "Expr2 LIKE '%" + comboBox2.Text + "%' AND Name LIKE '" + textBox1.Text + "' AND Country LIKE '" + comboBox3.Text + "' AND Expr1 LIKE '" + comboBox1.Text + "'";
-            dataGridView1.DataSource = DV;
+            country = comboBox2.Text;
+            CheckFilters();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int projectId = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            
+            FormProjectInfo fpi = new FormProjectInfo(projectId);
+            fpi.ShowDialog();
+        }
+
+        private int ToInt32(string v)
+        {
+            throw new NotImplementedException();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataView DV = new DataView(this.build2evenizeDataSet.View_1);
-            DV.RowFilter = "Expr2 LIKE '%"+comboBox2.Text+ "%' AND Name LIKE '"+textBox1.Text+ "' AND Country LIKE '" + comboBox3.Text + "' AND Expr1 LIKE '" + comboBox1.Text + "'";
-            dataGridView1.DataSource = DV;
+            institution = comboBox2.Text;         
+            CheckFilters();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            FormProjectInfo fpi = new FormProjectInfo();
+            FormProjectInfo fpi = new FormProjectInfo(0);
             fpi.ShowDialog();
         }
 

@@ -13,8 +13,10 @@ namespace Build2Evenize
 {
     public partial class FormProjectInfo : Form
     {
-        public FormProjectInfo()
+        int id;
+        public FormProjectInfo(int projectId)
         {
+            id = projectId;
             InitializeComponent();
         }
 
@@ -124,6 +126,19 @@ namespace Build2Evenize
                 dataGridView1.DataSource = ds.Tables[0].DefaultView;
                 wb.Close();
             }
+        }
+
+        private void FormProjectInfo_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'build2evenizeDataSet.Project' table. You can move, or remove it, as needed.
+            this.projectTableAdapter.Fill(this.build2evenizeDataSet.Project);
+            DataView DV = new DataView(this.build2evenizeDataSet.Project);
+
+            DV.RowFilter = "project_id = '"+ this.id +"'";
+            dataGridView2.DataSource = DV;
+            textBox1.Text = dataGridView2.Rows[0].Cells[1].Value.ToString();
+            textBox2.Text = dataGridView2.Rows[0].Cells[2].Value.ToString();
+
         }
     }
 }
