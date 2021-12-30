@@ -14,13 +14,16 @@ namespace Build2Evenize
     public partial class FormProject : Form
     {
         SqlConnection con;
+        int id;
         String name, area, institution, country;
+        private Common common;
 
-        public FormProject(string name, int id, SqlConnection con)
+        public FormProject(string name, int id, Common common)
         {
             InitializeComponent();
             label6.Text = name;
-            this.con =con;
+            this.id = id;
+            this.common = common;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -42,22 +45,6 @@ namespace Build2Evenize
             button1.BackColor = Color.FromArgb(250, 218, 24);
             button1.ForeColor = Color.FromArgb(37, 55, 127);
         }
-        private void Filters(string table, string columnName, ComboBox comboBox) //function for searching filters
-        {
-
-            // query to get columnname from table and fill in the combobox items
-            string query = "select distinct " + columnName+" from " + table;
-            SqlCommand cmd = new SqlCommand(query, this.con);
-            comboBox.Items.Add("All");
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                //add every row found on database to combobox
-                string name = (string)dr[columnName];
-                comboBox.Items.Add(name);
-            }
-            dr.Close();
-        }
         private void CheckFilters()
         {
             String query=null;
@@ -66,22 +53,22 @@ namespace Build2Evenize
             {
                 if (query == null)
                 {
-                    query = "Name LIKE '%" + name + "%'";
+                    query = "name LIKE '%" + name + "%'";
                 }
                 else
                 {
-                    query += " AND Name LIKE '%" + name + "%'";
+                    query += " AND name LIKE '%" + name + "%'";
                 }
             };
             if (area != "All")
             {
                 if (query == null)
                 {
-                    query = "Expr1 LIKE '%" + area + "%'";
+                    query = "area LIKE '%" + area + "%'";
                 }
                 else
                 {
-                    query += " AND Expr1 LIKE '%" + area + "%'";
+                    query += " AND area LIKE '%" + area + "%'";
                 }
             };
             if (institution != "All")
@@ -111,9 +98,12 @@ namespace Build2Evenize
         }
         private void FormProject_Load(object sender, EventArgs e)
         {
-            Filters("area", "name", comboBox1); // filter of area 
-            Filters("institution", "name", comboBox2); //filter of institution name
-            Filters("institution", "country", comboBox3); //filter of institution country
+            comboBox1.Items.Add("All");
+            common.Filters("area", "name", comboBox1); // filter of area 
+            comboBox2.Items.Add("All");
+            common.Filters("institution", "name", comboBox2); //filter of institution name
+            comboBox3.Items.Add("All");
+            common.Filters("institution", "country", comboBox3); //filter of institution country
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
             comboBox3.SelectedIndex = 0;
@@ -156,13 +146,8 @@ namespace Build2Evenize
         {
             int projectId = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             
-            FormProjectInfo fpi = new FormProjectInfo(projectId);
+            FormProjectInfo fpi = new FormProjectInfo(projectId, common);
             fpi.ShowDialog();
-        }
-
-        private int ToInt32(string v)
-        {
-            throw new NotImplementedException();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -173,7 +158,7 @@ namespace Build2Evenize
 
         private void button7_Click(object sender, EventArgs e)
         {
-            FormProjectInfo fpi = new FormProjectInfo(0);
+            FormProjectInfo fpi = new FormProjectInfo(0, common);
             fpi.ShowDialog();
         }
 

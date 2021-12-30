@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
 
@@ -13,10 +14,12 @@ namespace Build2Evenize
 {
     public partial class FormProjectInfo : Form
     {
+        private Common common;
         int id;
-        public FormProjectInfo(int projectId)
+        public FormProjectInfo(int projectId, Common common)
         {
-            id = projectId;
+            this.id = projectId;
+            this.common = common;
             InitializeComponent();
         }
 
@@ -130,14 +133,27 @@ namespace Build2Evenize
 
         private void FormProjectInfo_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'build2evenizeDataSet.Project' table. You can move, or remove it, as needed.
-            this.projectTableAdapter.Fill(this.build2evenizeDataSet.Project);
-            DataView DV = new DataView(this.build2evenizeDataSet.Project);
+            common.Filters("area", "name", comboBox1);
+            string query = "select * from Project where project_id = " + this.id;
+            SqlCommand cmd = new SqlCommand(query, common.con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                textBox1.Text = dr.GetString(1);
+                textBox2.Text = dr.GetString(2);
+            }
+            dr.Close();
+            query = "select area_id from Area where area_id in (select area_id from Project_Area where project_id = " + this.id + ")";
+            cmd = new SqlCommand(query, common.con);
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                comboBox1.SelectedIndex = dr.GetInt32(0) - 1;
+            }
+            dr.Close();
 
-            DV.RowFilter = "project_id = '"+ this.id +"'";
-            dataGridView2.DataSource = DV;
-            textBox1.Text = dataGridView2.Rows[0].Cells[1].Value.ToString();
-            textBox2.Text = dataGridView2.Rows[0].Cells[2].Value.ToString();
+
+
 
         }
     }

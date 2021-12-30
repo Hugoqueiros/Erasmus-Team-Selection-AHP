@@ -29,12 +29,9 @@ namespace Build2Evenize
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProjectInfo));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.build2evenizeDataSet = new Build2Evenize.build2evenizeDataSet();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -82,29 +79,16 @@ namespace Build2Evenize
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.projectTableAdapter = new Build2Evenize.build2evenizeDataSetTableAdapters.ProjectTableAdapter();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.projectidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nrstudentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datestartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateendDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.institutionidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.build2evenizeDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.panel1.Controls.Add(this.dataGridView2);
             this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.label1);
@@ -114,16 +98,6 @@ namespace Build2Evenize
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1349, 92);
             this.panel1.TabIndex = 0;
-            // 
-            // projectBindingSource
-            // 
-            this.projectBindingSource.DataMember = "Project";
-            this.projectBindingSource.DataSource = this.build2evenizeDataSet;
-            // 
-            // build2evenizeDataSet
-            // 
-            this.build2evenizeDataSet.DataSetName = "build2evenizeDataSet";
-            this.build2evenizeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button11
             // 
@@ -650,7 +624,7 @@ namespace Build2Evenize
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.label6.Location = new System.Drawing.Point(582, 184);
+            this.label6.Location = new System.Drawing.Point(550, 186);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 20);
             this.label6.TabIndex = 8;
@@ -737,82 +711,6 @@ namespace Build2Evenize
             this.label2.Text = "Name:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // projectTableAdapter
-            // 
-            this.projectTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.projectidDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.descDataGridViewTextBoxColumn,
-            this.nrstudentsDataGridViewTextBoxColumn,
-            this.datestartDataGridViewTextBoxColumn,
-            this.dateendDataGridViewTextBoxColumn,
-            this.institutionidDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.projectBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(507, 12);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(713, 63);
-            this.dataGridView2.TabIndex = 43;
-            this.dataGridView2.Visible = false;
-            // 
-            // projectidDataGridViewTextBoxColumn
-            // 
-            this.projectidDataGridViewTextBoxColumn.DataPropertyName = "project_id";
-            this.projectidDataGridViewTextBoxColumn.HeaderText = "project_id";
-            this.projectidDataGridViewTextBoxColumn.Name = "projectidDataGridViewTextBoxColumn";
-            this.projectidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descDataGridViewTextBoxColumn
-            // 
-            this.descDataGridViewTextBoxColumn.DataPropertyName = "desc";
-            this.descDataGridViewTextBoxColumn.HeaderText = "desc";
-            this.descDataGridViewTextBoxColumn.Name = "descDataGridViewTextBoxColumn";
-            this.descDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nrstudentsDataGridViewTextBoxColumn
-            // 
-            this.nrstudentsDataGridViewTextBoxColumn.DataPropertyName = "nr_students";
-            this.nrstudentsDataGridViewTextBoxColumn.HeaderText = "nr_students";
-            this.nrstudentsDataGridViewTextBoxColumn.Name = "nrstudentsDataGridViewTextBoxColumn";
-            this.nrstudentsDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // datestartDataGridViewTextBoxColumn
-            // 
-            this.datestartDataGridViewTextBoxColumn.DataPropertyName = "date_start";
-            this.datestartDataGridViewTextBoxColumn.HeaderText = "date_start";
-            this.datestartDataGridViewTextBoxColumn.Name = "datestartDataGridViewTextBoxColumn";
-            this.datestartDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateendDataGridViewTextBoxColumn
-            // 
-            this.dateendDataGridViewTextBoxColumn.DataPropertyName = "date_end";
-            this.dateendDataGridViewTextBoxColumn.HeaderText = "date_end";
-            this.dateendDataGridViewTextBoxColumn.Name = "dateendDataGridViewTextBoxColumn";
-            this.dateendDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // institutionidDataGridViewTextBoxColumn
-            // 
-            this.institutionidDataGridViewTextBoxColumn.DataPropertyName = "institution_id";
-            this.institutionidDataGridViewTextBoxColumn.HeaderText = "institution_id";
-            this.institutionidDataGridViewTextBoxColumn.Name = "institutionidDataGridViewTextBoxColumn";
-            this.institutionidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // FormProjectInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -830,15 +728,12 @@ namespace Build2Evenize
             this.Load += new System.EventHandler(this.FormProjectInfo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.build2evenizeDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -893,16 +788,5 @@ namespace Build2Evenize
         private System.Windows.Forms.ComboBox comboBox10;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.ComboBox comboBox9;
-        private build2evenizeDataSet build2evenizeDataSet;
-        private System.Windows.Forms.BindingSource projectBindingSource;
-        private build2evenizeDataSetTableAdapters.ProjectTableAdapter projectTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn projectidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nrstudentsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datestartDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateendDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn institutionidDataGridViewTextBoxColumn;
     }
 }

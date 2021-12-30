@@ -8,14 +8,11 @@ namespace Build2Evenize
 {
     public partial class Login_Register : Form
     {
-        public string server = @"build2evenize.database.windows.net";
-        public string database = "build2evenize";
-        public string user = @"ispg4259";
-        public string pass = "BUILD2evenize";
-        //server=build2evenize.database.windows.net;database=build2evenize;UID=ispg4259;password=BUILD2evenize;Trusted_Connection=True
+        Common common = new Common();
         public Login_Register()
         {
             InitializeComponent();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -67,14 +64,11 @@ namespace Build2Evenize
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            String str = $"server={server};database={database};UID={user};password={pass};Trusted_Connection=False;Encrypt=True;";
-            SqlConnection con = new SqlConnection(str);
-            con.Open();
-
+            common.Connection();
 
             if (loginUser.Text != String.Empty && loginPass.Text != String.Empty) {
                 String passEnc = MD5Hash(loginPass.Text);
-                SqlCommand cmd = new SqlCommand("select * from Coordinator where email='" + loginUser.Text + "' and password='" + passEnc+"'", con);
+                SqlCommand cmd = new SqlCommand("select * from Coordinator where email='" + loginUser.Text + "' and password='" + passEnc+"'", common.con);
                 SqlDataReader  dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
@@ -82,7 +76,7 @@ namespace Build2Evenize
                     string name = (string)dr["name"];
                     this.Hide();
                     dr.Close();
-                    FormProject fP = new FormProject(name,id,con);
+                    FormProject fP = new FormProject(name,id,common);
                     fP.ShowDialog();
                     
                     this.Close();
