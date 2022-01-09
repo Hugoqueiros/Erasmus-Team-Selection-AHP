@@ -55,7 +55,7 @@ namespace Build2Evenize
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            common.Country(comboBox2.Text, label6);
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -134,6 +134,7 @@ namespace Build2Evenize
         private void FormProjectInfo_Load(object sender, EventArgs e)
         {
             common.Filters("area", "name", comboBox1);
+            common.Filters("institution", "name", comboBox2);
             string query = "select * from Project where project_id = " + this.id;
             SqlCommand cmd = new SqlCommand(query, common.con);
             SqlDataReader dr = cmd.ExecuteReader();
@@ -143,6 +144,7 @@ namespace Build2Evenize
                 textBox2.Text = dr.GetString(2);
             }
             dr.Close();
+            dr.Dispose();
             query = "select area_id from Area where area_id in (select area_id from Project_Area where project_id = " + this.id + ")";
             cmd = new SqlCommand(query, common.con);
             dr = cmd.ExecuteReader();
@@ -151,9 +153,44 @@ namespace Build2Evenize
                 comboBox1.SelectedIndex = dr.GetInt32(0) - 1;
             }
             dr.Close();
+            dr.Dispose();
+            query = "select institution_id from Institution where institution_id in (select institution_id from Project where project_id = " + this.id + ")";
+            cmd = new SqlCommand(query, common.con);
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                comboBox2.SelectedIndex = dr.GetInt32(0) - 1;
+            }
+            dr.Close();
+            dr.Dispose();
 
-
-
+            
+            common.Country(comboBox2.Text, label6);           
+            
+            int partnersNumber = common.Partner(this.id, comboBox3);
+            common.Partner(this.id, comboBox4);
+            common.Partner(this.id, comboBox9);
+            comboBox3.SelectedIndex = 0;
+            switch (partnersNumber)
+            {
+                case 1:
+                    comboBox4.Visible = false;
+                    comboBox9.Visible = false;
+                    break;
+                case 2:
+                    comboBox4.SelectedIndex = 1;
+                    comboBox3.Visible = true;
+                    comboBox4.Visible = true;
+                    comboBox9.Visible = false;
+                    break;
+                case 3:
+                    comboBox4.SelectedIndex = 1;
+                    comboBox9.SelectedIndex = 2;
+                    comboBox3.Visible = true;
+                    comboBox4.Visible = true;
+                    comboBox9.Visible = true;
+                    break;
+            }
 
         }
     }
