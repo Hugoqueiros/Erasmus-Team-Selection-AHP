@@ -4,11 +4,11 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net472</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>Resources\B2E.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\B2E@300x1.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Resources\B2E.ico" />
+    <Content Include="Resources\B2E@300x1.ico" />
   </ItemGroup>
 
   <ItemGroup>

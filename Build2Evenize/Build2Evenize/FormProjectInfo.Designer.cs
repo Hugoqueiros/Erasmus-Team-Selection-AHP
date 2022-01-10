@@ -67,7 +67,6 @@ namespace Build2Evenize
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -79,6 +78,13 @@ namespace Build2Evenize
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -136,12 +142,12 @@ namespace Build2Evenize
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 37.8F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Montserrat", 37.8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(511, 59);
+            this.label1.Size = new System.Drawing.Size(521, 71);
             this.label1.TabIndex = 0;
             this.label1.Text = "PROJECT PROFILE";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -165,7 +171,7 @@ namespace Build2Evenize
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.button9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
             this.button9.Location = new System.Drawing.Point(300, 538);
             this.button9.Name = "button9";
@@ -178,7 +184,7 @@ namespace Build2Evenize
             // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.button8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Location = new System.Drawing.Point(0, 538);
             this.button8.Name = "button8";
@@ -192,7 +198,7 @@ namespace Build2Evenize
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.button7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(0, 497);
             this.button7.Name = "button7";
@@ -236,11 +242,11 @@ namespace Build2Evenize
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label13.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label13.Location = new System.Drawing.Point(3, -3);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(198, 24);
+            this.label13.Size = new System.Drawing.Size(183, 22);
             this.label13.TabIndex = 31;
             this.label13.Text = "Registered Students";
             // 
@@ -256,6 +262,12 @@ namespace Build2Evenize
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button18);
+            this.panel3.Controls.Add(this.button15);
+            this.panel3.Controls.Add(this.button20);
+            this.panel3.Controls.Add(this.button19);
+            this.panel3.Controls.Add(this.button16);
+            this.panel3.Controls.Add(this.button17);
             this.panel3.Controls.Add(this.button14);
             this.panel3.Controls.Add(this.comboBox11);
             this.panel3.Controls.Add(this.button13);
@@ -316,10 +328,11 @@ namespace Build2Evenize
             // 
             // comboBox11
             // 
+            this.comboBox11.Font = new System.Drawing.Font("Montserrat", 8.999999F);
             this.comboBox11.FormattingEnabled = true;
             this.comboBox11.Location = new System.Drawing.Point(147, 501);
             this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(541, 23);
+            this.comboBox11.Size = new System.Drawing.Size(541, 24);
             this.comboBox11.TabIndex = 41;
             this.comboBox11.Visible = false;
             // 
@@ -342,10 +355,11 @@ namespace Build2Evenize
             // 
             // comboBox10
             // 
+            this.comboBox10.Font = new System.Drawing.Font("Montserrat", 8.999999F);
             this.comboBox10.FormattingEnabled = true;
             this.comboBox10.Location = new System.Drawing.Point(147, 396);
             this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(541, 23);
+            this.comboBox10.Size = new System.Drawing.Size(541, 24);
             this.comboBox10.TabIndex = 39;
             this.comboBox10.Visible = false;
             // 
@@ -365,22 +379,25 @@ namespace Build2Evenize
             this.button12.TabIndex = 38;
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Visible = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // comboBox9
             // 
+            this.comboBox9.Font = new System.Drawing.Font("Montserrat", 8.999999F);
             this.comboBox9.FormattingEnabled = true;
             this.comboBox9.Location = new System.Drawing.Point(147, 291);
             this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(541, 23);
+            this.comboBox9.Size = new System.Drawing.Size(541, 24);
             this.comboBox9.TabIndex = 37;
             this.comboBox9.Visible = false;
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(147, 547);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(151, 21);
+            this.dateTimePicker1.Size = new System.Drawing.Size(151, 22);
             this.dateTimePicker1.TabIndex = 36;
             // 
             // button6
@@ -450,6 +467,7 @@ namespace Build2Evenize
             this.button3.TabIndex = 32;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -471,115 +489,239 @@ namespace Build2Evenize
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label12.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label12.Location = new System.Drawing.Point(524, 547);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(50, 20);
+            this.label12.Size = new System.Drawing.Size(51, 22);
             this.label12.TabIndex = 30;
             this.label12.Text = "Slots";
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown1.Location = new System.Drawing.Point(594, 546);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(129, 21);
+            this.numericUpDown1.Size = new System.Drawing.Size(129, 22);
             this.numericUpDown1.TabIndex = 29;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label11.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label11.Location = new System.Drawing.Point(303, 546);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 20);
+            this.label11.Size = new System.Drawing.Size(47, 22);
             this.label11.TabIndex = 28;
             this.label11.Text = "End:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label10.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label10.Location = new System.Drawing.Point(0, 546);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 20);
+            this.label10.Size = new System.Drawing.Size(55, 22);
             this.label10.TabIndex = 27;
             this.label10.Text = "Start:";
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(367, 547);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(151, 21);
+            this.dateTimePicker2.Size = new System.Drawing.Size(151, 22);
             this.dateTimePicker2.TabIndex = 26;
             // 
             // comboBox7
             // 
+            this.comboBox7.Font = new System.Drawing.Font("Montserrat", 8.999999F);
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(147, 466);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(541, 23);
+            this.comboBox7.Size = new System.Drawing.Size(541, 24);
             this.comboBox7.TabIndex = 23;
             this.comboBox7.Visible = false;
             // 
             // comboBox8
             // 
+            this.comboBox8.Font = new System.Drawing.Font("Montserrat", 8.999999F);
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Location = new System.Drawing.Point(147, 431);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(541, 23);
+            this.comboBox8.Size = new System.Drawing.Size(541, 24);
             this.comboBox8.TabIndex = 21;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label9.Location = new System.Drawing.Point(0, 429);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 20);
+            this.label9.Size = new System.Drawing.Size(97, 22);
             this.label9.TabIndex = 20;
             this.label9.Text = "Soft Skills:";
             // 
             // comboBox5
             // 
+            this.comboBox5.Font = new System.Drawing.Font("Montserrat", 8.999999F);
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(147, 361);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(541, 23);
+            this.comboBox5.Size = new System.Drawing.Size(541, 24);
             this.comboBox5.TabIndex = 18;
             this.comboBox5.Visible = false;
             // 
             // comboBox6
             // 
+            this.comboBox6.Font = new System.Drawing.Font("Montserrat", 8.999999F);
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(147, 326);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(541, 23);
+            this.comboBox6.Size = new System.Drawing.Size(541, 24);
             this.comboBox6.TabIndex = 16;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label8.Location = new System.Drawing.Point(0, 324);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 20);
+            this.label8.Size = new System.Drawing.Size(105, 22);
             this.label8.TabIndex = 15;
             this.label8.Text = "Hard Skills:";
             // 
             // comboBox4
             // 
+            this.comboBox4.Font = new System.Drawing.Font("Montserrat", 8.999999F);
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(147, 256);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(541, 23);
+            this.comboBox4.Size = new System.Drawing.Size(541, 24);
             this.comboBox4.TabIndex = 13;
             this.comboBox4.Visible = false;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Montserrat", 8.999999F);
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(147, 221);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(541, 24);
+            this.comboBox3.TabIndex = 10;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.label7.Location = new System.Drawing.Point(0, 219);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 22);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Partners:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.label6.Location = new System.Drawing.Point(550, 186);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 22);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Country";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Montserrat", 8.999999F);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(147, 186);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(397, 24);
+            this.comboBox2.TabIndex = 7;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.label5.Location = new System.Drawing.Point(0, 184);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 22);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Institution:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 8.999999F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(147, 151);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(573, 24);
+            this.comboBox1.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.label4.Location = new System.Drawing.Point(0, 149);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 22);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Area:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(147, 34);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(573, 111);
+            this.textBox2.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.label3.Location = new System.Drawing.Point(0, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 22);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Description:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(147, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(573, 22);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 22);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Name:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
@@ -599,117 +741,113 @@ namespace Build2Evenize
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox3
+            // button17
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(147, 221);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(541, 23);
-            this.comboBox3.TabIndex = 10;
+            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button17.FlatAppearance.BorderSize = 0;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button17.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.button17.ForeColor = System.Drawing.Color.White;
+            this.button17.Location = new System.Drawing.Point(146, 256);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(577, 29);
+            this.button17.TabIndex = 43;
+            this.button17.Text = "Add Partner";
+            this.button17.UseVisualStyleBackColor = false;
+            this.button17.Visible = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
-            // label7
+            // button15
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.label7.Location = new System.Drawing.Point(0, 219);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 20);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Partners:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button15.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.Location = new System.Drawing.Point(147, 291);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(577, 29);
+            this.button15.TabIndex = 43;
+            this.button15.Text = "Add Partner";
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Visible = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
-            // label6
+            // button16
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.label6.Location = new System.Drawing.Point(550, 186);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 20);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Country";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button16.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.button16.ForeColor = System.Drawing.Color.White;
+            this.button16.Location = new System.Drawing.Point(147, 361);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(577, 29);
+            this.button16.TabIndex = 43;
+            this.button16.Text = "Add Hard Skill";
+            this.button16.UseVisualStyleBackColor = false;
+            this.button16.Visible = false;
+            this.button16.Click += new System.EventHandler(this.button17_Click);
             // 
-            // comboBox2
+            // button18
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(147, 186);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(397, 23);
-            this.comboBox2.TabIndex = 7;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button18.FlatAppearance.BorderSize = 0;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button18.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.button18.ForeColor = System.Drawing.Color.White;
+            this.button18.Location = new System.Drawing.Point(147, 396);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(577, 29);
+            this.button18.TabIndex = 43;
+            this.button18.Text = "Add Hard Skill";
+            this.button18.UseVisualStyleBackColor = false;
+            this.button18.Visible = false;
+            this.button18.Click += new System.EventHandler(this.button15_Click);
             // 
-            // label5
+            // button19
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.label5.Location = new System.Drawing.Point(0, 184);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 20);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Institution:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button19.FlatAppearance.BorderSize = 0;
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button19.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.button19.ForeColor = System.Drawing.Color.White;
+            this.button19.Location = new System.Drawing.Point(147, 466);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(577, 29);
+            this.button19.TabIndex = 43;
+            this.button19.Text = "Add Soft Skill";
+            this.button19.UseVisualStyleBackColor = false;
+            this.button19.Visible = false;
+            this.button19.Click += new System.EventHandler(this.button17_Click);
             // 
-            // comboBox1
+            // button20
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(147, 151);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(573, 23);
-            this.comboBox1.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.label4.Location = new System.Drawing.Point(0, 149);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Area:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(147, 34);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(573, 111);
-            this.textBox2.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.label3.Location = new System.Drawing.Point(0, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Description:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(147, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(573, 21);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Name:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button20.FlatAppearance.BorderSize = 0;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button20.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.button20.ForeColor = System.Drawing.Color.White;
+            this.button20.Location = new System.Drawing.Point(147, 501);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(577, 29);
+            this.button20.TabIndex = 43;
+            this.button20.Text = "Add Soft Skill";
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Visible = false;
+            this.button20.Click += new System.EventHandler(this.button17_Click);
             // 
             // FormProjectInfo
             // 
@@ -756,7 +894,6 @@ namespace Build2Evenize
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -788,5 +925,12 @@ namespace Build2Evenize
         private System.Windows.Forms.ComboBox comboBox10;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button20;
     }
 }

@@ -55,17 +55,13 @@ namespace Build2Evenize
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            common.Country(comboBox2.Text, label6);
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
+            common.InstitutionCountry(comboBox2.Text, label6);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            comboBox3.ResetText();
+            comboBox3.Focus();
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -165,32 +161,48 @@ namespace Build2Evenize
             dr.Dispose();
 
             
-            common.Country(comboBox2.Text, label6);           
-            
-            int partnersNumber = common.Partner(this.id, comboBox3);
-            common.Partner(this.id, comboBox4);
-            common.Partner(this.id, comboBox9);
-            comboBox3.SelectedIndex = 0;
-            switch (partnersNumber)
-            {
-                case 1:
-                    comboBox4.Visible = false;
-                    comboBox9.Visible = false;
-                    break;
-                case 2:
-                    comboBox4.SelectedIndex = 1;
-                    comboBox3.Visible = true;
-                    comboBox4.Visible = true;
-                    comboBox9.Visible = false;
-                    break;
-                case 3:
-                    comboBox4.SelectedIndex = 1;
-                    comboBox9.SelectedIndex = 2;
-                    comboBox3.Visible = true;
-                    comboBox4.Visible = true;
-                    comboBox9.Visible = true;
-                    break;
-            }
+            common.InstitutionCountry(comboBox2.Text, label6);
+            common.FillInstitution(comboBox3, comboBox4, comboBox9);
+            common.Partner(this.id, comboBox3, comboBox4, comboBox9, button1,button3,button12,button17,button15);
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            button12.Visible = false;
+            comboBox9.Visible = false;
+            button3.Visible = true;
+            button15.Visible = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            button1.Visible = true;
+            button3.Visible = false;
+            comboBox4.Visible = false;
+            button17.Visible = true;
+            button15.Visible = false;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            button3.Visible = true;
+            comboBox4.Visible = true;
+            button17.Visible = false;
+            button15.Visible = true;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            button12.Visible = true;
+            comboBox9.Visible = true;
+            button3.Visible = false;
+            button15.Visible = false;
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
 
         }
     }
