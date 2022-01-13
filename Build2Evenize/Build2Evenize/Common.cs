@@ -45,82 +45,112 @@ public class Common
         dr.Close();
         dr.Dispose();
     }
-    public void FillInstitution(ComboBox Partner1, ComboBox Partner2, ComboBox Partner3)
+    public void Fill(string query, ComboBox cb1, ComboBox cb2, ComboBox cb3)
     {
-        string query = "select distinct name from Institution";
         cmd = new SqlCommand(query, con);
         dr = cmd.ExecuteReader();
         while (dr.Read())
         {
             //add every row found on database to combobox
             string name = (string)dr[0];
-            Partner1.Items.Add(name);
-            Partner2.Items.Add(name);
-            Partner3.Items.Add(name);
+            cb1.Items.Add(name);
+            cb2.Items.Add(name);
+            cb3.Items.Add(name);
         }
         dr.Close();
         dr.Dispose();
     }
-    public void Partner(int id, ComboBox Partner1, ComboBox Partner2, ComboBox Partner3, Button Delete1, Button Delete2, Button Delete3, Button Add1, Button Add2)
+    public void Switcher(int check,string query,ComboBox cb1, ComboBox cb2, ComboBox cb3, Button Delete1, Button Delete2, Button Delete3, Button Add1, Button Add2)
     {
-        string query = "select I.institution_id,I.name from Project_Partner PP JOIN Institution I on PP.institution_id = I.institution_id where project_id = "+ id;
         cmd = new SqlCommand(query, con);
         dr = cmd.ExecuteReader();
-        int partnersNumber = 0;
+        int i = 0;
         ArrayList name_list = new ArrayList();
         ArrayList id_list = new ArrayList();
 
         while (dr.Read())
         {
-            //add every row found on database to combobox
-            int institution_id = (int)dr[0];
-            string institution_name = (string)dr[1];
-            name_list.Add(institution_name);
-            id_list.Add(institution_id);
-            partnersNumber++;
+            
+            int id = (int)dr[0];
+            string name = (string)dr[1];
+            name_list.Add(name);
+            id_list.Add(id);
+            i++;
         }
         dr.Close();
         dr.Dispose();
-        PartnerNumber((int)id_list[0], Partner1);
-        
-        switch (partnersNumber)
+        if (check == 0)
+        {
+            Index("select name from Institution where institution_id = " + (int)id_list[0], cb1);
+        }
+        else if (check == 1)
+        {
+            Index("select name from Tech where tech_id = " + (int)id_list[0], cb1);
+        }
+        else if (check == 2)
+        {
+            Index("select name from Social_Skill where social_skill_id = " + (int)id_list[0], cb1);
+        }
+
+        switch (i)
         {
             case 0:
                 break;
             case 1:
-                Partner2.Visible = false;
-                Partner3.Visible = false;
+                cb2.Visible = false;
+                cb3.Visible = false;
                 Add1.Visible = true;
                 Delete1.Visible = true;
                 break;
             case 2:
-                PartnerNumber((int)id_list[1], Partner2);
-                Partner1.Visible = true;
-                Partner2.Visible = true;
-                Partner3.Visible = false;
+                if (check == 0)
+                {
+                    Index("select name from Institution where institution_id = " + (int)id_list[1], cb2);
+                }else if (check == 1){
+                    Index("select name from Tech where tech_id = " + (int)id_list[1], cb2);
+                }
+                else if (check == 2){
+                    Index("select name from Social_Skill where social_skill_id = " + (int)id_list[1], cb2);
+                }  
+                cb1.Visible = true;
+                cb2.Visible = true;
+                cb3.Visible = false;
                 Delete2.Visible = true;
                 Add2.Visible = true;
                 break;
             case 3:
-                PartnerNumber((int)id_list[1], Partner2);
-                PartnerNumber((int)id_list[2], Partner3);
-                Partner1.Visible = true;
-                Partner2.Visible = true;
-                Partner3.Visible = true;
+                if (check == 0)
+                {
+                    Index("select name from Institution where institution_id = " + (int)id_list[1], cb2);
+                    Index("select name from Institution where institution_id = " + (int)id_list[2], cb3);
+                }
+                else if (check == 1)
+                {
+                    Index("select name from Tech where tech_id = " + (int)id_list[1], cb2);
+                    Index("select name from Tech where tech_id = " + (int)id_list[2], cb3);
+                }
+                else if (check == 2)
+                {
+                    Index("select name from Social_Skill where social_skill_id = " + (int)id_list[1], cb2);
+                    Index("select name from Social_Skill where social_skill_id = " + (int)id_list[2], cb3);
+                }
+
+                cb1.Visible = true;
+                cb2.Visible = true;
+                cb3.Visible = true;
                 Delete3.Visible = true;
                 break;
         }
 
     }
-    public void PartnerNumber(int id, ComboBox Partner)
+    public void Index(string query, ComboBox cb)
     {
-        string query = "select name from Institution where institution_id = " + id;
         cmd = new SqlCommand(query, con);
         dr = cmd.ExecuteReader();
 
         if (dr.Read())
         {
-            Partner.SelectedItem = dr.GetString(0);
+            cb.SelectedItem = dr.GetString(0);
         }
         dr.Close();
         dr.Dispose();

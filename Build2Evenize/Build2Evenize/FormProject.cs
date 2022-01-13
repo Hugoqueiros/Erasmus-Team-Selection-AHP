@@ -49,7 +49,7 @@ namespace Build2Evenize
         {
             String query=null;
             DataView DV = new DataView(this.build2evenizeDataSet.View_1);
-            if (name != "All")
+            if (name != null)
             {
                 if (query == null)
                 {
@@ -138,7 +138,7 @@ namespace Build2Evenize
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            country = comboBox2.Text;
+            country = comboBox3.Text;
             CheckFilters();
         }
 
