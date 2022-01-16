@@ -111,7 +111,6 @@ namespace Build2Evenize
             this.button11.BackgroundImage = global::Build2Evenize.Properties.Resources.edit;
             this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button11.Enabled = false;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F);
@@ -121,6 +120,8 @@ namespace Build2Evenize
             this.button11.Size = new System.Drawing.Size(50, 50);
             this.button11.TabIndex = 37;
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Visible = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -128,7 +129,6 @@ namespace Build2Evenize
             this.button10.BackgroundImage = global::Build2Evenize.Properties.Resources.delete;
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.Enabled = false;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F);
@@ -138,6 +138,8 @@ namespace Build2Evenize
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 36;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Visible = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // label1
             // 
@@ -161,6 +163,7 @@ namespace Build2Evenize
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.txtSearch);
+            this.panel2.Enabled = false;
             this.panel2.Location = new System.Drawing.Point(742, 98);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel2.Name = "panel2";
@@ -304,6 +307,7 @@ namespace Build2Evenize
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label2);
+            this.panel3.Enabled = false;
             this.panel3.Location = new System.Drawing.Point(12, 98);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(723, 577);
@@ -668,6 +672,7 @@ namespace Build2Evenize
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(541, 24);
             this.comboBox8.TabIndex = 21;
+            this.comboBox8.SelectedIndexChanged += new System.EventHandler(this.comboBox8_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -698,6 +703,7 @@ namespace Build2Evenize
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(541, 24);
             this.comboBox6.TabIndex = 16;
+            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -746,6 +752,7 @@ namespace Build2Evenize
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(541, 24);
             this.comboBox3.TabIndex = 10;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label7
             // 

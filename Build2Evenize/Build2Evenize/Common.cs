@@ -60,7 +60,7 @@ public class Common
         dr.Close();
         dr.Dispose();
     }
-    public void Switcher(int check,string query,ComboBox cb1, ComboBox cb2, ComboBox cb3, Button Delete1, Button Delete2, Button Delete3, Button Add1, Button Add2)
+    public void Switcher(int check, string query, ComboBox cb1, ComboBox cb2, ComboBox cb3, Button Delete1, Button Delete2, Button Delete3, Button Add1, Button Add2)
     {
         cmd = new SqlCommand(query, con);
         dr = cmd.ExecuteReader();
@@ -70,7 +70,6 @@ public class Common
 
         while (dr.Read())
         {
-            
             int id = (int)dr[0];
             string name = (string)dr[1];
             name_list.Add(name);
@@ -79,69 +78,76 @@ public class Common
         }
         dr.Close();
         dr.Dispose();
-        if (check == 0)
+        if (id_list.Count != 0)
         {
-            Index("select name from Institution where institution_id = " + (int)id_list[0], cb1);
-        }
-        else if (check == 1)
-        {
-            Index("select name from Tech where tech_id = " + (int)id_list[0], cb1);
-        }
-        else if (check == 2)
-        {
-            Index("select name from Social_Skill where social_skill_id = " + (int)id_list[0], cb1);
-        }
+            //check - 0-institution data 1-Hard Skills data 2-Soft Skills data
+            if (check == 0)
+            {
+                Index("select name from Institution where institution_id = " + (int)id_list[0], cb1);
+            }
+            else if (check == 1)
+            {
+                Index("select name from Tech where tech_id = " + (int)id_list[0], cb1);
+            }
+            else if (check == 2)
+            {
+                Index("select name from Social_Skill where social_skill_id = " + (int)id_list[0], cb1);
+            }
+            //i - check if there is 0,1,2 or 3 chosen options
+            switch (i)
+            {
+                case 0:
+                    break;
+                case 1:
+                    cb2.Visible = false;
+                    cb3.Visible = false;
+                    Add1.Visible = true;
+                    Delete1.Visible = true;
+                    break;
+                case 2:
+                    if (check == 0)
+                    {
+                        Index("select name from Institution where institution_id = " + (int)id_list[1], cb2);
+                    }
+                    else if (check == 1)
+                    {
+                        Index("select name from Tech where tech_id = " + (int)id_list[1], cb2);
+                    }
+                    else if (check == 2)
+                    {
+                        Index("select name from Social_Skill where social_skill_id = " + (int)id_list[1], cb2);
+                    }
+                    cb1.Visible = true;
+                    cb2.Visible = true;
+                    cb3.Visible = false;
+                    Delete2.Visible = true;
+                    Add2.Visible = true;
+                    break;
+                case 3:
+                    if (check == 0)
+                    {
+                        Index("select name from Institution where institution_id = " + (int)id_list[1], cb2);
+                        Index("select name from Institution where institution_id = " + (int)id_list[2], cb3);
+                    }
+                    else if (check == 1)
+                    {
+                        Index("select name from Tech where tech_id = " + (int)id_list[1], cb2);
+                        Index("select name from Tech where tech_id = " + (int)id_list[2], cb3);
+                    }
+                    else if (check == 2)
+                    {
+                        Index("select name from Social_Skill where social_skill_id = " + (int)id_list[1], cb2);
+                        Index("select name from Social_Skill where social_skill_id = " + (int)id_list[2], cb3);
+                    }
 
-        switch (i)
-        {
-            case 0:
-                break;
-            case 1:
-                cb2.Visible = false;
-                cb3.Visible = false;
-                Add1.Visible = true;
-                Delete1.Visible = true;
-                break;
-            case 2:
-                if (check == 0)
-                {
-                    Index("select name from Institution where institution_id = " + (int)id_list[1], cb2);
-                }else if (check == 1){
-                    Index("select name from Tech where tech_id = " + (int)id_list[1], cb2);
-                }
-                else if (check == 2){
-                    Index("select name from Social_Skill where social_skill_id = " + (int)id_list[1], cb2);
-                }  
-                cb1.Visible = true;
-                cb2.Visible = true;
-                cb3.Visible = false;
-                Delete2.Visible = true;
-                Add2.Visible = true;
-                break;
-            case 3:
-                if (check == 0)
-                {
-                    Index("select name from Institution where institution_id = " + (int)id_list[1], cb2);
-                    Index("select name from Institution where institution_id = " + (int)id_list[2], cb3);
-                }
-                else if (check == 1)
-                {
-                    Index("select name from Tech where tech_id = " + (int)id_list[1], cb2);
-                    Index("select name from Tech where tech_id = " + (int)id_list[2], cb3);
-                }
-                else if (check == 2)
-                {
-                    Index("select name from Social_Skill where social_skill_id = " + (int)id_list[1], cb2);
-                    Index("select name from Social_Skill where social_skill_id = " + (int)id_list[2], cb3);
-                }
+                    cb1.Visible = true;
+                    cb2.Visible = true;
+                    cb3.Visible = true;
+                    Delete3.Visible = true;
+                    break;
+            }
 
-                cb1.Visible = true;
-                cb2.Visible = true;
-                cb3.Visible = true;
-                Delete3.Visible = true;
-                break;
         }
-
     }
     public void Index(string query, ComboBox cb)
     {

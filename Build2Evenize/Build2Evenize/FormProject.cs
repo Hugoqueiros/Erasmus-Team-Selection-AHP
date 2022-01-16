@@ -146,7 +146,7 @@ namespace Build2Evenize
         {
             int projectId = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             
-            FormProjectInfo fpi = new FormProjectInfo(projectId, common);
+            FormProjectInfo fpi = new FormProjectInfo(projectId,id, common);
             fpi.ShowDialog();
         }
 
@@ -158,7 +158,7 @@ namespace Build2Evenize
 
         private void button7_Click(object sender, EventArgs e)
         {
-            FormProjectInfo fpi = new FormProjectInfo(0, common);
+            FormProjectInfo fpi = new FormProjectInfo(0,id, common);
             fpi.ShowDialog();
         }
 

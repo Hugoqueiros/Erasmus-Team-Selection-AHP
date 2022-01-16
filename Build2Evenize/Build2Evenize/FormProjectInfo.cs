@@ -15,11 +15,12 @@ namespace Build2Evenize
     public partial class FormProjectInfo : Form
     {
         private Common common;
-        int id;
-        public FormProjectInfo(int projectId, Common common)
+        int id,coordinatorId;
+        public FormProjectInfo(int projectId,int coordinatorId, Common common)
         {
             this.id = projectId;
             this.common = common;
+            this.coordinatorId = coordinatorId;
             InitializeComponent();
         }
 
@@ -129,15 +130,36 @@ namespace Build2Evenize
 
         private void FormProjectInfo_Load(object sender, EventArgs e)
         {
-            common.Filters("area", "name", comboBox1);
-            common.Filters("institution", "name", comboBox2);
-            string query = "select * from Project where project_id = " + this.id;
+            bool isAdmin = false;
+            string query = "SELECT C.coordinator_id from Coordinator C where C.institution_id in (SELECT P.institution_id FROM Project P where P.project_id =" + this.id + ");";
             SqlCommand cmd = new SqlCommand(query, common.con);
             SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                isAdmin = (dr.GetInt32(0) == coordinatorId);
+            }
+            dr.Close();
+            dr.Dispose();
+
+            if (isAdmin)
+            {
+                button10.Visible = true;
+                button11.Visible = true;
+            }
+
+            common.Filters("area", "name", comboBox1);
+            common.Filters("institution", "name", comboBox2);
+            query = "select * from Project where project_id = " + this.id;
+            cmd = new SqlCommand(query, common.con);
+            dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 textBox1.Text = dr.GetString(1);
                 textBox2.Text = dr.GetString(2);
+                dateTimePicker1.Value = dr.GetDateTime(4);
+                dateTimePicker2.Value = dr.GetDateTime(5);
+                numericUpDown1.Value = dr.GetInt32(3);
+
             }
             dr.Close();
             dr.Dispose();
@@ -170,8 +192,6 @@ namespace Build2Evenize
 
             common.Fill("select distinct name from Social_Skill", comboBox8, comboBox7, comboBox11);
             common.Switcher(2, "select SS.social_skill_id, SS.name from Project_SK PS JOIN Social_Skill SS on SS.social_skill_id = PS.social_skill_id where project_id = " + this.id, comboBox8, comboBox7, comboBox11, button5, button6, button14, button20, button19);
-
-
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -282,6 +302,65 @@ namespace Build2Evenize
             comboBox11.Visible = false;
             button6.Visible = true;
             button19.Visible = true;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            panel3.Enabled = true;
+            panel2.Enabled = true;
+            
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            const string message = "Are you sure that you want to delete this project?";
+            const string caption = "Delete Project";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                string query = "DELETE FROM Project_Area WHERE project_id =" + this.id + ";" +
+                    "DELETE FROM Project_Partner WHERE project_id =" + this.id + ";" +
+                    "DELETE FROM Project_SK WHERE project_id =" + this.id + ";" +
+                    "DELETE FROM Project_Team WHERE project_id =" + this.id + ";" +
+                    "DELETE FROM Project_Tech WHERE project_id =" + this.id + ";" +
+                    "DELETE FROM Project WHERE project_id =" + this.id;
+                SqlCommand cmd = new SqlCommand(query, common.con);
+                int project =+ cmd.ExecuteNonQuery();
+
+
+                if (project != 0)
+                    MessageBox.Show("Project Deleted!");
+            }
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox3.SelectedIndex != -1)
+            {
+                button17.Visible = true;
+                button1.Visible = true;
+            }
+        }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox6.SelectedIndex != -1)
+            {
+                button18.Visible = true;
+                button2.Visible = true;
+            }
+        }
+
+        private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox8.SelectedIndex != -1)
+            {
+                button20.Visible = true;
+                button5.Visible = true;
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
