@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -104,6 +105,7 @@ namespace Build2Evenize
             common.Filters("institution", "name", comboBox2); //filter of institution name
             comboBox3.Items.Add("All");
             common.Filters("institution", "country", comboBox3); //filter of institution country
+            common.Filters("project", "name", comboBox6); // filter of area
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
             comboBox3.SelectedIndex = 0;
@@ -144,6 +146,16 @@ namespace Build2Evenize
             CheckFilters();
         }
 
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SimulationPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void button7_Click(object sender, EventArgs e)
         {
             FormProjectInfo fpi = new FormProjectInfo(this,0,id, common);
@@ -157,6 +169,124 @@ namespace Build2Evenize
             Login_Register lr = new Login_Register();
             lr.ShowDialog();
         }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public ArrayList resultadosTech(int idProj)
+        {
+            SqlCommand cmdTech = new SqlCommand("select count(*) as nrTechs from Project_Tech where project_id = " + idProj, common.con);
+            SqlDataReader dr = cmdTech.ExecuteReader();
+            dr.Read();
+            int nrTech = (int)dr["nrTechs"];
+            dr.Close();
+            dr.Dispose();
+
+
+            SqlCommand cmdSP = new SqlCommand("select count(*) as nrStudentsProj from Student_Project where project_id = " + idProj, common.con);
+            SqlDataReader drSP = cmdSP.ExecuteReader();
+            drSP.Read();
+            int nrSP = (int)drSP["nrStudentsProj"];
+            drSP.Close();
+            drSP.Dispose();
+
+            double[,] techMatrix = new double[nrSP, nrSP];
+
+            SqlCommand cmdCount = new SqlCommand("select count(tech_id) as count from Project_Tech where project_id = " + idProj, common.con);
+            SqlDataReader drCount = cmdCount.ExecuteReader();
+            drCount.Read();
+            int countTech = (int)drCount["count"];
+
+            SqlCommand cmdPT = new SqlCommand("select tech_id from Project_Tech where project_id = " + idProj, common.con);
+            SqlDataReader drPT = cmdPT.ExecuteReader();
+            int[] projectTechs = new int[countTech];
+            int x = 0;
+            while (drPT.Read())
+            {
+                projectTechs[x] = (int)drPT["tech_id"];
+                x++;
+            }
+
+            ArrayList resultadosReturn = new ArrayList();
+
+            for (int w = 0; w < countTech; w++)
+            {
+                SqlCommand cmdSV = new SqlCommand("select T.* from Student_Tech T, Student_Project P where T.tech_id = " + projectTechs[w] + " and P.project_id = " + idProj + " and T.student_id = P.student_id", common.con);
+                SqlDataReader drSV = cmdSV.ExecuteReader();
+                int[,] StudentTechLists = new int[nrSP, 4];
+                int count = 0;
+                while (drSV.Read())
+                {
+                    StudentTechLists[count, 0] = (int)drSV["student_tech_id"];
+                    StudentTechLists[count, 1] = (int)drSV["tech_id"];
+                    StudentTechLists[count, 2] = (int)drSV["student_id"];
+                    StudentTechLists[count, 3] = (int)drSV["value"];
+                    count++;
+                }
+
+                drSV.Close();
+                drSV.Dispose();
+
+                for (int i = 0; i < nrSP; i++)
+                {
+                    for (int j = 0; j < nrSP; j++)
+                    {
+                        techMatrix[i, j] = (double)StudentTechLists[i, 3] / StudentTechLists[j, 3];
+                    }
+                }
+
+                double totalFila = 0;
+                double[] resultados = new double[nrSP];
+                for (int i = 0; i < nrSP; i++)
+                {
+                    for (int j = 0; j < nrSP; j++)
+                    {
+                        double a = techMatrix[j, i];
+                        totalFila = totalFila + a;
+                    }
+                    resultados[i] = totalFila;
+                    totalFila = 0;
+                }
+
+                double valor = 0;
+                double valorFinal = 0;
+                double[] resultadosFinal = new double[nrSP];
+                for (int i = 0; i < nrSP; i++)
+                {
+                    for (int j = 0; j < nrSP; j++)
+                    {
+                        valor = techMatrix[i, j];
+                        valorFinal = (double)valorFinal + (valor / resultados[j]);
+                    }
+                    valorFinal = valorFinal / nrSP;
+                    resultadosFinal[i] = valorFinal;
+                    valorFinal = 0;
+                }
+
+                resultadosReturn.Add(resultadosFinal);
+            }
+
+            return resultadosReturn;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ArrayList valuesTech = resultadosTech(1);
+            double[] tech;
+            for (int i = 0; i < 2; i++)
+            {
+                tech = (double[])valuesTech[i];
+                for (int j = 0; j < 2; j++)
+                {
+                    MessageBox.Show(tech[j].ToString());
+                }
+
+            }
+
+        }
+
         public void Refresh()
         {
             this.view_1TableAdapter.Fill(this.build2evenizeDataSet.View_1);
