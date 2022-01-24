@@ -16,8 +16,10 @@ namespace Build2Evenize
     {
         private Common common;
         int id,coordinatorId;
-        public FormProjectInfo(int projectId,int coordinatorId, Common common)
+        FormProject f;
+        public FormProjectInfo(FormProject form, int projectId,int coordinatorId, Common common)
         {
+            this.f = form;
             this.id = projectId;
             this.common = common;
             this.coordinatorId = coordinatorId;
@@ -370,6 +372,26 @@ namespace Build2Evenize
             comboBox7.Visible = false;
             button20.Visible = true;
             button19.Visible = false;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            common.UpdateProject(this.id,textBox1.Text,textBox2.Text,(int)numericUpDown1.Value, dateTimePicker1.Text,dateTimePicker2.Text,comboBox2.Text,null);
+            
+
+            MessageBox.Show(textBox1.Text + " Updated Successfully!", "Success", MessageBoxButtons.OK);
+            f.Refresh();
+        }
+
+        public void setPanelVisible(bool flag)
+        {
+            this.panel2.Enabled = flag;
+            this.panel3.Enabled = flag;
         }
     }
 }

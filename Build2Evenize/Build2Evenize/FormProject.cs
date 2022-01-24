@@ -111,18 +111,6 @@ namespace Build2Evenize
             this.view_1TableAdapter.Fill(this.build2evenizeDataSet.View_1);
 
         }
-        
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        public void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             area = comboBox1.Text;
@@ -146,7 +134,7 @@ namespace Build2Evenize
         {
             int projectId = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             
-            FormProjectInfo fpi = new FormProjectInfo(projectId,id, common);
+            FormProjectInfo fpi = new FormProjectInfo(this,projectId,id, common);
             fpi.ShowDialog();
         }
 
@@ -158,8 +146,9 @@ namespace Build2Evenize
 
         private void button7_Click(object sender, EventArgs e)
         {
-            FormProjectInfo fpi = new FormProjectInfo(0,id, common);
-            fpi.ShowDialog();
+            FormProjectInfo fpi = new FormProjectInfo(this,0,id, common);
+            fpi.Show();
+            fpi.setPanelVisible(true);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -167,6 +156,11 @@ namespace Build2Evenize
             this.Hide();
             Login_Register lr = new Login_Register();
             lr.ShowDialog();
+        }
+        public void Refresh()
+        {
+            this.view_1TableAdapter.Fill(this.build2evenizeDataSet.View_1);
+            MessageBox.Show("SUCCESS");
         }
     }
 

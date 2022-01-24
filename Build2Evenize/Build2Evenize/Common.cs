@@ -161,5 +161,50 @@ public class Common
         dr.Close();
         dr.Dispose();
     }
+    public void UpdateProject(int id, string name, string desc, int nr, string start, string end, string institution, string area)
+    {
+        int institution_id=0, area_id=0;
+        string query = "SELECT institution_id from Institution where name LIKE '" + institution + "' JOIN ";
+        SqlCommand cmd = new SqlCommand(query, con);
+        SqlDataReader dr = cmd.ExecuteReader();
+        if (dr.Read())
+        {
+            institution_id = (dr.GetInt32(0));
+        }
+        dr.Close();
+        dr.Dispose();
+
+        query = "SELECT area_id from Area where area like '" + area + "'";
+        cmd = new SqlCommand(query, con);
+        dr = cmd.ExecuteReader();
+        if (dr.Read())
+        {
+            area_id = (dr.GetInt32(0));
+        }
+        dr.Close();
+        dr.Dispose();
+
+        query = "SELECT partner_id, institution_id from Project_Partner where project_id = '" + id + "'";
+        cmd = new SqlCommand(query, con);
+        dr = cmd.ExecuteReader();
+        if (dr.Read())
+        {
+            //partner_id = (dr.GetInt32(0));
+        }
+        dr.Close();
+        dr.Dispose();
+
+        query = "UPDATE Project SET name = '"+ name +"', [desc] = '"+ desc +"', nr_students = "+ nr +", " +
+                        "date_start =  '" + start + "', date_end = '"+ end +"', institution_id="+ institution_id + " " +
+                        "WHERE project_id = "+ id +";"+
+                "UPDATE Project_Area SET area_id = " + area_id + " +" +
+                        "WHERE project_id = "+ id +";"+
+                "UPDATE Project_Partner SET partner_id = " + area_id + " +" +
+                                "WHERE project_id = " + id + ";";
+
+        cmd = new SqlCommand(query, con);
+        cmd.ExecuteNonQuery();
+    }
+
 
 }

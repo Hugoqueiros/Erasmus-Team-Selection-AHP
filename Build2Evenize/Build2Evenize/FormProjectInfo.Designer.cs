@@ -176,12 +176,13 @@ namespace Build2Evenize
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
-            this.button9.Location = new System.Drawing.Point(300, 538);
+            this.button9.Location = new System.Drawing.Point(300, 536);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(294, 34);
+            this.button9.Size = new System.Drawing.Size(294, 30);
             this.button9.TabIndex = 35;
             this.button9.Text = "Save";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -189,13 +190,14 @@ namespace Build2Evenize
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(0, 538);
+            this.button8.Location = new System.Drawing.Point(3, 536);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(294, 35);
+            this.button8.Size = new System.Drawing.Size(294, 30);
             this.button8.TabIndex = 34;
             this.button8.Text = "Cancel";
             this.button8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -203,9 +205,9 @@ namespace Build2Evenize
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(0, 497);
+            this.button7.Location = new System.Drawing.Point(3, 501);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(595, 35);
+            this.button7.Size = new System.Drawing.Size(595, 29);
             this.button7.TabIndex = 33;
             this.button7.Text = "Import Students";
             this.button7.UseVisualStyleBackColor = false;
@@ -870,7 +872,7 @@ namespace Build2Evenize
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.Font = new System.Drawing.Font("Montserrat", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormProjectInfo";
