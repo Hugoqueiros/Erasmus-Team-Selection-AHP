@@ -781,6 +781,7 @@ namespace Build2Evenize
             // 
             // comboBox2
             // 
+            this.comboBox2.Enabled = false;
             this.comboBox2.Font = new System.Drawing.Font("Montserrat", 8.999999F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(147, 186);
