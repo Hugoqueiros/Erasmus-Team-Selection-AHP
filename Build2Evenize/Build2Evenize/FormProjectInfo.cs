@@ -63,8 +63,10 @@ namespace Build2Evenize
 
         private void button1_Click(object sender, EventArgs e)
         {
+            button1.Visible = false;
             comboBox3.ResetText();
             comboBox3.Focus();
+            button17.Visible =false;
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -198,6 +200,8 @@ namespace Build2Evenize
 
         private void button12_Click(object sender, EventArgs e)
         {
+            comboBox9.ResetText();
+            comboBox4.Focus();
             button12.Visible = false;
             comboBox9.Visible = false;
             button3.Visible = true;
@@ -206,7 +210,9 @@ namespace Build2Evenize
 
         private void button3_Click(object sender, EventArgs e)
         {
-            button1.Visible = false;
+            comboBox4.ResetText();
+            comboBox3.Focus();
+            button1.Visible = true;
             button3.Visible = false;
             comboBox4.Visible = false;
             button17.Visible = true;
@@ -233,12 +239,14 @@ namespace Build2Evenize
 
         private void button2_Click(object sender, EventArgs e)
         {
+            button18.Visible = false;
             comboBox6.ResetText();
             comboBox6.Focus();
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
+            comboBox10.ResetText();
             button13.Visible = false;
             comboBox10.Visible = false;
             button4.Visible = true;
@@ -264,12 +272,12 @@ namespace Build2Evenize
 
         private void button4_Click(object sender, EventArgs e)
         {
-
-                button2.Visible = true;
-                button4.Visible = false;
-                comboBox5.Visible = false;
-                button18.Visible = true;
-                button16.Visible = false;
+            comboBox5.ResetText();
+            button2.Visible = true;
+            button4.Visible = false;
+            comboBox5.Visible = false;
+            button18.Visible = true;
+            button16.Visible = false;
             
         }
 
@@ -381,7 +389,7 @@ namespace Build2Evenize
 
         private void button9_Click(object sender, EventArgs e)
         {
-            common.UpdateProject(this.id,textBox1.Text,textBox2.Text,(int)numericUpDown1.Value, dateTimePicker1.Text,dateTimePicker2.Text,comboBox2.Text,null);
+            common.UpdateProject(this.id,textBox1.Text,textBox2.Text,(int)numericUpDown1.Value, dateTimePicker1.Text,dateTimePicker2.Text,comboBox2.Text,comboBox1.Text,comboBox3.Text,comboBox4.Text,comboBox9.Text, comboBox6.Text, comboBox5.Text, comboBox10.Text);
             
 
             MessageBox.Show(textBox1.Text + " Updated Successfully!", "Success", MessageBoxButtons.OK);

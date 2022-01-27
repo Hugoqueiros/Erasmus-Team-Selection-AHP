@@ -290,7 +290,6 @@ namespace Build2Evenize
         public void Refresh()
         {
             this.view_1TableAdapter.Fill(this.build2evenizeDataSet.View_1);
-            MessageBox.Show("SUCCESS");
         }
     }
 
