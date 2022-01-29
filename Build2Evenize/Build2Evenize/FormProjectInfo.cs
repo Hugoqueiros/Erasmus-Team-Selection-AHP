@@ -145,11 +145,7 @@ namespace Build2Evenize
             dr.Close();
             dr.Dispose();
 
-            if (isAdmin)
-            {
-                button10.Visible = true;
-                button11.Visible = true;
-            }
+            
 
             common.Filters("area", "name", comboBox1);
             common.Filters("institution", "name", comboBox2);
@@ -176,15 +172,7 @@ namespace Build2Evenize
             }
             dr.Close();
             dr.Dispose();
-            query = "select institution_id from Institution where institution_id in (select institution_id from Project where project_id = " + this.id + ")";
-            cmd = new SqlCommand(query, common.con);
-            dr = cmd.ExecuteReader();
-            if (dr.Read())
-            {
-                comboBox2.SelectedIndex = dr.GetInt32(0) - 1;
-            }
-            dr.Close();
-            dr.Dispose();
+            
 
             
             common.InstitutionCountry(comboBox2.Text, label6);
@@ -196,6 +184,45 @@ namespace Build2Evenize
 
             common.Fill("select distinct name from Social_Skill", comboBox8, comboBox7, comboBox11);
             common.Switcher(2, "select SS.social_skill_id, SS.name from Project_SK PS JOIN Social_Skill SS on SS.social_skill_id = PS.social_skill_id where project_id = " + this.id, comboBox8, comboBox7, comboBox11, button5, button6, button14, button20, button19);
+
+            if (isAdmin)
+            {
+                button10.Visible = true;
+                button11.Visible = true;
+                query = "select institution_id from Institution where institution_id in (select institution_id from Coordinator where coordinator_id = " + coordinatorId + ")";
+                cmd = new SqlCommand(query, common.con);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    comboBox2.SelectedIndex = dr.GetInt32(0) - 1;
+                }
+                dr.Close();
+                dr.Dispose();
+            }
+            else
+            {
+                query = "select institution_id from Institution where institution_id in (select institution_id from Project where project_id = " + this.id + ")";
+                cmd = new SqlCommand(query, common.con);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    comboBox2.SelectedIndex = dr.GetInt32(0) - 1;
+                }
+                dr.Close();
+                dr.Dispose();
+            }
+            if (this.id == 0)
+            {
+                query = "select institution_id from Institution where institution_id in (select institution_id from Coordinator where coordinator_id = " + coordinatorId + ")";
+                cmd = new SqlCommand(query, common.con);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    comboBox2.SelectedIndex = dr.GetInt32(0) - 1;
+                }
+                dr.Close();
+                dr.Dispose();
+            }
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -283,6 +310,7 @@ namespace Build2Evenize
 
         private void button5_Click(object sender, EventArgs e)
         {
+            button20.Visible = false;
             comboBox8.ResetText();
             comboBox8.Focus();
         }
@@ -308,6 +336,7 @@ namespace Build2Evenize
 
         private void button14_Click(object sender, EventArgs e)
         {
+            comboBox11.ResetText();
             button14.Visible = false;
             comboBox11.Visible = false;
             button6.Visible = true;
@@ -375,6 +404,7 @@ namespace Build2Evenize
 
         private void button6_Click(object sender, EventArgs e)
         {
+            comboBox7.ResetText();
             button5.Visible = true;
             button6.Visible = false;
             comboBox7.Visible = false;
@@ -389,8 +419,8 @@ namespace Build2Evenize
 
         private void button9_Click(object sender, EventArgs e)
         {
-            common.UpdateProject(this.id,textBox1.Text,textBox2.Text,(int)numericUpDown1.Value, dateTimePicker1.Text,dateTimePicker2.Text,comboBox2.Text,comboBox1.Text,comboBox3.Text,comboBox4.Text,comboBox9.Text, comboBox6.Text, comboBox5.Text, comboBox10.Text);
-            
+            common.UpdateProject(this.id,textBox1.Text,textBox2.Text,(int)numericUpDown1.Value, dateTimePicker1.Text,dateTimePicker2.Text,comboBox2.Text,comboBox1.Text,comboBox3.Text,comboBox4.Text,comboBox9.Text, comboBox6.Text, comboBox5.Text, comboBox10.Text, comboBox8.Text, comboBox7.Text, comboBox11.Text);
+            common.InsertStudent();
 
             MessageBox.Show(textBox1.Text + " Updated Successfully!", "Success", MessageBoxButtons.OK);
             f.Refresh();

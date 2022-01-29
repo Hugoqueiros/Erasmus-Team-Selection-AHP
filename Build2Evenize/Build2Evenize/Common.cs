@@ -121,6 +121,7 @@ public class Common
                     cb1.Visible = true;
                     cb2.Visible = true;
                     cb3.Visible = false;
+                    Delete1.Visible = false;
                     Delete2.Visible = true;
                     Add1.Visible = false;
                     Add2.Visible = true;
@@ -148,6 +149,7 @@ public class Common
                     Add1.Visible = false;
                     Add2.Visible= false;
                     Delete1.Visible = false;
+                    Delete2.Visible= false;
                     Delete3.Visible = true;
                     break;
             }
@@ -166,7 +168,7 @@ public class Common
         dr.Close();
         dr.Dispose();
     }
-    public void UpdateProject(int id, string name, string desc, int nr, string start, string end, string institution, string area, string partner1, string partner2, string partner3, string tech1, string tech2, string tech3)
+    public void UpdateProject(int id, string name, string desc, int nr, string start, string end, string institution, string area, string partner1, string partner2, string partner3, string tech1, string tech2, string tech3, string sk1, string sk2, string sk3)
     {
         int institution_id=0, area_id=0, db_id1=0, db_id2 = 0, db_id3 = 0;
         string db_name1=null, db_name2=null , db_name3=null ;
@@ -374,6 +376,99 @@ public class Common
                 cmd.ExecuteNonQuery();
             }
 
+        //____________________________________________________________________________________________________________________________________________________________________
+        // SOFT SKILLS
+
+        count = 0;
+        query = "select PS.social_skill_id, SK.name, PS.project_sk_id from Project_SK PS JOIN Social_Skill SK on PS.social_skill_id = SK.social_skill_id where PS.project_id = '" + id + "'";
+        cmd = new SqlCommand(query, con);
+        dr = cmd.ExecuteReader();
+        while (dr.Read())
+        {
+            count++;
+            switch (count)
+            {
+                case 0:
+                    break;
+                case 1:
+                    db_id1 = dr.GetInt32(2);
+                    db_name1 = dr.GetString(1);
+                    break;
+                case 2:
+                    db_id2 = dr.GetInt32(2);
+                    db_name2 = dr.GetString(1);
+                    break;
+                case 3:
+                    db_id3 = dr.GetInt32(2);
+                    db_name3 = dr.GetString(1);
+                    break;
+            }
+        }
+        dr.Close();
+        dr.Dispose();
+
+
+        if (count == 0 && sk1 != "")
+        {
+            query = "INSERT INTO Project_SK (project_id, social_skill_id) VALUES (" + id + "," + Get_Id("select social_skill_id from Social_Skill where name LIKE '" + sk1 + "'") + ");";
+            cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+        }
+        else if (count == 1 && sk2 != "")
+        {
+            query = "INSERT INTO Project_SK (project_id, social_skill_id) VALUES (" + id + "," + Get_Id("select social_skill_id from Social_Skill where name LIKE '" + sk2 + "'") + ");";
+            cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+        }
+        else if (count == 2 && sk3 != "")
+        {
+            query = "INSERT INTO Project_SK (project_id, social_skill_id) VALUES (" + id + "," + Get_Id("select social_skill_id from Social_Skill where name LIKE '" + sk3 + "'") + ");";
+            cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+        }
+        if (sk1 != db_name1)
+            if (sk1 != "")
+            {
+                query = "UPDATE Project_SK SET social_skill_id = " + Get_Id("select social_skill_id from Social_Skill where name LIKE '" + sk1 + "'") +
+                            " WHERE project_sk_id = " + db_id1 + ";";
+                cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+            }
+            else
+            {
+                query = "DELETE FROM Project_SK WHERE project_sk_id = " + db_id1 + "";
+                cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+            }
+        if (sk2 != db_name2)
+            if (sk2 != "")
+            {
+                query = "UPDATE Project_SK SET social_skill_id = " + Get_Id("select social_skill_id from Social_Skill where name LIKE '" + sk2 + "'") +
+                            " WHERE project_sk_id = " + db_id2 + ";";
+                cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+            }
+            else
+            {
+                query = "DELETE FROM Project_SK WHERE project_sk_id = '" + db_id2 + "'";
+                cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+            }
+        if (sk3 != db_name3)
+            if (sk3 != "")
+            {
+                query = "UPDATE Project_SK SET social_skill_id = " + Get_Id("select social_skill_id from Social_Skill where name LIKE '" + sk3 + "'") +
+                            " WHERE project_sk_id = " + db_id3 + ";";
+                cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+            }
+            else
+            {
+                query = "DELETE FROM Project_SK WHERE project_sk_id = '" + db_id3 + "'";
+                cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+            }
+
 
         //UPDATE OF SIMPLE PROJECT DATA - NAME, DESCRIPTION, ETC.
         query = "UPDATE Project SET name = '" + name + "', [desc] = '" + desc + "', nr_students = " + nr + ", " +
@@ -385,6 +480,14 @@ public class Common
         cmd = new SqlCommand(query, con);
         cmd.ExecuteNonQuery();
     }
+    public void InsertStudent()
+    {
+        /*string query = "INSERT INTO Student (name,email) VALUES (" + id + "," + Get_Id("select tech_id from Tech where name LIKE '" + tech1 + "'") + ");";
+        SqlCommand cmd = new SqlCommand(query, con);
+        cmd.ExecuteNonQuery();*/
+    }
+
+
     public int Get_Id(string query)
     {
         int id = 0;
