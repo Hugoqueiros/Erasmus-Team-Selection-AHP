@@ -169,23 +169,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FranciscoPereira\\.nuget\\packages\\": {},
+    "C:\\Users\\João\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Universidade\\SAD\\Build2Evenize\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
+      "projectUniqueName": "C:\\Users\\João\\source\\repos\\SADProject\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
       "projectName": "Build2Evenize",
-      "projectPath": "D:\\Universidade\\SAD\\Build2Evenize\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
-      "packagesPath": "C:\\Users\\FranciscoPereira\\.nuget\\packages\\",
-      "outputPath": "D:\\Universidade\\SAD\\Build2Evenize\\Build2Evenize\\Build2Evenize\\obj\\",
+      "projectPath": "C:\\Users\\João\\source\\repos\\SADProject\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
+      "packagesPath": "C:\\Users\\João\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\João\\source\\repos\\SADProject\\Build2Evenize\\Build2Evenize\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\FranciscoPereira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\João\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

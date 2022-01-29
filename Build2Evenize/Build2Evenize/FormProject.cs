@@ -48,7 +48,7 @@ namespace Build2Evenize
         }
         private void CheckFilters()
         {
-            String query=null;
+            String query = null;
             DataView DV = new DataView(this.build2evenizeDataSet.View_1);
             if (name != null)
             {
@@ -135,14 +135,14 @@ namespace Build2Evenize
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int projectId = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-            
-            FormProjectInfo fpi = new FormProjectInfo(this,projectId,id, common);
+
+            FormProjectInfo fpi = new FormProjectInfo(this, projectId, id, common);
             fpi.ShowDialog();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            institution = comboBox2.Text;         
+            institution = comboBox2.Text;
             CheckFilters();
         }
 
@@ -158,7 +158,7 @@ namespace Build2Evenize
 
         private void button7_Click(object sender, EventArgs e)
         {
-            FormProjectInfo fpi = new FormProjectInfo(this,0,id, common);
+            FormProjectInfo fpi = new FormProjectInfo(this, 0, id, common);
             fpi.Show();
             fpi.setPanelVisible(true);
         }
@@ -271,16 +271,106 @@ namespace Build2Evenize
             return resultadosReturn;
         }
 
+        public ArrayList resultadosSK(int idProj)
+        {
+            SqlCommand cmdSP = new SqlCommand("select count(*) as nrStudentsProj from Student_Project where project_id = " + idProj, common.con);
+            SqlDataReader drSP = cmdSP.ExecuteReader();
+            drSP.Read();
+            int nrSP = (int)drSP["nrStudentsProj"];
+            drSP.Close();
+            drSP.Dispose();
+
+            double[,] skMatrix = new double[nrSP, nrSP];
+
+            SqlCommand cmdCount = new SqlCommand("select count(social_skill_id) as count from Project_SK where project_id = " + idProj, common.con);
+            SqlDataReader drCount = cmdCount.ExecuteReader();
+            drCount.Read();
+            int countSK = (int)drCount["count"];
+
+            SqlCommand cmdPSK = new SqlCommand("select social_skill_id from Project_SK where project_id = " + idProj, common.con);
+            SqlDataReader drPSK = cmdPSK.ExecuteReader();
+            int[] projectSK = new int[countSK];
+            int x = 0;
+            while (drPSK.Read())
+            {
+                projectSK[x] = (int)drPSK["social_skill_id"];
+                x++;
+            }
+
+            ArrayList resultadosReturn = new ArrayList();
+
+            for (int w = 0; w < countSK; w++)
+            {
+                SqlCommand cmdSV = new SqlCommand("select SK.* from Student_SK SK, Student_Project P where SK.social_skill_id = " + projectSK[w] + " and P.project_id = " + idProj + " and SK.student_id = P.student_id", common.con);
+                SqlDataReader drSV = cmdSV.ExecuteReader();
+                int[,] StudentSKLists = new int[nrSP, 4];
+                int count = 0;
+                while (drSV.Read())
+                {
+                    StudentSKLists[count, 0] = (int)drSV["student_sk_id"];
+                    StudentSKLists[count, 1] = (int)drSV["social_skill_id"];
+                    StudentSKLists[count, 2] = (int)drSV["student_id"];
+                    StudentSKLists[count, 3] = (int)drSV["value"];
+                    count++;
+                }
+
+                drSV.Close();
+                drSV.Dispose();
+
+                for (int i = 0; i < nrSP; i++)
+                {
+                    for (int j = 0; j < nrSP; j++)
+                    {
+                        skMatrix[i, j] = (double)StudentSKLists[i, 3] / StudentSKLists[j, 3];
+                    }
+                }
+
+                double totalFila = 0;
+                double[] resultados = new double[nrSP];
+                for (int i = 0; i < nrSP; i++)
+                {
+                    for (int j = 0; j < nrSP; j++)
+                    {
+                        double a = skMatrix[j, i];
+                        totalFila = totalFila + a;
+                    }
+                    resultados[i] = totalFila;
+                    totalFila = 0;
+                }
+
+                double valor = 0;
+                double valorFinal = 0;
+                double[] resultadosFinal = new double[nrSP];
+                for (int i = 0; i < nrSP; i++)
+                {
+                    for (int j = 0; j < nrSP; j++)
+                    {
+                        valor = skMatrix[i, j];
+                        valorFinal = (double)valorFinal + (valor / resultados[j]);
+                    }
+                    valorFinal = valorFinal / nrSP;
+                    resultadosFinal[i] = valorFinal;
+                    valorFinal = 0;
+                }
+
+                resultadosReturn.Add(resultadosFinal);
+            }
+
+            return resultadosReturn;
+
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             ArrayList valuesTech = resultadosTech(1);
-            double[] tech;
+            ArrayList valuesSK = resultadosSK(1);
+            double[] sk;
             for (int i = 0; i < 2; i++)
             {
-                tech = (double[])valuesTech[i];
+                sk = (double[])valuesSK[i];
                 for (int j = 0; j < 2; j++)
                 {
-                    MessageBox.Show(tech[j].ToString());
+                    MessageBox.Show(sk[j].ToString());
                 }
 
             }
@@ -290,6 +380,7 @@ namespace Build2Evenize
         public void Refresh()
         {
             this.view_1TableAdapter.Fill(this.build2evenizeDataSet.View_1);
+            MessageBox.Show("SUCCESS");
         }
     }
 
