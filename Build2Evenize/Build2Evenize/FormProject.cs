@@ -203,6 +203,11 @@ namespace Build2Evenize
             SqlDataReader drPT = cmdPT.ExecuteReader();
             int[] projectTechs = new int[countTech];
             int x = 0;
+
+            ArrayList studentValuesReturn = new ArrayList();
+            Dictionary<int, double> studentValue;
+            Dictionary<int, double> studentValueFinal;
+
             while (drPT.Read())
             {
                 projectTechs[x] = (int)drPT["tech_id"];
@@ -213,28 +218,28 @@ namespace Build2Evenize
 
             for (int w = 0; w < countTech; w++)
             {
+                studentValue = new Dictionary<int, double>();
+                studentValueFinal = new Dictionary<int, double>();
                 SqlCommand cmdSV = new SqlCommand("select T.* from Student_Tech T, Student_Project P where T.tech_id = " + projectTechs[w] + " and P.project_id = " + idProj + " and T.student_id = P.student_id", common.con);
                 SqlDataReader drSV = cmdSV.ExecuteReader();
-                int[,] StudentTechLists = new int[nrSP, 4];
-                int count = 0;
                 while (drSV.Read())
                 {
-                    StudentTechLists[count, 0] = (int)drSV["student_tech_id"];
-                    StudentTechLists[count, 1] = (int)drSV["tech_id"];
-                    StudentTechLists[count, 2] = (int)drSV["student_id"];
-                    StudentTechLists[count, 3] = (int)drSV["value"];
-                    count++;
+                    studentValue.Add((int)drSV["student_id"], (int)drSV["value"]);
                 }
 
                 drSV.Close();
                 drSV.Dispose();
 
-                for (int i = 0; i < nrSP; i++)
+                int p = 0;
+                foreach (var itemI in studentValue)
                 {
-                    for (int j = 0; j < nrSP; j++)
-                    {
-                        techMatrix[i, j] = (double)StudentTechLists[i, 3] / StudentTechLists[j, 3];
+                    int q = 0;
+                    foreach (var itemJ in studentValue)
+                    {                      
+                        techMatrix[p, q] = (double)itemI.Value / itemJ.Value;
+                        q += 1;
                     }
+                    p++;
                 }
 
                 double totalFila = 0;
@@ -253,22 +258,25 @@ namespace Build2Evenize
                 double valor = 0;
                 double valorFinal = 0;
                 double[] resultadosFinal = new double[nrSP];
-                for (int i = 0; i < nrSP; i++)
+                int k = 0;
+                foreach (var itemI in studentValue)
                 {
-                    for (int j = 0; j < nrSP; j++)
+                    int l = 0;
+                    foreach (var itemJ in studentValue)
                     {
-                        valor = techMatrix[i, j];
-                        valorFinal = (double)valorFinal + (valor / resultados[j]);
+                        valor = techMatrix[k, l];
+                        valorFinal = (double)valorFinal + (valor / resultados[l]);
+                        l++;
                     }
                     valorFinal = valorFinal / nrSP;
-                    resultadosFinal[i] = valorFinal;
+                    studentValueFinal.Add(itemI.Key, valorFinal);
                     valorFinal = 0;
+                    k++;
                 }
-
-                resultadosReturn.Add(resultadosFinal);
+                studentValuesReturn.Add(studentValueFinal);
             }
 
-            return resultadosReturn;
+            return studentValuesReturn;
         }
 
         public ArrayList resultadosSK(int idProj)
@@ -291,6 +299,10 @@ namespace Build2Evenize
             SqlDataReader drPSK = cmdPSK.ExecuteReader();
             int[] projectSK = new int[countSK];
             int x = 0;
+            ArrayList studentValuesReturn = new ArrayList();
+            Dictionary<int, double> studentValue;
+            Dictionary<int, double> studentValueFinal;
+
             while (drPSK.Read())
             {
                 projectSK[x] = (int)drPSK["social_skill_id"];
@@ -301,28 +313,28 @@ namespace Build2Evenize
 
             for (int w = 0; w < countSK; w++)
             {
+                studentValue = new Dictionary<int, double>();
+                studentValueFinal = new Dictionary<int, double>();
                 SqlCommand cmdSV = new SqlCommand("select SK.* from Student_SK SK, Student_Project P where SK.social_skill_id = " + projectSK[w] + " and P.project_id = " + idProj + " and SK.student_id = P.student_id", common.con);
                 SqlDataReader drSV = cmdSV.ExecuteReader();
-                int[,] StudentSKLists = new int[nrSP, 4];
-                int count = 0;
                 while (drSV.Read())
                 {
-                    StudentSKLists[count, 0] = (int)drSV["student_sk_id"];
-                    StudentSKLists[count, 1] = (int)drSV["social_skill_id"];
-                    StudentSKLists[count, 2] = (int)drSV["student_id"];
-                    StudentSKLists[count, 3] = (int)drSV["value"];
-                    count++;
+                    studentValue.Add((int)drSV["student_id"], (int)drSV["value"]);
                 }
 
                 drSV.Close();
                 drSV.Dispose();
 
-                for (int i = 0; i < nrSP; i++)
+                int p = 0;
+                foreach (var itemI in studentValue)
                 {
-                    for (int j = 0; j < nrSP; j++)
+                    int q = 0;
+                    foreach (var itemJ in studentValue)
                     {
-                        skMatrix[i, j] = (double)StudentSKLists[i, 3] / StudentSKLists[j, 3];
+                        skMatrix[p, q] = (double)itemI.Value / itemJ.Value;
+                        q += 1;
                     }
+                    p++;
                 }
 
                 double totalFila = 0;
@@ -341,39 +353,171 @@ namespace Build2Evenize
                 double valor = 0;
                 double valorFinal = 0;
                 double[] resultadosFinal = new double[nrSP];
+                int k = 0;
+                foreach (var itemI in studentValue)
+                {
+                    int l = 0;
+                    foreach (var itemJ in studentValue)
+                    {
+                        valor = skMatrix[k, l];
+                        valorFinal = (double)valorFinal + (valor / resultados[l]);
+                        l++;
+                    }
+                    valorFinal = valorFinal / nrSP;
+                    studentValueFinal.Add(itemI.Key, valorFinal);
+                    valorFinal = 0;
+                    k++;
+                }
+                studentValuesReturn.Add(studentValueFinal);
+            }
+
+            return studentValuesReturn;
+
+        }
+
+        public Dictionary<int, double> resultsGrade(int idProj)
+        {
+            SqlCommand cmdSP = new SqlCommand("select count(*) as nrStudentsProj from Student_Project where project_id = " + idProj, common.con);
+            SqlDataReader drSP = cmdSP.ExecuteReader();
+            drSP.Read();
+            int nrSP = (int)drSP["nrStudentsProj"];
+            drSP.Close();
+            drSP.Dispose();
+
+            double[,] gradeMatrix = new double[nrSP, nrSP];
+
+            ArrayList studentValuesReturn = new ArrayList();
+            Dictionary<int, double> studentValue;
+            Dictionary<int, double> studentValueFinal;
+
+            ArrayList resultadosReturn = new ArrayList();
+
+                studentValue = new Dictionary<int, double>();
+                studentValueFinal = new Dictionary<int, double>();
+                SqlCommand cmdSV = new SqlCommand("select S.grade, S.student_id from Student S, Student_Project SP where S.student_id = SP.student_id and SP.project_id = "+idProj, common.con);
+                SqlDataReader drSV = cmdSV.ExecuteReader();
+                while (drSV.Read())
+                {
+                    studentValue.Add((int)drSV["student_id"], Convert.ToDouble(drSV["grade"]));
+                }
+
+                drSV.Close();
+                drSV.Dispose();
+
+                int p = 0;
+                foreach (var itemI in studentValue)
+                {
+                    int q = 0;
+                    foreach (var itemJ in studentValue)
+                    {
+                        gradeMatrix[p, q] = (double)itemI.Value / itemJ.Value;
+                        q += 1;
+                    }
+                    p++;
+                }
+
+                double totalFila = 0;
+                double[] resultados = new double[nrSP];
                 for (int i = 0; i < nrSP; i++)
                 {
                     for (int j = 0; j < nrSP; j++)
                     {
-                        valor = skMatrix[i, j];
-                        valorFinal = (double)valorFinal + (valor / resultados[j]);
+                        double a = gradeMatrix[j, i];
+                        totalFila = totalFila + a;
                     }
-                    valorFinal = valorFinal / nrSP;
-                    resultadosFinal[i] = valorFinal;
-                    valorFinal = 0;
+                    resultados[i] = totalFila;
+                    totalFila = 0;
                 }
 
-                resultadosReturn.Add(resultadosFinal);
-            }
-
-            return resultadosReturn;
-
+                double valor = 0;
+                double valorFinal = 0;
+                double[] resultadosFinal = new double[nrSP];
+                int k = 0;
+                foreach (var itemI in studentValue)
+                {
+                    int l = 0;
+                    foreach (var itemJ in studentValue)
+                    {
+                        valor = gradeMatrix[k, l];
+                        valorFinal = (double)valorFinal + (valor / resultados[l]);
+                        l++;
+                    }
+                    valorFinal = valorFinal / nrSP;
+                    studentValueFinal.Add(itemI.Key, valorFinal);
+                    valorFinal = 0;
+                    k++;
+                }
+            return studentValueFinal;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             ArrayList valuesTech = resultadosTech(1);
             ArrayList valuesSK = resultadosSK(1);
-            double[] sk;
-            for (int i = 0; i < 2; i++)
-            {
-                sk = (double[])valuesSK[i];
-                for (int j = 0; j < 2; j++)
-                {
-                    MessageBox.Show(sk[j].ToString());
-                }
+            Dictionary<int, double> valuesGrade = resultsGrade(1);
 
+            Dictionary<int, double> valuesTechFinal = new Dictionary<int, double>();
+            Dictionary<int, double> valuesSKFinal = new Dictionary<int, double>();
+
+            for (int i = 0; i < valuesTech.Count; i++)
+            {
+                Dictionary<int, double> a = (Dictionary<int, double>)valuesTech[i];
+                foreach (var itemI in a)
+                {
+                    if (valuesTechFinal.ContainsKey(itemI.Key))
+                    {
+                        valuesTechFinal[itemI.Key] = valuesTechFinal[itemI.Key] + itemI.Value;
+                    }
+                    else
+                    {
+                        valuesTechFinal.Add(itemI.Key, itemI.Value);
+                    }
+                }
             }
+            for (int i = 0; i < valuesSK.Count; i++)
+            {
+                Dictionary<int, double> a = (Dictionary<int, double>)valuesSK[i];
+                foreach (var itemI in a)
+                {
+                    if (valuesSKFinal.ContainsKey(itemI.Key))
+                    {
+                        valuesSKFinal[itemI.Key] = valuesSKFinal[itemI.Key] + itemI.Value;
+                    }
+                    else
+                    {
+                        valuesSKFinal.Add(itemI.Key, itemI.Value);
+                    }
+                }
+            }
+
+            SqlCommand cmdSP = new SqlCommand("select nr_students from Project where project_id = 1", common.con);
+            SqlDataReader drSP = cmdSP.ExecuteReader();
+            drSP.Read();
+            int nrSP = (int)drSP["nr_students"];
+            drSP.Close();
+            drSP.Dispose();
+
+            Dictionary<int, double> ranking = new Dictionary<int, double>();
+            foreach (var itemI in valuesTechFinal)
+            {
+                int id = itemI.Key;
+                double valueT = itemI.Value;
+                double valueSK = valuesSKFinal[id];
+                double valueGrade = valuesGrade[id];
+                double valueFinal = valueT + valueSK + valueGrade;
+                ranking.Add(id, valueFinal);
+
+                    
+                //MessageBox.Show(itemI.Key.ToString()+" - " +itemI.Value.ToString());
+            }
+            Dictionary<int, double> finalTeam = new Dictionary<int, double>();
+            Dictionary<int, double> secondTeam = new Dictionary<int, double>();
+            var top5 = ranking.OrderByDescending(pair => pair.Value).Take(nrSP);
+            foreach (var itemI in top5)
+            {
+                MessageBox.Show(itemI.Key.ToString() + " - " + itemI.Value.ToString());
+            }
+
 
         }
 
