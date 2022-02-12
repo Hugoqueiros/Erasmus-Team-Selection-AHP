@@ -464,7 +464,7 @@ namespace Build2Evenize
             this.SimulationPanel.Controls.Add(this.dataGridView2);
             this.SimulationPanel.Location = new System.Drawing.Point(305, 12);
             this.SimulationPanel.Name = "SimulationPanel";
-            this.SimulationPanel.Size = new System.Drawing.Size(1564, 934);
+            this.SimulationPanel.Size = new System.Drawing.Size(1564, 849);
             this.SimulationPanel.TabIndex = 38;
             this.SimulationPanel.Visible = false;
             this.SimulationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SimulationPanel_Paint);

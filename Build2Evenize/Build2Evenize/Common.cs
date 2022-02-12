@@ -168,12 +168,13 @@ public class Common
         dr.Close();
         dr.Dispose();
     }
-    public void UpdateProject(int id, string name, string desc, int nr, string start, string end, string institution, string area, string partner1, string partner2, string partner3, string tech1, string tech2, string tech3, string sk1, string sk2, string sk3)
+    public void UpdateProject(int id, string name, string desc, int nr, DateTime start, DateTime end, string institution, string area, string partner1, string partner2, string partner3, string tech1, string tech2, string tech3, string sk1, string sk2, string sk3)
     {
         int institution_id=0, area_id=0, db_id1=0, db_id2 = 0, db_id3 = 0;
-        string db_name1=null, db_name2=null , db_name3=null ;
+        string db_name1 = null, db_name2 = null, db_name3 = null, query;
 
-        string query = "SELECT institution_id from Institution where name LIKE '" + institution + "'";
+        
+        query = "SELECT institution_id from Institution where name LIKE '" + institution + "'";
         SqlCommand cmd = new SqlCommand(query, con);
         SqlDataReader dr = cmd.ExecuteReader();
         if (dr.Read())
@@ -192,7 +193,17 @@ public class Common
         }
         dr.Close();
         dr.Dispose();
+        if (id == 0)
+        {
+            query = "INSERT INTO Project (name,[desc],nr_students,date_start,date_end,institution_id) VALUES ('" + name + "' , '" + desc + "' , " + nr + " ,'" + start.ToString("yyyy-MM-dd") + "' ,'" + end.ToString("yyyy-MM-dd") + "' ," + Get_Id("select institution_id from Institution where name LIKE '" + institution + "'") + ");";
+            SqlCommand cmd1 = new SqlCommand(query, con);
+            cmd1.ExecuteNonQuery();
 
+            query = "INSERT INTO Project_Area (project_id,area_id) VALUES (" + Get_Id("select max(project_id) from Project") + "," + area_id + ")";
+            cmd1 = new SqlCommand(query, con);
+            cmd1.ExecuteNonQuery();
+
+        }
         //____________________________________________________________________________________________________________________________________________________________________
         // PARTNER UPDATES AND ADDITIONS
         int count =0;
@@ -472,7 +483,7 @@ public class Common
 
         //UPDATE OF SIMPLE PROJECT DATA - NAME, DESCRIPTION, ETC.
         query = "UPDATE Project SET name = '" + name + "', [desc] = '" + desc + "', nr_students = " + nr + ", " +
-                        "date_start =  '" + start + "', date_end = '" + end + "', institution_id=" + institution_id +
+                        "date_start =  '" + start.ToString("yyyy-MM-dd") + "', date_end = '" + end.ToString("yyyy-MM-dd") + "', institution_id=" + institution_id +
                         "WHERE project_id = " + id + ";" +
                 "UPDATE Project_Area SET area_id = " + area_id +
                         "WHERE project_id = " + id + ";";
@@ -480,15 +491,124 @@ public class Common
         cmd = new SqlCommand(query, con);
         cmd.ExecuteNonQuery();
     }
-    public void InsertStudent()
+    public void InsertStudent(int id,string name, string mail, string phone, DateTime nasc, string country, int english_level, string institution, string area, int deg, string grade, int hs1, int hs2, int hs3, int ss1, int ss2, int ss3)
     {
-        /*string query = "INSERT INTO Student (name,email) VALUES (" + id + "," + Get_Id("select tech_id from Tech where name LIKE '" + tech1 + "'") + ");";
+        string query = "INSERT INTO Student (name,email,phone,date_birth,degree,institution_id,grade,english_value) VALUES ('" + name + "' ,'" + mail + "'," + phone + " ,'" + nasc.ToString("yyyy-MM-dd") + "' ," + deg + " ," + Get_Id("select institution_id from Institution where name LIKE '" + institution + "'") + "," + grade + "," + english_level +");";
         SqlCommand cmd = new SqlCommand(query, con);
-        cmd.ExecuteNonQuery();*/
+        cmd.ExecuteNonQuery();
+
+        query = "INSERT INTO Student_Project (student_id,project_id) VALUES (" + Get_Id("select max(student_id) from Student") + "," + id + ")";
+        cmd = new SqlCommand(query, con);
+        cmd.ExecuteNonQuery();
+
+        query = "INSERT INTO Student_Area (student_id,area_id) VALUES (" + Get_Id("select max(student_id) from Student") + "," + Get_Id("select area_id from Area where name LIKE '" + area + "'") + ")";
+        cmd = new SqlCommand(query, con);
+        cmd.ExecuteNonQuery();
+
+        int count = 0, tech1=0, tech2=0, tech3=0, sk1=0, sk2=0, sk3=0;
+        query = "select PT.tech_id from Project_Tech PT where PT.project_id = '" + id + "'";
+        cmd = new SqlCommand(query, con);
+        dr = cmd.ExecuteReader();
+        while (dr.Read())
+        {
+            count++;
+            switch (count)
+            {
+                case 0:
+                    break;
+                case 1:
+                    tech1 = dr.GetInt32(0);
+                    break;
+                case 2:
+                    tech2 = dr.GetInt32(0);
+                    break;
+                case 3:
+                   tech3= dr.GetInt32(0);
+                    break;
+            }
+        }
+        dr.Close();
+        dr.Dispose();
+
+        for(int i = 0; i <= count; i++)
+        {
+
+       
+            switch (i)
+            {
+                case 0:
+                    break;
+                case 1:
+                    query = "INSERT INTO Student_Tech (student_id,tech_id,value) VALUES (" + Get_Id("select max(student_id) from Student") + "," + tech1 + "," + hs1 + ")";
+                    cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                    break;
+                case 2:
+                    query = "INSERT INTO Student_Tech (student_id,tech_id,value) VALUES (" + Get_Id("select max(student_id) from Student") + "," + tech2 + "," + hs2 + ")";
+                    cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                    break;
+                case 3:
+                    query = "INSERT INTO Student_Tech (student_id,tech_id,value) VALUES (" + Get_Id("select max(student_id) from Student") + "," + tech3 + "," + hs3 + ")";
+                    cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                    break;
+            }
+        }
+        count = 0;
+        query = "select PS.social_skill_id from Project_SK PS where PS.project_id = '" + id + "'";
+        cmd = new SqlCommand(query, con);
+        dr = cmd.ExecuteReader();
+        while (dr.Read())
+        {
+            count++;
+
+            switch (count)
+            {
+                case 0:
+                    break;
+                case 1:
+                    sk1 = dr.GetInt32(0);
+                    break;
+                case 2:
+                    sk2 = dr.GetInt32(0);
+                    break;
+                case 3:
+                    sk3 = dr.GetInt32(0);
+                    break;
+            }
+        }
+        dr.Close();
+        dr.Dispose();
+        for (int i = 0; i <= count; i++)
+        {
+            switch (i)
+            {
+                case 0:
+                    break;
+                case 1:
+                    query = "INSERT INTO Student_SK (student_id,social_skill_id,value) VALUES (" + Get_Id("select max(student_id) from Student") + "," + sk1 + "," + ss1 + ")";
+                    cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                    break;
+                case 2:
+                    query = "INSERT INTO Student_SK (student_id,social_skill_id,value) VALUES (" + Get_Id("select max(student_id) from Student") + "," + sk2 + "," + ss2 + ")";
+                    cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                    break;
+                case 3:
+                    query = "INSERT INTO Student_SK (student_id,social_skill_id,value) VALUES (" + Get_Id("select max(student_id) from Student") + "," + sk3 + "," + ss3 + ")";
+                    cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                    break;
+            }
+        }
+
     }
 
 
-    public int Get_Id(string query)
+
+        public int Get_Id(string query)
     {
         int id = 0;
         cmd = new SqlCommand(query, con);

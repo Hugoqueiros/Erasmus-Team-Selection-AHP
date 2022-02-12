@@ -372,6 +372,8 @@ namespace Build2Evenize
 
                 if (project != 0)
                     MessageBox.Show("Project Deleted!");
+                    f.Refresh();
+                this.Close();
             }
         }
 
@@ -419,11 +421,40 @@ namespace Build2Evenize
 
         private void button9_Click(object sender, EventArgs e)
         {
-            common.UpdateProject(this.id,textBox1.Text,textBox2.Text,(int)numericUpDown1.Value, dateTimePicker1.Text,dateTimePicker2.Text,comboBox2.Text,comboBox1.Text,comboBox3.Text,comboBox4.Text,comboBox9.Text, comboBox6.Text, comboBox5.Text, comboBox10.Text, comboBox8.Text, comboBox7.Text, comboBox11.Text);
-            common.InsertStudent();
+            if (this.id == 0)
+            {
+                common.UpdateProject(this.id, textBox1.Text, textBox2.Text, (int)numericUpDown1.Value, Convert.ToDateTime(dateTimePicker1.Text), Convert.ToDateTime(dateTimePicker2.Text), comboBox2.Text, comboBox1.Text, comboBox3.Text, comboBox4.Text, comboBox9.Text, comboBox6.Text, comboBox5.Text, comboBox10.Text, comboBox8.Text, comboBox7.Text, comboBox11.Text);
+                MessageBox.Show(textBox1.Text + " Created Successfully!", "Success", MessageBoxButtons.OK);
+                f.Refresh();
+            }
+            else
+            {
+                common.UpdateProject(this.id, textBox1.Text, textBox2.Text, (int)numericUpDown1.Value, Convert.ToDateTime(dateTimePicker1.Text), Convert.ToDateTime(dateTimePicker2.Text), comboBox2.Text, comboBox1.Text, comboBox3.Text, comboBox4.Text, comboBox9.Text, comboBox6.Text, comboBox5.Text, comboBox10.Text, comboBox8.Text, comboBox7.Text, comboBox11.Text);
 
-            MessageBox.Show(textBox1.Text + " Updated Successfully!", "Success", MessageBoxButtons.OK);
-            f.Refresh();
+
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    string name = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                    string mail = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                    string phone = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                    DateTime nasc = Convert.ToDateTime(dataGridView1.Rows[i].Cells[4].Value);
+                    string country = dataGridView1.Rows[i].Cells[5].Value.ToString();
+                    int english_level = Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
+                    string institution = dataGridView1.Rows[i].Cells[7].Value.ToString();
+                    string area = dataGridView1.Rows[i].Cells[8].Value.ToString();
+                    int degree = Convert.ToInt32(dataGridView1.Rows[i].Cells[9].Value);
+                    string grade = Convert.ToString(dataGridView1.Rows[i].Cells[10].Value);
+                    int hs1 = Convert.ToInt32(dataGridView1.Rows[i].Cells[11].Value);
+                    int hs2 = Convert.ToInt32(dataGridView1.Rows[i].Cells[12].Value);
+                    int hs3 = Convert.ToInt32(dataGridView1.Rows[i].Cells[13].Value);
+                    int ss1 = Convert.ToInt32(dataGridView1.Rows[i].Cells[14].Value);
+                    int ss2 = Convert.ToInt32(dataGridView1.Rows[i].Cells[15].Value);
+                    int ss3 = Convert.ToInt32(dataGridView1.Rows[i].Cells[16].Value);
+                    common.InsertStudent(this.id, name, mail, phone, nasc, country, english_level, institution, area, degree, grade, hs1, hs2, hs3, ss1, ss2, ss3);
+                }
+                MessageBox.Show(textBox1.Text + " Updated Successfully!", "Success", MessageBoxButtons.OK);
+                f.Refresh();
+            }   
         }
 
         public void setPanelVisible(bool flag)
