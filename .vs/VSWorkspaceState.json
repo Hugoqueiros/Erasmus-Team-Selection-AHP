@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Build2Evenize",
+    "\\Build2Evenize\\Build2Evenize"
   ],
+  "SelectedNode": "\\Build2Evenize\\Build2Evenize\\FormProject.cs",
   "PreviewInSolutionExplorer": false
 }

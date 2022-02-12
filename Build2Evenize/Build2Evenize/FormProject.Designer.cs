@@ -32,6 +32,8 @@ namespace Build2Evenize
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProject));
@@ -67,12 +69,32 @@ namespace Build2Evenize
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SimulationPanel = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.NameS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Instituiton = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.view_1TableAdapter = new Build2Evenize.build2evenizeDataSetTableAdapters.View_1TableAdapter();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -84,6 +106,7 @@ namespace Build2Evenize
             this.SimulationPanel.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -104,7 +127,7 @@ namespace Build2Evenize
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(0, 300);
             this.button2.Name = "button2";
@@ -119,7 +142,7 @@ namespace Build2Evenize
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
@@ -143,12 +166,12 @@ namespace Build2Evenize
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Location = new System.Drawing.Point(105, 66);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(81, 26);
+            this.linkLabel1.Size = new System.Drawing.Size(68, 24);
             this.linkLabel1.TabIndex = 15;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Logout";
@@ -160,7 +183,7 @@ namespace Build2Evenize
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(3, 35);
             this.label6.MaximumSize = new System.Drawing.Size(300, 0);
@@ -175,7 +198,7 @@ namespace Build2Evenize
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 9);
             this.label3.Name = "label3";
@@ -209,7 +232,7 @@ namespace Build2Evenize
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(1, 890);
             this.button7.Name = "button7";
@@ -230,7 +253,7 @@ namespace Build2Evenize
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 9F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -249,7 +272,7 @@ namespace Build2Evenize
             this.dataGridView1.DataSource = this.view1BindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 9F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
@@ -390,22 +413,22 @@ namespace Build2Evenize
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label1.Location = new System.Drawing.Point(825, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 22);
+            this.label1.Size = new System.Drawing.Size(76, 20);
             this.label1.TabIndex = 12;
             this.label1.Text = "Country:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label5.Location = new System.Drawing.Point(825, 39);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 22);
+            this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "Institution:";
             // 
@@ -413,34 +436,34 @@ namespace Build2Evenize
             // 
             this.comboBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 13.8F);
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
             this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(84, 82);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(724, 33);
+            this.comboBox1.Size = new System.Drawing.Size(724, 30);
             this.comboBox1.TabIndex = 9;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label4.Location = new System.Drawing.Point(2, 89);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 22);
+            this.label4.Size = new System.Drawing.Size(52, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Area:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.label2.Location = new System.Drawing.Point(2, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 22);
+            this.label2.Size = new System.Drawing.Size(60, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Name:";
             // 
@@ -449,17 +472,21 @@ namespace Build2Evenize
             this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.Location = new System.Drawing.Point(84, 32);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(724, 31);
+            this.textBox1.Size = new System.Drawing.Size(724, 29);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // SimulationPanel
             // 
+            this.SimulationPanel.Controls.Add(this.label12);
+            this.SimulationPanel.Controls.Add(this.dataGridView3);
+            this.SimulationPanel.Controls.Add(this.label11);
             this.SimulationPanel.Controls.Add(this.groupBox2);
+            this.SimulationPanel.Controls.Add(this.button3);
             this.SimulationPanel.Controls.Add(this.button4);
             this.SimulationPanel.Controls.Add(this.dataGridView2);
             this.SimulationPanel.Location = new System.Drawing.Point(305, 12);
@@ -472,7 +499,13 @@ namespace Build2Evenize
             // groupBox2
             // 
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.comboBox7);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.comboBox5);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.comboBox4);
             this.groupBox2.Controls.Add(this.comboBox6);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -480,19 +513,77 @@ namespace Build2Evenize
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1130, 111);
+            this.groupBox2.Size = new System.Drawing.Size(1130, 121);
             this.groupBox2.TabIndex = 40;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = " ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.label7.Location = new System.Drawing.Point(289, 87);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 20);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "Hard Skill:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.comboBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox4.Location = new System.Drawing.Point(383, 82);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(81, 30);
+            this.comboBox4.TabIndex = 39;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
+            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.comboBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(96, 39);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(724, 30);
+            this.comboBox6.TabIndex = 9;
+            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged_1);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.label10.Location = new System.Drawing.Point(2, 39);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 20);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Project:";
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(829, 33);
+            this.button3.Location = new System.Drawing.Point(28, 851);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(266, 44);
             this.button3.TabIndex = 38;
@@ -500,42 +591,20 @@ namespace Build2Evenize
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // comboBox6
-            // 
-            this.comboBox6.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
-            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox6.Font = new System.Drawing.Font("Montserrat", 13.8F);
-            this.comboBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(84, 39);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(724, 33);
-            this.comboBox6.TabIndex = 9;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.label10.Location = new System.Drawing.Point(2, 39);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 22);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Project:";
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 851);
+            this.button4.Location = new System.Drawing.Point(1254, 851);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(266, 44);
             this.button4.TabIndex = 39;
             this.button4.Text = "Export Results";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridView2
             // 
@@ -545,27 +614,33 @@ namespace Build2Evenize
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 9F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NameS,
+            this.Email,
+            this.Phone,
+            this.DateBirth,
+            this.Instituiton});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.GridColor = System.Drawing.Color.White;
             this.dataGridView2.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dataGridView2.Location = new System.Drawing.Point(1, 126);
+            this.dataGridView2.Location = new System.Drawing.Point(1, 151);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
@@ -574,12 +649,220 @@ namespace Build2Evenize
             this.dataGridView2.RowTemplate.Height = 29;
             this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(1562, 696);
+            this.dataGridView2.Size = new System.Drawing.Size(1563, 295);
             this.dataGridView2.TabIndex = 37;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // NameS
+            // 
+            this.NameS.HeaderText = "Name";
+            this.NameS.Name = "NameS";
+            this.NameS.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Phone
+            // 
+            this.Phone.HeaderText = "Phone Number ";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            // 
+            // DateBirth
+            // 
+            this.DateBirth.HeaderText = "Date Birth";
+            this.DateBirth.Name = "DateBirth";
+            this.DateBirth.ReadOnly = true;
+            // 
+            // Instituiton
+            // 
+            this.Instituiton.HeaderText = "Instituiton";
+            this.Instituiton.Name = "Instituiton";
+            this.Instituiton.ReadOnly = true;
             // 
             // view_1TableAdapter
             // 
             this.view_1TableAdapter.ClearBeforeFill = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.label8.Location = new System.Drawing.Point(484, 87);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 20);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Soft Skill:";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.comboBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox5.Location = new System.Drawing.Point(573, 82);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(81, 30);
+            this.comboBox5.TabIndex = 42;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.label9.Location = new System.Drawing.Point(673, 88);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 20);
+            this.label9.TabIndex = 43;
+            this.label9.Text = "Grade:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
+            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.comboBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox7.Location = new System.Drawing.Point(739, 82);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(81, 30);
+            this.comboBox7.TabIndex = 44;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.label11.Location = new System.Drawing.Point(2, 128);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(216, 20);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Team with chosen Criteria";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView3.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(218)))), ((int)(((byte)(24)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView3.EnableHeadersVisualStyles = false;
+            this.dataGridView3.GridColor = System.Drawing.Color.White;
+            this.dataGridView3.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.dataGridView3.Location = new System.Drawing.Point(2, 510);
+            this.dataGridView3.MultiSelect = false;
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.RowHeadersVisible = false;
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 29;
+            this.dataGridView3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView3.Size = new System.Drawing.Size(1563, 295);
+            this.dataGridView3.TabIndex = 46;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Phone Number ";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Date Birth";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Instituiton";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.label12.Location = new System.Drawing.Point(1, 487);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(201, 20);
+            this.label12.TabIndex = 47;
+            this.label12.Text = "Team with same Criteria";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
+            this.label13.Location = new System.Drawing.Point(3, 87);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(199, 20);
+            this.label13.TabIndex = 48;
+            this.label13.Text = "Determine your Criteria:";
             // 
             // FormProject
             // 
@@ -589,7 +872,7 @@ namespace Build2Evenize
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.SimulationPanel);
             this.Controls.Add(this.ProjectManagementPanel);
-            this.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
@@ -609,9 +892,11 @@ namespace Build2Evenize
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.SimulationPanel.ResumeLayout(false);
+            this.SimulationPanel.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -656,5 +941,25 @@ namespace Build2Evenize
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateBirth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Instituiton;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Label label13;
     }
 }

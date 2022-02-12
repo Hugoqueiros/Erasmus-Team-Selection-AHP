@@ -1,11 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "jZZnEIWwpAdE5r+2CvbrLof8q5W+D60hagiQrLlKCq6j0axn9vE0eKJrfu5XRf2ckMCMbZEZ2SFgG3Cvm6jXlA==",
+  "dgSpecHash": "WUYFJpoMoqTitLmEgTLvvNLi3jf3fjxgUU87CuIjHsyoXRTAZsnrNl1lRUg10ZKkyAV0ZExgIGycTKp+oUuh1w==",
   "success": true,
-  "projectFilePath": "D:\\Universidade\\SAD\\Build2Evenize\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
+  "projectFilePath": "C:\\Users\\hugo-\\source\\repos\\SAD_Project_Final\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\FranciscoPereira\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1000\\microsoft.office.interop.excel.15.0.4795.1000.nupkg.sha512",
-    "C:\\Users\\FranciscoPereira\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512"
+    "C:\\Users\\hugo-\\.nuget\\packages\\closedxml\\0.95.4\\closedxml.0.95.4.nupkg.sha512",
+    "C:\\Users\\hugo-\\.nuget\\packages\\documentformat.openxml\\2.7.2\\documentformat.openxml.2.7.2.nupkg.sha512",
+    "C:\\Users\\hugo-\\.nuget\\packages\\excelnumberformat\\1.0.10\\excelnumberformat.1.0.10.nupkg.sha512",
+    "C:\\Users\\hugo-\\.nuget\\packages\\ironxl.excel\\2021.12.0\\ironxl.excel.2021.12.0.nupkg.sha512",
+    "C:\\Users\\hugo-\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\hugo-\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1000\\microsoft.office.interop.excel.15.0.4795.1000.nupkg.sha512",
+    "C:\\Users\\hugo-\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
+    "C:\\Users\\hugo-\\.nuget\\packages\\system.io.filesystem.primitives\\4.0.1\\system.io.filesystem.primitives.4.0.1.nupkg.sha512",
+    "C:\\Users\\hugo-\\.nuget\\packages\\system.io.packaging\\4.0.0\\system.io.packaging.4.0.0.nupkg.sha512"
   ],
   "logs": []
 }
