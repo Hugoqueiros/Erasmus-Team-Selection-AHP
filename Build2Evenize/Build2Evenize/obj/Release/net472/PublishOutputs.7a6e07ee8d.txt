@@ -1,0 +1,5 @@
+D:\Universidade\SAD\Build2Evenize.exe
+D:\Universidade\SAD\Build2Evenize.exe.config
+D:\Universidade\SAD\Build2Evenize.pdb
+D:\Universidade\SAD\Microsoft.Office.Interop.Excel.dll
+D:\Universidade\SAD\System.Data.SqlClient.dll
