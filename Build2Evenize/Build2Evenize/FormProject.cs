@@ -314,7 +314,7 @@ namespace Build2Evenize
             drSP.Dispose();
 
             double[,] techMatrix = new double[nrSP, nrSP];
-            string[,] info_student = new string[nrSL, 5];
+            string[,] info_student = new string[nrSL, 6];
             double[,] sk_Matrix = new double[nrSP, nrSP];
             double[,] gradeMatrix = new double[nrSP, nrSP];
             double[,] criterio_Matrix = new double[3, 3];
@@ -400,8 +400,6 @@ namespace Build2Evenize
             ArrayList resultadosReturn = new ArrayList();
 
             int vagas = 0;
-
-            //MEDIA DAS SKILLS FEITA POR AQUI
             
             student_sk_value = new Dictionary<int, double>();
             student_sk_ValueFinal = new Dictionary<int, double>();
@@ -461,12 +459,6 @@ namespace Build2Evenize
                 ul++;
             }
 
-
-            //FIM MÉDIA
-
-
-            //CALCULO NOTAS
-
             student_grade_value = new Dictionary<int, double>();
             student_grade_ValueFinal = new Dictionary<int, double>();
             SqlCommand cmdGrade = new SqlCommand("select S.grade, S.student_id from Student S, Student_Project SP where S.student_id = SP.student_id and SP.project_id = "+idProj, common.con);
@@ -522,13 +514,6 @@ namespace Build2Evenize
                 valorFinal_grade = 0;
                 kgra++;
             }
-
-
-                //FIM NOTAS
-            
-
-            //CÁLCULO DE CADA UMA DAS AREAS
-
 
             for (int w = 0; w < countTech; w++)
             {
@@ -607,9 +592,6 @@ namespace Build2Evenize
                     k++;
                 }
 
-                // FIM DO CALCULO DAS TECHS
-
-                
                 var top5 = studentValueFinal.OrderByDescending(pair => pair.Value).Take(slots_per_area);
                 foreach (var itemI in top5)
                 {
@@ -625,7 +607,7 @@ namespace Build2Evenize
             for (int i = 0; i < student_best_on_tech.Length; i++)
             {
                 string id_student = student_best_on_tech[i];
-                SqlCommand cmdIS = new SqlCommand("SELECT S.name as student_name, S.email as student_email, S.phone as phone, S.date_birth as date_birth , I.name as instituiton_name  FROM Student S, Institution I Where student_id=" + id_student + " and s.institution_id=i.institution_id ", common.con);
+                SqlCommand cmdIS = new SqlCommand("SELECT S.name as student_name, S.email as student_email, S.phone as phone, S.date_birth as date_birth , I.name as instituiton_name, A.name as area_name  FROM Student S, Institution I, Student_Area as SA, Area as A Where s.student_id=" + id_student + "AND s.student_id=sa.student_id AND sa.area_id =a.area_id AND s.institution_id=i.institution_id", common.con);
                 SqlDataReader drIS = cmdIS.ExecuteReader();
                 while (drIS.Read())
                 {
@@ -634,6 +616,7 @@ namespace Build2Evenize
                     info_student[juu, 2] = (string)drIS["phone"];
                     info_student[juu, 3] = drIS["date_birth"].ToString();
                     info_student[juu, 4] = (string)drIS["instituiton_name"];
+                    info_student[juu, 5] = (string)drIS["area_name"];
                     juu = juu +1;
                 }
                 drIS.Close();
@@ -907,97 +890,115 @@ namespace Build2Evenize
                 int nrIP = (int)drIP["project_id"];
                 drIP.Close();
                 drIP.Dispose();
-                ArrayList valuesTech = resultadosTech(1);
-                ArrayList valuesSK = resultadosSK(1);
-                string[,] course = (string[,])resultadoseachTech(nrIP, grade, soft, hard);
-                Dictionary<int, double> valuesGrade = resultsGrade(1);
 
-                Dictionary<int, double> valuesTechFinal = new Dictionary<int, double>();
-                Dictionary<int, double> valuesSKFinal = new Dictionary<int, double>();
-                Dictionary<int, Dictionary<int, double>> valuesTechEach = new Dictionary<int, Dictionary<int, double>>();
-
-                int j = 0;
-
-                for (int i = 0; i < course.GetLength(0); i++)
-                {
-                    this.dataGridView2.Rows.Add(course[i, j], course[i, j+1], course[i, j+2], course[i, j+3], course[i, j+4]);
-                }
-
-                for (int i = 0; i < valuesTech.Count; i++)
-                {
-                    Dictionary<int, double> a = (Dictionary<int, double>)valuesTech[i];
-                    foreach (var itemI in a)
-                    {
-                        if (valuesTechFinal.ContainsKey(itemI.Key))
-                        {
-                            valuesTechFinal[itemI.Key] = valuesTechFinal[itemI.Key] + itemI.Value;
-                        }
-                        else
-                        {
-                            valuesTechFinal.Add(itemI.Key, itemI.Value);
-                        }
-                    }
-                }
-                for (int i = 0; i < valuesSK.Count; i++)
-                {
-                    Dictionary<int, double> a = (Dictionary<int, double>)valuesSK[i];
-                    foreach (var itemI in a)
-                    {
-                        if (valuesSKFinal.ContainsKey(itemI.Key))
-                        {
-                            valuesSKFinal[itemI.Key] = valuesSKFinal[itemI.Key] + itemI.Value;
-                        }
-                        else
-                        {
-                            valuesSKFinal.Add(itemI.Key, itemI.Value);
-                        }
-                    }
-                }
-
-                SqlCommand cmdSP = new SqlCommand("select nr_students from Project where project_id = 1", common.con);
+                SqlCommand cmdSP = new SqlCommand("select nr_students from Project where project_id = " + nrIP, common.con);
                 SqlDataReader drSP = cmdSP.ExecuteReader();
                 drSP.Read();
                 int nrSP = (int)drSP["nr_students"];
                 drSP.Close();
                 drSP.Dispose();
 
-                Dictionary<int, double> ranking = new Dictionary<int, double>();
-                foreach (var itemI in valuesTechFinal)
-                {
-                    int id = itemI.Key;
-                    double valueT = itemI.Value;
-                    double valueSK = valuesSKFinal[id];
-                    double valueGrade = valuesGrade[id];
-                    double valueFinal = valueT + valueSK + valueGrade;
-                    ranking.Add(id, valueFinal);
+                SqlCommand cmdSSP = new SqlCommand("select count(*) as nrStudentsProj from Student_Project where project_id = " + nrIP, common.con);
+                SqlDataReader drSSP = cmdSSP.ExecuteReader();
+                drSSP.Read();
+                int nrSSP = (int)drSSP["nrStudentsProj"];
+                drSP.Close();
+                drSP.Dispose();
 
+                int possible = nrSSP - nrSP;
 
-                    //MessageBox.Show(itemI.Key.ToString()+" - " +itemI.Value.ToString());
-                }
-                Dictionary<int, double> finalTeam = new Dictionary<int, double>();
-                Dictionary<int, double> secondTeam = new Dictionary<int, double>();
-                string[,] info_student = new string[nrSP, 5];
-                var top = ranking.OrderByDescending(pair => pair.Value).Take(nrSP);
-                int ln = 0;
-                int ll = 0;
-                foreach (var itemI in top)
+                if (possible >= 0)
                 {
-                    int id_student = itemI.Key;
-                    SqlCommand cmdIS = new SqlCommand("SELECT S.name as student_name, S.email as student_email, S.phone as phone, S.date_birth as date_birth , I.name as instituiton_name  FROM Student S, Institution I Where student_id=" + id_student + " and s.institution_id=i.institution_id ", common.con);
-                    SqlDataReader drIS = cmdIS.ExecuteReader();
-                    while (drIS.Read())
+
+                    ArrayList valuesTech = resultadosTech(nrIP);
+                    ArrayList valuesSK = resultadosSK(nrIP);
+                    string[,] course = (string[,])resultadoseachTech(nrIP, grade, soft, hard);
+                    Dictionary<int, double> valuesGrade = resultsGrade(nrIP);
+
+                    Dictionary<int, double> valuesTechFinal = new Dictionary<int, double>();
+                    Dictionary<int, double> valuesSKFinal = new Dictionary<int, double>();
+                    Dictionary<int, Dictionary<int, double>> valuesTechEach = new Dictionary<int, Dictionary<int, double>>();
+
+                    int j = 0;
+
+                    for (int i = 0; i < course.GetLength(0); i++)
                     {
-                        info_student[ln, 0] = (string)drIS["student_name"];
-                        info_student[ln, 1] = (string)drIS["student_email"];
-                        info_student[ln, 2] = (string)drIS["phone"];
-                        info_student[ln, 3] = drIS["date_birth"].ToString();
-                        info_student[ln, 4] = (string)drIS["instituiton_name"];
+                        this.dataGridView2.Rows.Add(course[i, j], course[i, j+1], course[i, j+2], course[i, j+3], course[i, j+4], course[i, j+5]);
                     }
-                    drIS.Close();
-                    drIS.Dispose();
-                    this.dataGridView3.Rows.Add(info_student[ln, ll], info_student[ln, ll+1], info_student[ln, ll+2], info_student[ln, ll+3], info_student[ln, ll+4]);
-                    ln = ln +1;
 
+                    for (int i = 0; i < valuesTech.Count; i++)
+                    {
+                        Dictionary<int, double> a = (Dictionary<int, double>)valuesTech[i];
+                        foreach (var itemI in a)
+                        {
+                            if (valuesTechFinal.ContainsKey(itemI.Key))
+                            {
+                                valuesTechFinal[itemI.Key] = valuesTechFinal[itemI.Key] + itemI.Value;
+                            }
+                            else
+                            {
+                                valuesTechFinal.Add(itemI.Key, itemI.Value);
+                            }
+                        }
+                    }
+                    for (int i = 0; i < valuesSK.Count; i++)
+                    {
+                        Dictionary<int, double> a = (Dictionary<int, double>)valuesSK[i];
+                        foreach (var itemI in a)
+                        {
+                            if (valuesSKFinal.ContainsKey(itemI.Key))
+                            {
+                                valuesSKFinal[itemI.Key] = valuesSKFinal[itemI.Key] + itemI.Value;
+                            }
+                            else
+                            {
+                                valuesSKFinal.Add(itemI.Key, itemI.Value);
+                            }
+                        }
+                    }
+
+                    Dictionary<int, double> ranking = new Dictionary<int, double>();
+                    foreach (var itemI in valuesTechFinal)
+                    {
+                        int id = itemI.Key;
+                        double valueT = itemI.Value;
+                        double valueSK = valuesSKFinal[id];
+                        double valueGrade = valuesGrade[id];
+                        double valueFinal = valueT + valueSK + valueGrade;
+                        ranking.Add(id, valueFinal);
+                    }
+
+                    Dictionary<int, double> finalTeam = new Dictionary<int, double>();
+                    Dictionary<int, double> secondTeam = new Dictionary<int, double>();
+                    string[,] info_student = new string[nrSP, 6];
+                    var top = ranking.OrderByDescending(pair => pair.Value).Take(nrSP);
+                    int ln = 0;
+                    int ll = 0;
+                    foreach (var itemI in top)
+                    {
+                        int id_student = itemI.Key;
+                        SqlCommand cmdIS = new SqlCommand("SELECT S.name as student_name, S.email as student_email, S.phone as phone, S.date_birth as date_birth , I.name as instituiton_name, A.name as area_name  FROM Student S, Institution I, Student_Area as SA, Area as A Where s.student_id=" + id_student + "AND s.student_id=sa.student_id AND sa.area_id =a.area_id AND s.institution_id=i.institution_id ", common.con);
+                        SqlDataReader drIS = cmdIS.ExecuteReader();
+                        while (drIS.Read())
+                        {
+                            info_student[ln, 0] = (string)drIS["student_name"];
+                            info_student[ln, 1] = (string)drIS["student_email"];
+                            info_student[ln, 2] = (string)drIS["phone"];
+                            info_student[ln, 3] = drIS["date_birth"].ToString();
+                            info_student[ln, 4] = (string)drIS["instituiton_name"];
+                            info_student[ln, 5] = (string)drIS["area_name"];
+                        }
+                        drIS.Close();
+                        drIS.Dispose();
+                        this.dataGridView3.Rows.Add(info_student[ln, ll], info_student[ln, ll+1], info_student[ln, ll+2], info_student[ln, ll+3], info_student[ln, ll+4], info_student[ln, ll+5]);
+                        ln = ln +1;
+
+                    }
+                } 
+                else
+                {
+                    MessageBox.Show("Not enough students enrolled for the project", "Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

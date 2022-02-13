@@ -558,11 +558,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hugo-\\source\\repos\\SAD_Project_Final\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
+      "projectUniqueName": "C:\\Users\\hugo-\\Source\\Repos\\SADProject\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
       "projectName": "Build2Evenize",
-      "projectPath": "C:\\Users\\hugo-\\source\\repos\\SAD_Project_Final\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
+      "projectPath": "C:\\Users\\hugo-\\Source\\Repos\\SADProject\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
       "packagesPath": "C:\\Users\\hugo-\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hugo-\\source\\repos\\SAD_Project_Final\\Build2Evenize\\Build2Evenize\\obj\\",
+      "outputPath": "C:\\Users\\hugo-\\Source\\Repos\\SADProject\\Build2Evenize\\Build2Evenize\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hugo-\\AppData\\Roaming\\NuGet\\NuGet.Config",

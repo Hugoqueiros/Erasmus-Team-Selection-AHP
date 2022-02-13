@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WUYFJpoMoqTitLmEgTLvvNLi3jf3fjxgUU87CuIjHsyoXRTAZsnrNl1lRUg10ZKkyAV0ZExgIGycTKp+oUuh1w==",
+  "dgSpecHash": "VABAIElBsIZ1oRla7FIhWb+4lbw19sRRJCSN/3HgcZRymF5dVLUnQsHenkisl/+hTHIkgmYiUQ3WFJBDqe55dQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hugo-\\source\\repos\\SAD_Project_Final\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
+  "projectFilePath": "C:\\Users\\hugo-\\Source\\Repos\\SADProject\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hugo-\\.nuget\\packages\\closedxml\\0.95.4\\closedxml.0.95.4.nupkg.sha512",
     "C:\\Users\\hugo-\\.nuget\\packages\\documentformat.openxml\\2.7.2\\documentformat.openxml.2.7.2.nupkg.sha512",
