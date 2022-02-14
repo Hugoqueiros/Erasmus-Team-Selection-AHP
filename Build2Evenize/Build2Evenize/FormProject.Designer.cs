@@ -70,6 +70,12 @@ namespace Build2Evenize
             this.SimulationPanel = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentaArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -84,19 +90,13 @@ namespace Build2Evenize
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.view_1TableAdapter = new Build2Evenize.build2evenizeDataSetTableAdapters.View_1TableAdapter();
             this.NameS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Instituiton = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentaArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.view_1TableAdapter = new Build2Evenize.build2evenizeDataSetTableAdapters.View_1TableAdapter();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -488,12 +488,11 @@ namespace Build2Evenize
             this.SimulationPanel.Controls.Add(this.dataGridView3);
             this.SimulationPanel.Controls.Add(this.label11);
             this.SimulationPanel.Controls.Add(this.groupBox2);
-            this.SimulationPanel.Controls.Add(this.button3);
             this.SimulationPanel.Controls.Add(this.button4);
             this.SimulationPanel.Controls.Add(this.dataGridView2);
             this.SimulationPanel.Location = new System.Drawing.Point(305, 12);
             this.SimulationPanel.Name = "SimulationPanel";
-            this.SimulationPanel.Size = new System.Drawing.Size(1564, 849);
+            this.SimulationPanel.Size = new System.Drawing.Size(1564, 934);
             this.SimulationPanel.TabIndex = 38;
             this.SimulationPanel.Visible = false;
             this.SimulationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SimulationPanel_Paint);
@@ -553,8 +552,44 @@ namespace Build2Evenize
             this.dataGridView3.RowTemplate.Height = 29;
             this.dataGridView3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(1563, 295);
+            this.dataGridView3.Size = new System.Drawing.Size(1562, 367);
             this.dataGridView3.TabIndex = 46;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Phone Number ";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Date Birth";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Instituiton";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // StudentaArea
+            // 
+            this.StudentaArea.HeaderText = "Student Area";
+            this.StudentaArea.Name = "StudentaArea";
+            this.StudentaArea.ReadOnly = true;
             // 
             // label11
             // 
@@ -575,6 +610,7 @@ namespace Build2Evenize
             this.groupBox2.Controls.Add(this.comboBox7);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.comboBox5);
+            this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.comboBox4);
@@ -585,7 +621,7 @@ namespace Build2Evenize
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1130, 121);
+            this.groupBox2.Size = new System.Drawing.Size(1559, 121);
             this.groupBox2.TabIndex = 40;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = " ";
@@ -595,11 +631,12 @@ namespace Build2Evenize
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.label13.Location = new System.Drawing.Point(3, 87);
+            this.label13.Location = new System.Drawing.Point(927, 43);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(199, 20);
+            this.label13.Size = new System.Drawing.Size(72, 20);
             this.label13.TabIndex = 48;
-            this.label13.Text = "Determine your Criteria:";
+            this.label13.Text = "Criteria:";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // comboBox7
             // 
@@ -618,7 +655,7 @@ namespace Build2Evenize
             "7",
             "8",
             "9"});
-            this.comboBox7.Location = new System.Drawing.Point(739, 82);
+            this.comboBox7.Location = new System.Drawing.Point(1465, 38);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(81, 30);
             this.comboBox7.TabIndex = 44;
@@ -628,7 +665,7 @@ namespace Build2Evenize
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.label9.Location = new System.Drawing.Point(673, 88);
+            this.label9.Location = new System.Drawing.Point(1399, 44);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 20);
             this.label9.TabIndex = 43;
@@ -652,7 +689,7 @@ namespace Build2Evenize
             "7",
             "8",
             "9"});
-            this.comboBox5.Location = new System.Drawing.Point(573, 82);
+            this.comboBox5.Location = new System.Drawing.Point(1299, 38);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(81, 30);
             this.comboBox5.TabIndex = 42;
@@ -662,7 +699,7 @@ namespace Build2Evenize
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.label8.Location = new System.Drawing.Point(484, 87);
+            this.label8.Location = new System.Drawing.Point(1210, 43);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 20);
             this.label8.TabIndex = 41;
@@ -673,7 +710,7 @@ namespace Build2Evenize
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(55)))), ((int)(((byte)(127)))));
-            this.label7.Location = new System.Drawing.Point(289, 87);
+            this.label7.Location = new System.Drawing.Point(1015, 43);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 20);
             this.label7.TabIndex = 40;
@@ -697,7 +734,7 @@ namespace Build2Evenize
             "7",
             "8",
             "9"});
-            this.comboBox4.Location = new System.Drawing.Point(383, 82);
+            this.comboBox4.Location = new System.Drawing.Point(1109, 38);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(81, 30);
             this.comboBox4.TabIndex = 39;
@@ -733,9 +770,9 @@ namespace Build2Evenize
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(28, 851);
+            this.button3.Location = new System.Drawing.Point(7, 77);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(266, 44);
+            this.button3.Size = new System.Drawing.Size(1539, 40);
             this.button3.TabIndex = 38;
             this.button3.Text = "Start Simulation";
             this.button3.UseVisualStyleBackColor = false;
@@ -748,9 +785,9 @@ namespace Build2Evenize
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(1254, 851);
+            this.button4.Location = new System.Drawing.Point(4, 885);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(266, 44);
+            this.button4.Size = new System.Drawing.Size(1555, 44);
             this.button4.TabIndex = 39;
             this.button4.Text = "Export Results";
             this.button4.UseVisualStyleBackColor = false;
@@ -800,13 +837,9 @@ namespace Build2Evenize
             this.dataGridView2.RowTemplate.Height = 29;
             this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(1563, 295);
+            this.dataGridView2.Size = new System.Drawing.Size(1563, 333);
             this.dataGridView2.TabIndex = 37;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // view_1TableAdapter
-            // 
-            this.view_1TableAdapter.ClearBeforeFill = true;
             // 
             // NameS
             // 
@@ -844,41 +877,9 @@ namespace Build2Evenize
             this.StudentArea.Name = "StudentArea";
             this.StudentArea.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // view_1TableAdapter
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Phone Number ";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Date Birth";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Instituiton";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // StudentaArea
-            // 
-            this.StudentaArea.HeaderText = "Student Area";
-            this.StudentaArea.Name = "StudentaArea";
-            this.StudentaArea.ReadOnly = true;
+            this.view_1TableAdapter.ClearBeforeFill = true;
             // 
             // FormProject
             // 

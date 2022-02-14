@@ -1,18 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "VABAIElBsIZ1oRla7FIhWb+4lbw19sRRJCSN/3HgcZRymF5dVLUnQsHenkisl/+hTHIkgmYiUQ3WFJBDqe55dQ==",
+  "dgSpecHash": "Xoos71QeDcSVNdlCIiWpUhxyZc+g2A+cdkm7yJJ0Jju6HZ0NeBBi4Km8y8MSCyzRV17kjd2AY3oFHuAAGG7ALQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hugo-\\Source\\Repos\\SADProject\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
+  "projectFilePath": "D:\\Universidade\\SAD\\Build2Evenize\\Build2Evenize\\Build2Evenize\\Build2Evenize.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\hugo-\\.nuget\\packages\\closedxml\\0.95.4\\closedxml.0.95.4.nupkg.sha512",
-    "C:\\Users\\hugo-\\.nuget\\packages\\documentformat.openxml\\2.7.2\\documentformat.openxml.2.7.2.nupkg.sha512",
-    "C:\\Users\\hugo-\\.nuget\\packages\\excelnumberformat\\1.0.10\\excelnumberformat.1.0.10.nupkg.sha512",
-    "C:\\Users\\hugo-\\.nuget\\packages\\ironxl.excel\\2021.12.0\\ironxl.excel.2021.12.0.nupkg.sha512",
-    "C:\\Users\\hugo-\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\hugo-\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1000\\microsoft.office.interop.excel.15.0.4795.1000.nupkg.sha512",
-    "C:\\Users\\hugo-\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
-    "C:\\Users\\hugo-\\.nuget\\packages\\system.io.filesystem.primitives\\4.0.1\\system.io.filesystem.primitives.4.0.1.nupkg.sha512",
-    "C:\\Users\\hugo-\\.nuget\\packages\\system.io.packaging\\4.0.0\\system.io.packaging.4.0.0.nupkg.sha512"
+    "C:\\Users\\FranciscoPereira\\.nuget\\packages\\closedxml\\0.95.4\\closedxml.0.95.4.nupkg.sha512",
+    "C:\\Users\\FranciscoPereira\\.nuget\\packages\\documentformat.openxml\\2.7.2\\documentformat.openxml.2.7.2.nupkg.sha512",
+    "C:\\Users\\FranciscoPereira\\.nuget\\packages\\excelnumberformat\\1.0.10\\excelnumberformat.1.0.10.nupkg.sha512",
+    "C:\\Users\\FranciscoPereira\\.nuget\\packages\\ironxl.excel\\2021.12.0\\ironxl.excel.2021.12.0.nupkg.sha512",
+    "C:\\Users\\FranciscoPereira\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\FranciscoPereira\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1000\\microsoft.office.interop.excel.15.0.4795.1000.nupkg.sha512",
+    "C:\\Users\\FranciscoPereira\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
+    "C:\\Users\\FranciscoPereira\\.nuget\\packages\\system.io.filesystem.primitives\\4.0.1\\system.io.filesystem.primitives.4.0.1.nupkg.sha512",
+    "C:\\Users\\FranciscoPereira\\.nuget\\packages\\system.io.packaging\\4.0.0\\system.io.packaging.4.0.0.nupkg.sha512"
   ],
   "logs": []
 }

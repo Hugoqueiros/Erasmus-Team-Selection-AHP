@@ -106,12 +106,21 @@ namespace Build2Evenize
             common.Filters("institution", "name", comboBox2); //filter of institution name
             comboBox3.Items.Add("All");
             common.Filters("institution", "country", comboBox3); //filter of institution country
-            common.Filters("project", "name", comboBox6); // filter of area
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
             comboBox3.SelectedIndex = 0;
             // TODO: This line of code loads data into the 'build2evenizeDataSet.View_1' table. You can move, or remove it, as needed.
             this.view_1TableAdapter.Fill(this.build2evenizeDataSet.View_1);
+
+            string query = "select name from Project where getdate() <= date_start and institution_id in (SELECT C.institution_id FROM Coordinator C where C.coordinator_id ="+ this.id +");";
+            SqlCommand cmd = new SqlCommand(query, common.con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                comboBox6.Items.Add(dr.GetString(0));
+            }
+            dr.Close();
+            dr.Dispose();
 
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -387,7 +396,7 @@ namespace Build2Evenize
                 x++;
             }
 
-            string[] student_best_on_tech = new string[nrSL];
+            int[] student_best_on_tech = new int[nrSL];
             ArrayList studentValuesReturn = new ArrayList();
             Dictionary<int, double> studentValue;
             Dictionary<int, double> student_sk_value;
@@ -578,7 +587,7 @@ namespace Build2Evenize
                     valorFinal = valorFinal / nrSP;
                     double valor_pre_final = valorFinal;
 
-                        if (student_best_on_tech.Contains(itemI.Key.ToString())){
+                        if (student_best_on_tech.Contains(itemI.Key)){
 
                     }
                     else
@@ -595,7 +604,7 @@ namespace Build2Evenize
                 var top5 = studentValueFinal.OrderByDescending(pair => pair.Value).Take(slots_per_area);
                 foreach (var itemI in top5)
                 {
-                    student_best_on_tech[vagas] = itemI.Key.ToString();
+                    student_best_on_tech[vagas] = itemI.Key;
                     vagas = vagas + 1;
                 }
                 studentValuesReturn.Add(studentValueFinal);
@@ -606,8 +615,8 @@ namespace Build2Evenize
 
             for (int i = 0; i < student_best_on_tech.Length; i++)
             {
-                string id_student = student_best_on_tech[i];
-                SqlCommand cmdIS = new SqlCommand("SELECT S.name as student_name, S.email as student_email, S.phone as phone, S.date_birth as date_birth , I.name as instituiton_name, A.name as area_name  FROM Student S, Institution I, Student_Area as SA, Area as A Where s.student_id=" + id_student + "AND s.student_id=sa.student_id AND sa.area_id =a.area_id AND s.institution_id=i.institution_id", common.con);
+                int id_student = student_best_on_tech[i];
+                SqlCommand cmdIS = new SqlCommand("SELECT S.name as student_name, S.email as student_email, S.phone as phone, S.date_birth as date_birth , I.name as instituiton_name, A.name as area_name  FROM Student S, Institution I, Student_Area as SA, Area as A Where s.student_id=" + id_student + " AND s.student_id=sa.student_id AND sa.area_id =a.area_id AND s.institution_id=i.institution_id", common.con);
                 SqlDataReader drIS = cmdIS.ExecuteReader();
                 while (drIS.Read())
                 {
@@ -751,7 +760,7 @@ namespace Build2Evenize
                 {
                     for (int j = 0; j < dataGridView2.Columns.Count; j++)
                     {
-                        xcelApp.Cells[i + 2, j + 1] = dataGridView2.Rows[i].Cells[j].Value.ToString();
+                        xcelApp.Cells[i+2, j+1] = dataGridView2.Rows[i].Cells[j].Value.ToString();
                     }
                 }
                 xcelApp.Columns.AutoFit();
@@ -795,6 +804,11 @@ namespace Build2Evenize
         }
 
         private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
         {
 
         }

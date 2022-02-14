@@ -22,8 +22,7 @@ namespace Build2Evenize
 
         private void Login_Register_Load(object sender, EventArgs e)
         {
-            loginUser.Text = "ispg4259@ispgaya.pt";
-            loginPass.Text = "admin";
+
         }
 
         private void label1_Click(object sender, EventArgs e)

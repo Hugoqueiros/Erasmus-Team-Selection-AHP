@@ -189,36 +189,55 @@ namespace Build2Evenize
             {
                 button10.Visible = true;
                 button11.Visible = true;
-                query = "select institution_id from Institution where institution_id in (select institution_id from Coordinator where coordinator_id = " + coordinatorId + ")";
+                query = "select name from Institution where institution_id in (select institution_id from Coordinator where coordinator_id = " + coordinatorId + ")";
                 cmd = new SqlCommand(query, common.con);
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    comboBox2.SelectedIndex = dr.GetInt32(0) - 1;
+                    comboBox2.SelectedItem = dr.GetString(0);
+                }
+                dr.Close();
+                dr.Dispose();
+                query = "select A.name from Project_Area PA, Area A where PA.project_id = " + this.id + " AND PA.area_id=A.area_id";
+                cmd = new SqlCommand(query, common.con);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    comboBox1.SelectedItem = dr.GetString(0);
                 }
                 dr.Close();
                 dr.Dispose();
             }
             else
             {
-                query = "select institution_id from Institution where institution_id in (select institution_id from Project where project_id = " + this.id + ")";
+                query = "select name from Institution where institution_id in (select institution_id from Project where project_id = " + this.id + ")";
                 cmd = new SqlCommand(query, common.con);
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    comboBox2.SelectedIndex = dr.GetInt32(0) - 1;
+                    comboBox2.SelectedItem = dr.GetString(0);
+                }
+                dr.Close();
+                dr.Dispose();
+                query = "select A.name from Project_Area PA, Area A where PA.project_id = " + this.id + " AND PA.area_id=A.area_id";
+                cmd = new SqlCommand(query, common.con);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    comboBox1.SelectedItem = dr.GetString(0);
                 }
                 dr.Close();
                 dr.Dispose();
             }
+
             if (this.id == 0)
             {
-                query = "select institution_id from Institution where institution_id in (select institution_id from Coordinator where coordinator_id = " + coordinatorId + ")";
+                query = "select name from Institution where institution_id in (select institution_id from Coordinator where coordinator_id = " + coordinatorId + ")";
                 cmd = new SqlCommand(query, common.con);
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    comboBox2.SelectedIndex = dr.GetInt32(0) - 1;
+                    comboBox2.SelectedItem = dr.GetString(0);
                 }
                 dr.Close();
                 dr.Dispose();
@@ -423,7 +442,7 @@ namespace Build2Evenize
         {
             if (this.id == 0)
             {
-                common.UpdateProject(this.id, textBox1.Text, textBox2.Text, (int)numericUpDown1.Value, Convert.ToDateTime(dateTimePicker1.Text), Convert.ToDateTime(dateTimePicker2.Text), comboBox2.Text, comboBox1.Text, comboBox3.Text, comboBox4.Text, comboBox9.Text, comboBox6.Text, comboBox5.Text, comboBox10.Text, comboBox8.Text, comboBox7.Text, comboBox11.Text);
+                common.InsertProject(this.id, textBox1.Text, textBox2.Text, (int)numericUpDown1.Value, Convert.ToDateTime(dateTimePicker1.Text), Convert.ToDateTime(dateTimePicker2.Text), comboBox2.Text, comboBox1.Text, comboBox3.Text, comboBox4.Text, comboBox9.Text, comboBox6.Text, comboBox5.Text, comboBox10.Text, comboBox8.Text, comboBox7.Text, comboBox11.Text);
                 MessageBox.Show(textBox1.Text + " Created Successfully!", "Success", MessageBoxButtons.OK);
                 f.Refresh();
             }
@@ -432,7 +451,7 @@ namespace Build2Evenize
                 common.UpdateProject(this.id, textBox1.Text, textBox2.Text, (int)numericUpDown1.Value, Convert.ToDateTime(dateTimePicker1.Text), Convert.ToDateTime(dateTimePicker2.Text), comboBox2.Text, comboBox1.Text, comboBox3.Text, comboBox4.Text, comboBox9.Text, comboBox6.Text, comboBox5.Text, comboBox10.Text, comboBox8.Text, comboBox7.Text, comboBox11.Text);
 
 
-                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                for (int i = 1; i < dataGridView1.Rows.Count; i++)
                 {
                     string name = dataGridView1.Rows[i].Cells[1].Value.ToString();
                     string mail = dataGridView1.Rows[i].Cells[2].Value.ToString();

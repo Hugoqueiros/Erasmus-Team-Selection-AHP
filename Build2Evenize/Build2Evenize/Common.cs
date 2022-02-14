@@ -108,6 +108,7 @@ public class Common
                 case 2:
                     if (check == 0)
                     {
+                        
                         Index("select name from Institution where institution_id = " + (int)id_list[1], cb2);
                     }
                     else if (check == 1)
@@ -198,6 +199,15 @@ public class Common
             query = "INSERT INTO Project (name,[desc],nr_students,date_start,date_end,institution_id) VALUES ('" + name + "' , '" + desc + "' , " + nr + " ,'" + start.ToString("yyyy-MM-dd") + "' ,'" + end.ToString("yyyy-MM-dd") + "' ," + Get_Id("select institution_id from Institution where name LIKE '" + institution + "'") + ");";
             SqlCommand cmd1 = new SqlCommand(query, con);
             cmd1.ExecuteNonQuery();
+
+
+            query = "SELECT project_id FROM Project WHERE name='"+name+"' AND desc='"+desc+"' AND nr_students="+nr+" AND date_start = "+ start.ToString("yyyy-MM-dd") + " AND date_end = "+ end.ToString("yyyy-MM-dd") + " AND institution_id "+ Get_Id("select institution_id from Institution where name LIKE '" + institution + "'") + "";
+            cmd1 = new SqlCommand(query, con);
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                id = (dr.GetInt32(0));
+            }
 
             query = "INSERT INTO Project_Area (project_id,area_id) VALUES (" + Get_Id("select max(project_id) from Project") + "," + area_id + ")";
             cmd1 = new SqlCommand(query, con);
@@ -490,6 +500,129 @@ public class Common
 
         cmd = new SqlCommand(query, con);
         cmd.ExecuteNonQuery();
+    }
+
+    public void InsertProject(int id, string name, string desc, int nr, DateTime start, DateTime end, string institution, string area, string partner1, string partner2, string partner3, string tech1, string tech2, string tech3, string sk1, string sk2, string sk3)
+    {
+        int institution_id = 0, area_id = 0, db_id1 = 0, db_id2 = 0, db_id3 = 0;
+        string db_name1 = null, db_name2 = null, db_name3 = null, query;
+
+
+        query = "SELECT institution_id from Institution where name LIKE '" + institution + "'";
+        SqlCommand cmd = new SqlCommand(query, con);
+        SqlDataReader dr = cmd.ExecuteReader();
+        if (dr.Read())
+        {
+            institution_id = (dr.GetInt32(0));
+        }
+        dr.Close();
+        dr.Dispose();
+
+        query = "SELECT area_id from Area where name like '" + area + "'";
+        cmd = new SqlCommand(query, con);
+        dr = cmd.ExecuteReader();
+        if (dr.Read())
+        {
+            area_id = (dr.GetInt32(0));
+        }
+        dr.Close();
+        dr.Dispose();
+        
+        query = "INSERT INTO Project (name,[desc],nr_students,date_start,date_end,institution_id) VALUES ('" + name + "' , '" + desc + "' , " + nr + " ,'" + start.ToString("yyyy-MM-dd") + "' ,'" + end.ToString("yyyy-MM-dd") + "' ," + Get_Id("select institution_id from Institution where name LIKE '" + institution + "'") + ");";
+        SqlCommand cmd1 = new SqlCommand(query, con);
+        cmd1.ExecuteNonQuery();
+
+        dr.Close();
+        dr.Dispose();
+
+        int newid = 0;
+        query = "SELECT project_id FROM Project WHERE name='" + name + "' AND nr_students=" + nr + " AND date_start = '" + start.ToString("yyyy-MM-dd") + "' AND date_end = '" + end.ToString("yyyy-MM-dd") + "' AND institution_id = " + Get_Id("select institution_id from Institution where name LIKE '" + institution + "'") + "";
+        cmd1 = new SqlCommand(query, con);
+        dr = cmd1.ExecuteReader();
+
+        if (dr.Read())
+        {
+            id = (dr.GetInt32(0));
+        }
+
+        query = "INSERT INTO Project_Area (project_id,area_id) VALUES (" + Get_Id("select max(project_id) from Project") + "," + area_id + ")";
+        cmd1 = new SqlCommand(query, con);
+        cmd1.ExecuteNonQuery();
+
+        
+        //____________________________________________________________________________________________________________________________________________________________________
+        // PARTNER UPDATES AND ADDITIONS
+
+
+        if (partner1 != "")
+        {          
+            query = "INSERT INTO Project_Partner (project_id, institution_id) VALUES (" + id + "," + Get_Id("select institution_id from Institution where name LIKE '" + partner1 + "'") + ");";
+            MessageBox.Show(query, id.ToString());
+            cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+        }
+        if (partner2 != "")
+        {
+            query = "INSERT INTO Project_Partner (project_id, institution_id) VALUES (" + id + "," + Get_Id("select institution_id from Institution where name LIKE '" + partner2 + "'") + ");";
+            cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+        }
+        if (partner3 != "")
+        {
+            query = "INSERT INTO Project_Partner (project_id, institution_id) VALUES (" + id + "," + Get_Id("select institution_id from Institution where name LIKE '" + partner3 + "'") + ");";
+            cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+        }
+
+
+
+        //____________________________________________________________________________________________________________________________________________________________________
+        // HARD SKILLS
+
+      
+        if (tech1 != "")
+        {
+            query = "INSERT INTO Project_Tech (project_id, tech_id) VALUES (" + id + "," + Get_Id("select tech_id from Tech where name LIKE '" + tech1 + "'") + ");";
+            cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+        }
+        if (tech2 != "")
+        {
+            query = "INSERT INTO Project_Tech (project_id, tech_id) VALUES (" + id + "," + Get_Id("select tech_id from Tech where name LIKE '" + tech2 + "'") + ");";
+            cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+        }
+        if (tech3 != "")
+        {
+            query = "INSERT INTO Project_Tech (project_id, tech_id) VALUES (" + id + "," + Get_Id("select tech_id from Tech where name LIKE '" + tech3 + "'") + ");";
+            cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+        }
+
+
+        //____________________________________________________________________________________________________________________________________________________________________
+        // SOFT SKILLS
+
+       
+        if (sk1 != "")
+        {
+            query = "INSERT INTO Project_SK (project_id, social_skill_id) VALUES (" + id + "," + Get_Id("select social_skill_id from Social_Skill where name LIKE '" + sk1 + "'") + ");";
+            cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+        }
+        if (sk2 != "")
+        {
+            query = "INSERT INTO Project_SK (project_id, social_skill_id) VALUES (" + id + "," + Get_Id("select social_skill_id from Social_Skill where name LIKE '" + sk2 + "'") + ");";
+            cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+        }
+        if (sk3 != "")
+        {
+            query = "INSERT INTO Project_SK (project_id, social_skill_id) VALUES (" + id + "," + Get_Id("select social_skill_id from Social_Skill where name LIKE '" + sk3 + "'") + ");";
+            cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+        }
+
     }
     public void InsertStudent(int id,string name, string mail, string phone, DateTime nasc, string country, int english_level, string institution, string area, int deg, string grade, int hs1, int hs2, int hs3, int ss1, int ss2, int ss3)
     {

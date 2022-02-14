@@ -105,7 +105,6 @@ namespace Build2Evenize
             this.loginUser.Name = "loginUser";
             this.loginUser.Size = new System.Drawing.Size(330, 52);
             this.loginUser.TabIndex = 1;
-            this.loginUser.Text = "ispg4259@ispgaya.pt";
             this.loginUser.TextChanged += new System.EventHandler(this.loginUser_TextChanged);
             // 
             // panel1
@@ -128,7 +127,6 @@ namespace Build2Evenize
             this.loginPass.PasswordChar = '*';
             this.loginPass.Size = new System.Drawing.Size(330, 52);
             this.loginPass.TabIndex = 1;
-            this.loginPass.Text = "admin";
             // 
             // panel4
             // 

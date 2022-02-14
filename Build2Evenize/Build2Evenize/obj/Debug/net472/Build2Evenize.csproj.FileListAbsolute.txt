@@ -84,3 +84,8 @@ C:\Users\hugo-\Source\Repos\SADProject\Build2Evenize\Build2Evenize\obj\Debug\net
 C:\Users\hugo-\Source\Repos\SADProject\Build2Evenize\Build2Evenize\obj\Debug\net472\Build2Evenize.csproj.CopyComplete
 C:\Users\hugo-\Source\Repos\SADProject\Build2Evenize\Build2Evenize\obj\Debug\net472\Build2Evenize.exe
 C:\Users\hugo-\Source\Repos\SADProject\Build2Evenize\Build2Evenize\obj\Debug\net472\Build2Evenize.pdb
+D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\bin\Debug\net472\ClosedXML.dll
+D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\bin\Debug\net472\DocumentFormat.OpenXml.dll
+D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\bin\Debug\net472\ExcelNumberFormat.dll
+D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\bin\Debug\net472\IronXL.dll
+D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\bin\Debug\net472\System.IO.Packaging.dll
