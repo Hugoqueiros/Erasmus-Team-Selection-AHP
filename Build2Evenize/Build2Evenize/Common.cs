@@ -557,7 +557,6 @@ public class Common
         if (partner1 != "")
         {          
             query = "INSERT INTO Project_Partner (project_id, institution_id) VALUES (" + id + "," + Get_Id("select institution_id from Institution where name LIKE '" + partner1 + "'") + ");";
-            MessageBox.Show(query, id.ToString());
             cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
         }

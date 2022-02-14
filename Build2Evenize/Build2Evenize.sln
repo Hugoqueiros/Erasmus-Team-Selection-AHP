@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Build2Evenize", "Build2Evenize\Build2Evenize.csproj", "{5A4E0EC8-9418-4B8E-A282-D7413DC2ED96}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{32BD304D-2F84-4A25-B9D5-3B17D9EEC114}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{441893D6-9F1F-4AB8-AADA-6C8263936E5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{5A4E0EC8-9418-4B8E-A282-D7413DC2ED96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A4E0EC8-9418-4B8E-A282-D7413DC2ED96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A4E0EC8-9418-4B8E-A282-D7413DC2ED96}.Release|Any CPU.Build.0 = Release|Any CPU
-		{32BD304D-2F84-4A25-B9D5-3B17D9EEC114}.Debug|Any CPU.ActiveCfg = Debug
-		{32BD304D-2F84-4A25-B9D5-3B17D9EEC114}.Release|Any CPU.ActiveCfg = Release
+		{441893D6-9F1F-4AB8-AADA-6C8263936E5D}.Debug|Any CPU.ActiveCfg = Debug
+		{441893D6-9F1F-4AB8-AADA-6C8263936E5D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

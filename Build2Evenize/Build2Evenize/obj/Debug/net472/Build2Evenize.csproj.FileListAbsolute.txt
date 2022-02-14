@@ -1,4 +1,3 @@
-D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\obj\Debug\net472\Build2Evenize.csproj.AssemblyReference.cache
 D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\obj\Debug\net472\Build2Evenize.csproj.SuggestedBindingRedirects.cache
 D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\obj\Debug\net472\Build2Evenize.FormProject.resources
 D:\Universidade\SAD\Build2Evenize\Build2Evenize\Build2Evenize\obj\Debug\net472\Build2Evenize.FormProjectInfo.resources
